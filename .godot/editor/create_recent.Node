@@ -1,0 +1,9 @@
+WorldEnvironment
+DirectionalLight3D
+CSGBox3D
+Node3D
+Camera3D
+SpringArm3D
+MeshInstance3D
+CollisionShape3D
+CharacterBody3D

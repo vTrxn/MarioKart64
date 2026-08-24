@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bbt08ps58sakb"]
+
+[ext_resource type="Script" uid="uid://daqugjt0oindn" path="res://scripts/player/playerkart.gd" id="1_0k413"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fcsne"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_1bto1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_68o8p"]
+albedo_color = Color(0.32712615, 0.9999998, 0.9125032, 1)
+
+[node name="Playerkart" type="CharacterBody3D" unique_id=1849314512]
+script = ExtResource("1_0k413")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1855634901]
+shape = SubResource("BoxShape3D_fcsne")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1330087408]
+mesh = SubResource("BoxMesh_1bto1")
+surface_material_override/0 = SubResource("StandardMaterial3D_68o8p")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=913134273]
+transform = Transform3D(1, 0, 0, 0, 0.8660252, 0.49999988, 0, -0.49999988, 0.8660252, 0, 0, 0)
+collision_mask = 0
+spring_length = 3.5
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=75258822]
+transform = Transform3D(1, 0, 0, 0, 0.9659261, -0.25881913, 0, 0.25881913, 0.9659261, 0, -0.045186296, 2.6713996)

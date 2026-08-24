@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://l2gau4rbudpc"]
+
+[ext_resource type="PackedScene" uid="uid://bbt08ps58sakb" path="res://scenes/player/playerkart.tscn" id="1_ybdod"]
+
+[sub_resource type="Environment" id="Environment_1bto1"]
+reflected_light_source = 2
+
+[node name="Node3D" type="Node3D" unique_id=669458843]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1086815279]
+use_collision = true
+size = Vector3(100, 1, 100)
+
+[node name="Playerkart" parent="." unique_id=1849314512 instance=ExtResource("1_ybdod")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.750364, 1.0000038, 38.335766)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=665686989]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 27.686108, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1099298816]
+environment = SubResource("Environment_1bto1")
