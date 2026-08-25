@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<COLLADA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1.4.1" xmlns="http://www.collada.org/2005/11/COLLADASchema">
+  <asset>
+    <created>2022-08-25T09:47:19.3499114-05:00</created>
+    <modified>2022-08-25T09:47:19.3499114-05:00</modified>
+  </asset>
+  <library_images>
+    <image id="tire_race_lod">
+      <init_from>./tire_race_lod.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="mat_tire_race_lod_mat_id" name="mat_tire_race_lod_mat">
+      <instance_effect url="#mat_tire_race_lod_eff_id" />
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="mat_tire_race_lod_eff_id" name="mat_tire_race_lod_eff">
+      <profile_COMMON>
+        <newparam sid="mat_tire_race_lod_surf">
+          <surface type="2D">
+            <init_from>tire_race_lod</init_from>
+            <format>PNG</format>
+          </surface>
+        </newparam>
+        <newparam sid="mat_tire_race_lod_samp">
+          <sampler2D>
+            <source>mat_tire_race_lod_surf</source>
+            <wrap_s>MIRROR</wrap_s>
+            <wrap_t>MIRROR</wrap_t>
+            <minfilter>LINEAR_MIPMAP_NEAREST</minfilter>
+            <magfilter>LINEAR</magfilter>
+            <mipfilter>LINEAR</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="mat_tire_race_lod_tech">
+          <phong>
+            <diffuse>
+              <texture texture="mat_tire_race_lod_samp" texcoord="uv" />
+            </diffuse>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="_0_0_geo_id" name="_0_0">
+      <mesh>
+        <source id="_0_0_Position_id" name="_0_0_Position">
+          <float_array id="_0_0_Position_array_id" count="12">-0.67057 -0.515657 0.906734 -0.67057 -0.498827 -0.936106 5.99597 0.189248 0 -0.335736 0.795399 0</float_array>
+          <technique_common>
+            <accessor source="#_0_0_Position_array_id" count="4" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="_0_0_Normal_id" name="_0_0_Normal">
+          <float_array id="_0_0_Normal_array_id" count="12">0.0651442 0.0431751 0.996941 0.0659124 0.0220828 -0.997581 0.0778566 -0.489522 0.868508 0.0651715 0.997806 -0.0116723</float_array>
+          <technique_common>
+            <accessor source="#_0_0_Normal_array_id" count="4" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="_0_0_TexCoord0_id" name="_0_0_TexCoord0">
+          <float_array id="_0_0_TexCoord0_array_id" count="8">0.354687 0.0631926 0.357067 0.0631926 0.454388 -0.0729715 0.510034 0.0563536</float_array>
+          <technique_common>
+            <accessor source="#_0_0_TexCoord0_array_id" count="4" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="_0_0_vtx_id">
+          <input semantic="POSITION" source="#_0_0_Position_id" />
+          <input semantic="NORMAL" source="#_0_0_Normal_id" />
+        </vertices>
+        <triangles material="Mdl_1_Mtl_mat_tire_race_lod" count="3">
+          <input semantic="VERTEX" source="#_0_0_vtx_id" offset="0" />
+          <input semantic="TEXCOORD" source="#_0_0_TexCoord0_id" offset="0" set="0" />
+          <p>0 1 2 2 3 0 2 1 3</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="shaft_race_LRe_lod_01_id" name="shaft_race_LRe_lod_01">
+      <node id="_0_0_node_id" name="_0_0_node" type="NODE">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#_0_0_geo_id">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Mdl_1_Mtl_mat_tire_race_lod" target="#mat_tire_race_lod_mat_id" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#shaft_race_LRe_lod_01_id" />
+  </scene>
+</COLLADA>

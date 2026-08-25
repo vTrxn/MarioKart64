@@ -1,23 +1,19 @@
 [gd_scene format=3 uid="uid://bbt08ps58sakb"]
 
 [ext_resource type="Script" uid="uid://daqugjt0oindn" path="res://scripts/player/playerkart.gd" id="1_0k413"]
+[ext_resource type="PackedScene" uid="uid://bmmxss5peq10d" path="res://assets/3d/Veiculos/Pipe Frame/body_pipe.dae" id="2_ajf5j"]
+[ext_resource type="ArrayMesh" uid="uid://sba62es5bc1j" path="res://assets/3d/Personajes/Mario/mr_lod/mr_lod.obj" id="3_d4bam"]
+[ext_resource type="PackedScene" uid="uid://b84r0gp7amgpm" path="res://assets/3d/Ruedas/Standard/tire_std_R.dae" id="4_ggfqo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fcsne"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_1bto1"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_68o8p"]
-albedo_color = Color(0.32712615, 0.9999998, 0.9125032, 1)
+size = Vector3(1, 1.0517883, 1.3066406)
 
 [node name="Playerkart" type="CharacterBody3D" unique_id=1849314512]
 script = ExtResource("1_0k413")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1855634901]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4039154, 0.0036621094)
 shape = SubResource("BoxShape3D_fcsne")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1330087408]
-mesh = SubResource("BoxMesh_1bto1")
-surface_material_override/0 = SubResource("StandardMaterial3D_68o8p")
 
 [node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=913134273]
 transform = Transform3D(1, 0, 0, 0, 0.8660252, 0.49999988, 0, -0.49999988, 0.8660252, 0, 0, 0)
@@ -25,4 +21,24 @@ collision_mask = 0
 spring_length = 3.5
 
 [node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=75258822]
-transform = Transform3D(1, 0, 0, 0, 0.9659261, -0.25881913, 0, 0.25881913, 0.9659261, 0, -0.045186296, 2.6713996)
+transform = Transform3D(1, -1.5354354e-08, -5.370028e-09, 1.2327759e-08, 0.9307597, -0.36563212, 1.061225e-08, 0.36563212, 0.9307597, 0, -0.27446973, 2.3213046)
+fov = 75.403145
+
+[node name="body_pipe" parent="." unique_id=1780766078 instance=ExtResource("2_ajf5j")]
+transform = Transform3D(-0.1, 0, 3.2584136e-08, 0, 0.1, 0, -3.2584136e-08, 0, -0.1, -0.008438945, -0.10493173, 0.15829347)
+
+[node name="MrLod" type="MeshInstance3D" parent="." unique_id=3618860]
+transform = Transform3D(-0.1, 0, -8.742278e-09, 0, 0.1, 0, 8.742278e-09, 0, -0.1, -0.012486935, 0.15334424, 0.18484545)
+mesh = ExtResource("3_d4bam")
+
+[node name="tire_std_R" parent="." unique_id=1921641267 instance=ExtResource("4_ggfqo")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.5814105, 0.18523209, 0.5813692)
+
+[node name="tire_std_R2" parent="." unique_id=1530043211 instance=ExtResource("4_ggfqo")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.5551894, 0.18887702, 0.5847285)
+
+[node name="tire_std_R3" parent="." unique_id=308893673 instance=ExtResource("4_ggfqo")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -0.5143235, 0.10873601, -0.60146725)
+
+[node name="tire_std_R4" parent="." unique_id=493449022 instance=ExtResource("4_ggfqo")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.49535072, 0.10714105, -0.61049664)

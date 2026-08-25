@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bt7ouuign4dxt"
+path="res://.godot/imported/lg_lod.obj-5459aabb00402c0c6df1855b2aed3671.mesh"
+
+[deps]
+
+files=["res://.godot/imported/lg_lod.obj-5459aabb00402c0c6df1855b2aed3671.mesh"]
+
+source_file="res://assets/3d/Personajes/Luigi/lg_lod/lg_lod.obj"
+dest_files=["res://.godot/imported/lg_lod.obj-5459aabb00402c0c6df1855b2aed3671.mesh", "res://.godot/imported/lg_lod.obj-5459aabb00402c0c6df1855b2aed3671.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

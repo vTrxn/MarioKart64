@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<COLLADA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1.4.1" xmlns="http://www.collada.org/2005/11/COLLADASchema">
+  <asset>
+    <created>2022-08-26T05:48:03.1605416-05:00</created>
+    <modified>2022-08-26T05:48:03.1605416-05:00</modified>
+  </asset>
+  <library_images>
+    <image id="tire_classic_color">
+      <init_from>./tire_classic_color.png</init_from>
+    </image>
+    <image id="tire_classic_nmap">
+      <init_from>./tire_classic_nmap.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="mat_tire_classic_mat_id" name="mat_tire_classic_mat">
+      <instance_effect url="#mat_tire_classic_eff_id" />
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="mat_tire_classic_eff_id" name="mat_tire_classic_eff">
+      <profile_COMMON>
+        <newparam sid="mat_tire_classic_surf">
+          <surface type="2D">
+            <init_from>tire_classic_color</init_from>
+            <format>PNG</format>
+          </surface>
+        </newparam>
+        <newparam sid="mat_tire_classic_samp">
+          <sampler2D>
+            <source>mat_tire_classic_surf</source>
+            <wrap_s>MIRROR</wrap_s>
+            <wrap_t>MIRROR</wrap_t>
+            <minfilter>LINEAR_MIPMAP_NEAREST</minfilter>
+            <magfilter>LINEAR</magfilter>
+            <mipfilter>LINEAR</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="mat_tire_classic_tech">
+          <phong>
+            <diffuse>
+              <texture texture="mat_tire_classic_samp" texcoord="uv" />
+            </diffuse>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="_0_0_geo_id" name="_0_0">
+      <mesh>
+        <source id="_0_0_Position_id" name="_0_0_Position">
+          <float_array id="_0_0_Position_array_id" count="57">-1.7762 0.120276 0.00930674 -2.59087 0.886023 0.00930674 -2.59087 0.0849172 0.873847 -2.59087 0.0849172 -0.855233 -3.40554 0.120276 0.00930674 -3.40554 0.120276 0.00930674 -1.7762 0.120276 0.00930674 -2.59087 0.0849172 0.873847 -2.59087 0.0849172 -0.855233 -4.23021 -0.950841 -0.716869 -4.23021 0.2 -3.83733E-05 0.620094 -0.183853 -0.461111 0.227845 0.399267 -3.83742E-05 0.620094 -0.182996 0.429795 -4.23021 -0.950841 0.716391 0.620094 -0.183853 -0.461111 -4.23021 -0.950841 -0.716869 -4.23021 -0.950841 0.716391 0.620094 -0.182996 0.429795</float_array>
+          <technique_common>
+            <accessor source="#_0_0_Position_array_id" count="19" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="_0_0_Normal_id" name="_0_0_Normal">
+          <float_array id="_0_0_Normal_array_id" count="57">0.820626 -0.571465 0 0 1 0 0 0.18994 0.981796 0 0.18994 -0.981796 -0.820626 -0.571465 0 -0.820626 -0.571465 0 0.820626 -0.571465 0 0 0.18994 0.981796 0 0.18994 -0.981796 0.128654 -0.457488 -0.879859 -0.0596843 0.9982 0.00592866 0.128654 -0.457488 -0.879859 -0.0596843 0.9982 0.00592866 0.131216 -0.462179 0.877025 0.131216 -0.462179 0.877025 0.128654 -0.457488 -0.879859 0.128654 -0.457488 -0.879859 0.131216 -0.462179 0.877025 0.131216 -0.462179 0.877025</float_array>
+          <technique_common>
+            <accessor source="#_0_0_Normal_array_id" count="19" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="_0_0_TexCoord0_id" name="_0_0_TexCoord0">
+          <float_array id="_0_0_TexCoord0_array_id" count="38">0.444873 0.055667 0.50054 0 0.444873 -0.055667 0.556207 0.0556671 0.556207 -0.055667 0.556207 -0.055667 0.444873 0.055667 0.444873 -0.055667 0.556207 0.0556671 1.39812 0.0688992 1.39812 -1.93119E-05 0.552019 0.0443097 0.59884 -1.93119E-05 0.552019 -0.0413449 1.39812 -0.0688991 0.552019 0.0443097 1.39812 0.0688992 1.39812 -0.0688991 0.552019 -0.0413449</float_array>
+          <technique_common>
+            <accessor source="#_0_0_TexCoord0_array_id" count="19" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="_0_0_Tangent_id" name="_0_0_Tangent">
+          <float_array id="_0_0_Tangent_array_id" count="57">0.068266 0.0980307 -0.992839 -0.685804 0 -0.727786 -0.776317 0.618868 -0.119728 -0.776318 -0.618867 -0.119727 0.0682664 -0.0980309 -0.992839 -0.270763 0.388818 -0.880629 -0.270763 -0.388817 -0.880629 -0.971458 0.232893 -0.0450561 -0.971458 -0.232892 -0.045056 -0.989976 -0.111386 -0.0868392 -0.998217 -0.0596849 -8.92462E-05 -0.988695 -0.128071 -0.0779766 -0.998217 -0.0596849 -8.92462E-05 -0.981805 -0.183077 0.0504136 -0.981805 -0.183077 0.0504136 -0.982084 -0.181965 -0.0489872 -0.982084 -0.181965 -0.0489872 -0.989972 -0.107791 0.0913098 -0.989204 -0.119275 0.085143</float_array>
+          <technique_common>
+            <accessor source="#_0_0_Tangent_array_id" count="19" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="_0_0_Color_id" name="_0_0_Color">
+          <float_array id="_0_0_Color_array_id" count="76">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.5490196 0.5490196 0.5490196 1 0.5490196 0.5490196 0.5490196 1 0.5490196 0.5490196 0.5490196 1 1 1 1 1 0.5490196 0.5490196 0.5490196 1 1 1 1 1 1 1 1 1 0.5490196 0.5490196 0.5490196 1</float_array>
+          <technique_common>
+            <accessor source="#_0_0_Color_array_id" count="19" stride="4">
+              <param name="R" type="float" />
+              <param name="G" type="float" />
+              <param name="B" type="float" />
+              <param name="A" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="_0_0_vtx_id">
+          <input semantic="POSITION" source="#_0_0_Position_id" />
+          <input semantic="NORMAL" source="#_0_0_Normal_id" />
+          <input semantic="TANGENT" source="#_0_0_Tangent_id" />
+        </vertices>
+        <triangles material="Mdl_2_Mtl_mat_tire_classic" count="12">
+          <input semantic="VERTEX" source="#_0_0_vtx_id" offset="0" />
+          <input semantic="TEXCOORD" source="#_0_0_TexCoord0_id" offset="0" set="0" />
+          <input semantic="COLOR" source="#_0_0_Color_id" offset="0" />
+          <p>0 1 2 1 0 3 4 1 3 2 1 4 5 6 7 8 6 5 9 10 11 10 12 11 18 12 10 17 18 10 13 14 15 14 16 15</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="shaft_classic_RFr_02_id" name="shaft_classic_RFr_02">
+      <node id="_0_0_node_id" name="_0_0_node" type="NODE">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#_0_0_geo_id">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Mdl_2_Mtl_mat_tire_classic" target="#mat_tire_classic_mat_id" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#shaft_classic_RFr_02_id" />
+  </scene>
+</COLLADA>

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bf3kasxldmxrs"
+path="res://.godot/imported/pc_lod.obj-243c8b81c56b81771a98c2014e937999.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pc_lod.obj-243c8b81c56b81771a98c2014e937999.mesh"]
+
+source_file="res://assets/3d/Personajes/Peach/pc_lod/pc_lod.obj"
+dest_files=["res://.godot/imported/pc_lod.obj-243c8b81c56b81771a98c2014e937999.mesh", "res://.godot/imported/pc_lod.obj-243c8b81c56b81771a98c2014e937999.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
