@@ -15,7 +15,7 @@ size = Vector3(100, 1, 100)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.750364, 1.0000038, 38.335766)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=665686989]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 27.686108, 0)
+transform = Transform3D(1, 0, 0, 0, -0.030272137, 0.9995417, 0, -0.9995417, -0.030272137, 0, 27.686108, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1099298816]
 environment = SubResource("Environment_1bto1")
