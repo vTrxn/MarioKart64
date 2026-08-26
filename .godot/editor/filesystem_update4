@@ -1,1 +1,4 @@
-res://scenes/player/playerkart.tscn
+res://scripts/player/playerkart.gd
+res://scripts/ui/item_roulette.gd
+res://scenes/ui/item_roulette.tscn
+res://assets/roulette/new_atlas_texture.tres

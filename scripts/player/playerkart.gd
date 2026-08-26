@@ -8,6 +8,20 @@ extends CharacterBody3D
 @export var gravity: float = 20.0
 
 var current_speed: float = 0.0
+@onready var item_roulette = $ItemRoulette
+
+func _ready():
+	if item_roulette:
+		item_roulette.connect("item_selected", Callable(self, "_on_item_selected"))
+
+func _on_item_selected(item_id):
+	print("Item seleccionado: ", item_id)
+
+func _unhandled_input(event):
+	if event is InputEventKey and event.pressed and not event.echo:
+		if event.keycode == KEY_E or event.keycode == KEY_SPACE:
+			if item_roulette and not item_roulette.is_rolling:
+				item_roulette.start_roulette()
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
