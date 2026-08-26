@@ -1,16 +1,13 @@
-[gd_scene format=3 uid="uid://cx6g5k4d3b2a1"]
+[gd_scene load_steps=4 format=3 uid="uid://cx6g5k4d3b2a1"]
 
-[ext_resource type="Script" uid="uid://bcq2omlrimpmu" path="res://scripts/ui/item_roulette.gd" id="1_abcde"]
-[ext_resource type="Texture2D" uid="uid://dlo6cgkvl58kt" path="res://assets/roulette/DS___DSi_-_Mario_Kart_DS_-_HUD_Elements__In-Game__-_Item_Roulette__1_-removebg-preview.png" id="2_ktjur"]
+[ext_resource type="Script" path="res://scripts/ui/item_roulette.gd" id="1_abcde"]
+[ext_resource type="Texture2D" path="res://assets/roulette/mark_rulet.png" id="2_fghij"]
+[ext_resource type="AudioStream" path="res://assets/audio/Mario Kart Wii - Item Box - Sound Effect.mp3" id="3_audio"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kh5iw"]
-atlas = ExtResource("2_ktjur")
-region = Rect2(0, 0, 38, 38)
-
-[node name="ItemRoulette" type="CanvasLayer" unique_id=1465506647]
+[node name="ItemRoulette" type="CanvasLayer"]
 script = ExtResource("1_abcde")
 
-[node name="Control" type="Control" parent="." unique_id=367640728]
+[node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -18,33 +15,38 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Background" type="TextureRect" parent="Control" unique_id=1158466727]
+[node name="Background" type="TextureRect" parent="Control"]
 layout_mode = 0
-offset_left = 521.0
-offset_top = 44.0
-offset_right = 559.0
-offset_bottom = 82.0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 66.0
+offset_bottom = 70.0
 scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_kh5iw")
+pivot_offset = Vector2(17, 19)
+texture = ExtResource("2_fghij")
 stretch_mode = 2
 
-[node name="ItemIcon" type="TextureRect" parent="Control/Background" unique_id=181779981]
+[node name="ItemIcon" type="TextureRect" parent="Control/Background"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 182.5
+offset_left = -16.0
 offset_top = -18.0
-offset_right = 214.5
+offset_right = 16.0
 offset_bottom = 18.0
 grow_horizontal = 2
 grow_vertical = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Timer" type="Timer" parent="." unique_id=1840092744]
+[node name="Timer" type="Timer" parent="."]
 wait_time = 0.1
+
+[node name="RouletteSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_audio")
+volume_db = 0.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

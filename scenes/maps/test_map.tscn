@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://l2gau4rbudpc"]
 
 [ext_resource type="PackedScene" uid="uid://bbt08ps58sakb" path="res://scenes/player/playerkart.tscn" id="1_ybdod"]
+[ext_resource type="PackedScene" uid="uid://iju8h2yrbqjt" path="res://scenes/items/item_box.tscn" id="3_o3n0h"]
 
 [sub_resource type="Environment" id="Environment_1bto1"]
 reflected_light_source = 2
@@ -19,3 +20,6 @@ transform = Transform3D(1, 0, 0, 0, -0.030272137, 0.9995417, 0, -0.9995417, -0.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1099298816]
 environment = SubResource("Environment_1bto1")
+
+[node name="ItemBox" parent="." unique_id=2114309966 instance=ExtResource("3_o3n0h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.464912, 0.5, 13.8584)

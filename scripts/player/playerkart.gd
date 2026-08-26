@@ -15,13 +15,18 @@ func _ready():
 		item_roulette.connect("item_selected", Callable(self, "_on_item_selected"))
 
 func _on_item_selected(item_id):
-	print("Item seleccionado: ", item_id)
+	print(item_id)
 
 func _unhandled_input(event):
 	if event is InputEventKey and event.pressed and not event.echo:
 		if event.keycode == KEY_E or event.keycode == KEY_SPACE:
-			if item_roulette and not item_roulette.is_rolling:
-				item_roulette.start_roulette()
+			trigger_item_box()
+
+func trigger_item_box() -> bool:
+	if item_roulette and not item_roulette.is_rolling:
+		item_roulette.start_roulette()
+		return true
+	return false
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
