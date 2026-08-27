@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cu66n88ldel5h"]
+
+[ext_resource type="PackedScene" uid="uid://xqwa6g7yo3pp" path="res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers.glb" id="1_us7vw"]
+[ext_resource type="PackedScene" uid="uid://bbt08ps58sakb" path="res://scenes/player/playerkart.tscn" id="2_ltx7w"]
+
+[node name="Node3D" type="Node3D" unique_id=1949299023]
+
+[node name="Sketchfab_Scene" parent="." unique_id=1106099024 instance=ExtResource("1_us7vw")]
+transform = Transform3D(140, 0, 0, 0, 140, 0, 0, 0, 140, 117.48947, 0, -23.324846)
+
+[node name="Playerkart" parent="." unique_id=1849314512 instance=ExtResource("2_ltx7w")]
+transform = Transform3D(-0.9999979, 0, 0.0020516778, 0, 1, 0, -0.0020516778, 0, -0.9999979, 118.19221, 0.233598, -7.048349)
