@@ -1,21 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://cx6g5k4d3b2a1"]
+[gd_scene format=3 uid="uid://cx6g5k4d3b2a1"]
 
-[ext_resource type="Script" path="res://scripts/ui/item_roulette.gd" id="1_abcde"]
-[ext_resource type="Texture2D" path="res://assets/roulette/mark_rulet.png" id="2_fghij"]
-[ext_resource type="AudioStream" path="res://assets/audio/Mario Kart Wii - Item Box - Sound Effect.mp3" id="3_audio"]
+[ext_resource type="Script" uid="uid://bcq2omlrimpmu" path="res://scripts/ui/item_roulette.gd" id="1_abcde"]
+[ext_resource type="Texture2D" uid="uid://b6aftcw72c75c" path="res://assets/roulette/mark_rulet.png" id="2_fghij"]
+[ext_resource type="AudioStream" uid="uid://c0acupmn0te17" path="res://assets/audio/Mario Kart Wii - Item Box - Sound Effect.mp3" id="3_audio"]
 
-[node name="ItemRoulette" type="CanvasLayer"]
+[node name="ItemRoulette" type="CanvasLayer" unique_id=1137834404]
 script = ExtResource("1_abcde")
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=1149812723]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 454.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Background" type="TextureRect" parent="Control"]
+[node name="Background" type="TextureRect" parent="Control" unique_id=1086955523]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 32.0
@@ -26,27 +27,26 @@ pivot_offset = Vector2(17, 19)
 texture = ExtResource("2_fghij")
 stretch_mode = 2
 
-[node name="ItemIcon" type="TextureRect" parent="Control/Background"]
+[node name="ItemIcon" type="TextureRect" parent="Control/Background" unique_id=899517193]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -16.0
-offset_top = -18.0
-offset_right = 16.0
-offset_bottom = 18.0
+offset_left = -83.5
+offset_top = -82.5
+offset_right = 80.5
+offset_bottom = 86.5
 grow_horizontal = 2
 grow_vertical = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=2116018672]
 wait_time = 0.1
 
-[node name="RouletteSound" type="AudioStreamPlayer" parent="."]
+[node name="RouletteSound" type="AudioStreamPlayer" parent="." unique_id=1417786589]
 stream = ExtResource("3_audio")
-volume_db = 0.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

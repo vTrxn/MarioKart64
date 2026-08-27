@@ -35,7 +35,7 @@ func start_roulette():
 	
 	final_item_index = _get_random_item_by_weight()
 	
-	background.scale = Vector2(1, 1)
+	background.scale = Vector2(0.7, 0.7)
 	
 	audio.play()
 	timer.wait_time = 0.1
@@ -61,7 +61,7 @@ func _stop_roulette():
 	emit_signal("item_selected", item_db[final_item_index]["id"])
 	
 	await get_tree().create_timer(2.0).timeout
-	background.scale = Vector2(0.5, 0.5)
+	background.scale = Vector2(0.7, 0.7)
 
 func _get_random_item_by_weight() -> int:
 	var total_weight = 0
