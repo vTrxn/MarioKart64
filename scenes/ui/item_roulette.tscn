@@ -9,10 +9,12 @@ script = ExtResource("1_abcde")
 
 [node name="Control" type="Control" parent="." unique_id=1149812723]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 454.0
+anchor_left = 0.32500002
+anchor_right = 0.712
+anchor_bottom = 0.65400004
+offset_left = 97.599976
+offset_right = -108.224
+offset_bottom = -166.79202
 grow_horizontal = 2
 grow_vertical = 2
 
