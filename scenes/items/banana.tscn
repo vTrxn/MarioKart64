@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b7a0avg1m3swy"]
+
+[ext_resource type="Script" uid="uid://dw67u2oil6xcr" path="res://scripts/items/banana.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bh4wlegy8bsyf" path="res://assets/roulette/banana_rulet.png" id="2_texture"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_banana"]
+
+[node name="Banana" type="Area3D" unique_id=497259378]
+script = ExtResource("1_script")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=887525962]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.5, 0)
+pixel_size = 0.002
+billboard = 1
+texture = ExtResource("2_texture")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1269011637]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_banana")
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=1651745234]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+target_position = Vector3(0, -5, 0)

@@ -12,11 +12,13 @@ var time_elapsed = 0.0
 var roll_duration = 3.0
 
 var item_db = [
-	{ "id": "banana", "texture": preload("res://assets/roulette/banana_rulet.png"), "weight": 40 },
-	{ "id": "green_shell", "texture": preload("res://assets/roulette/green_shell_rulet.png"), "weight": 30 },
-	{ "id": "red_shell", "texture": preload("res://assets/roulette/red_shell_rulet.png"), "weight": 15 },
-	{ "id": "false_box", "texture": preload("res://assets/roulette/false_rulet.png"), "weight": 10 },
-	{ "id": "mushroom", "texture": preload("res://assets/roulette/fongus1_rulet.png"), "weight": 5 },
+	{ "id": "banana", "texture": preload("res://assets/roulette/banana_rulet.png"), "weight": 20 },
+	{ "id": "triple_banana", "texture": preload("res://assets/roulette/bananas_rulet.png"), "weight": 20 },
+	{ "id": "green_shell", "texture": preload("res://assets/roulette/green_shell_rulet.png"), "weight": 0 },
+	{ "id": "red_shell", "texture": preload("res://assets/roulette/red_shell_rulet.png"), "weight": 0 },
+	{ "id": "false_box", "texture": preload("res://assets/roulette/false_rulet.png"), "weight": 20 },
+	{ "id": "mushroom", "texture": preload("res://assets/roulette/fongus1_rulet.png"), "weight": 20 },
+	{ "id": "triple_mushroom", "texture": preload("res://assets/roulette/fongus3_rulet.png"), "weight": 20 },
 	{ "id": "bullet", "texture": preload("res://assets/roulette/bullet_rulet.png"), "weight": 0 },
 	{ "id": "star", "texture": preload("res://assets/roulette/stard_rulet.png"), "weight": 0 },
 	{ "id": "bomb", "texture": preload("res://assets/roulette/bomb_rulet.png"), "weight": 0 }
@@ -77,3 +79,12 @@ func _get_random_item_by_weight() -> int:
 			return i
 			
 	return 0
+
+func clear_item():
+	hide()
+	item_icon.texture = null
+
+func set_item_texture(tex: Texture2D):
+	if tex:
+		item_icon.texture = tex
+		show()
