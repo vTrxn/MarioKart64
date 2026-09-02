@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1788128926
+::res://::1788313432
 icon.svg::CompressedTexture2D::5866279888725123995::1787695119::1787695223::1::::<><><>0<>0<>97c30809ca3f8de52d0a8a5bbc977061<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://assets/::1787707136
 ::res://assets/3d/::1787695119
@@ -470,6 +470,6 @@ false_box.gd::GDScript::3376025469144714924::1788101182::0::1::::<>Area3D<><>0<>
 item_box.gd::GDScript::1870146636764791531::1787709547::0::1::::<>Area3D<><>0<>0<><>::
 ::res://scripts/maps/::1787695119
 ::res://scripts/player/::1788100547
-playerkart.gd::GDScript::7193517652979377319::1788101169::0::1::::<>CharacterBody3D<><>0<>0<><>::
+playerkart.gd::GDScript::7193517652979377319::1788133057::0::1::::<>CharacterBody3D<><>0<>0<><>::
 ::res://scripts/ui/::1788103114
-item_roulette.gd::GDScript::2561493423010117928::1788103114::0::1::::<>CanvasLayer<><>0<>0<><>::
+item_roulette.gd::GDScript::2561493423010117928::1788132997::0::1::::<>CanvasLayer<><>0<>0<><>::

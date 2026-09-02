@@ -5,7 +5,6 @@
 [ext_resource type="ArrayMesh" uid="uid://sba62es5bc1j" path="res://assets/3d/Personajes/Mario/mr_lod/mr_lod.obj" id="3_d4bam"]
 [ext_resource type="PackedScene" uid="uid://b84r0gp7amgpm" path="res://assets/3d/Ruedas/Standard/tire_std_R.dae" id="4_ggfqo"]
 [ext_resource type="PackedScene" uid="uid://cx6g5k4d3b2a1" path="res://scenes/ui/item_roulette.tscn" id="5_itemr"]
-[ext_resource type="PackedScene" uid="uid://b7a0avg1m3swy" path="res://scenes/items/banana.tscn" id="6_eu8hq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fcsne"]
 size = Vector3(1.2270508, 1.0517883, 1.3066406)
@@ -56,6 +55,3 @@ transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -0.5143235, 0.108736
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.49535072, 0.10714105, -0.61049664)
 
 [node name="ItemRoulette" parent="." unique_id=28749010 instance=ExtResource("5_itemr")]
-
-[node name="Banana" parent="." unique_id=652412013 instance=ExtResource("6_eu8hq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.36505973, 0.25218248, 3.2933002)
