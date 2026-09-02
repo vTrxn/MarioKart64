@@ -7,14 +7,14 @@
 [ext_resource type="PackedScene" uid="uid://cx6g5k4d3b2a1" path="res://scenes/ui/item_roulette.tscn" id="5_itemr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fcsne"]
-size = Vector3(1.2270508, 1.0517883, 1.3066406)
+size = Vector3(1.5674438, 1.0517883, 1.3066406)
 
 [node name="Playerkart" type="CharacterBody3D" unique_id=1849314512]
 script = ExtResource("1_0k413")
 max_speed = 30.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1855634901]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0075683594, 0.4039154, 0.0036621094)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008392334, 0.4039154, 0.0036621094)
 shape = SubResource("BoxShape3D_fcsne")
 
 [node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=913134273]
@@ -29,11 +29,17 @@ fov = 75.403145
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SpringArm3D" unique_id=366745792]
 transform = Transform3D(1, 0, 0, 0, 0.98400617, -0.17813659, 0, 0.17813659, 0.98400617, 0, -0.11192274, 3.5448093)
 
+[node name="DirectionalLight3D5" type="DirectionalLight3D" parent="SpringArm3D" unique_id=555758615]
+transform = Transform3D(1, 0, 0, 0, 0.16474417, -0.9863365, 0, 0.9863365, 0.16474417, 0.20255631, 0.947978, -0.036055326)
+
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="SpringArm3D" unique_id=1007510236]
-transform = Transform3D(0.8017981, -0.09840049, 0.58943814, 0.29879746, 0.920217, -0.25282657, -0.51753235, 0.37883854, 0.76723003, 4.2532806, 1.1915207, 3.4708796)
+transform = Transform3D(0.8017982, -0.098400444, 0.5894379, 0.29879752, 0.92021704, -0.25282657, -0.51753247, 0.3788385, 0.7672301, 4.214959, 1.8702226, 2.2953334)
 
 [node name="DirectionalLight3D3" type="DirectionalLight3D" parent="SpringArm3D" unique_id=2070673833]
-transform = Transform3D(0.7993597, -0.24237841, -0.54979694, 0.18221305, 0.9697249, -0.16258109, 0.5725579, 0.029780567, 0.8193235, -4.5550003, 1.3224125, 3.599465)
+transform = Transform3D(0.79935974, -0.2423784, -0.549797, 0.18221308, 0.9697249, -0.16258106, 0.572558, 0.029780537, 0.81932354, -4.4370365, 2.0112398, 2.4063811)
+
+[node name="DirectionalLight3D4" type="DirectionalLight3D" parent="SpringArm3D" unique_id=1391234155]
+transform = Transform3D(0.8398234, -0.5389013, 0.06543694, 0.032506943, 0.17024758, 0.98486525, -0.5418857, -0.82498574, 0.16049594, -0.10528135, 11.623098, -1.696343)
 
 [node name="body_pipe" parent="." unique_id=1780766078 instance=ExtResource("2_ajf5j")]
 transform = Transform3D(-0.1, 0, 3.2584136e-08, 0, 0.1, 0, -3.2584136e-08, 0, -0.1, -0.008438945, -0.10493173, 0.15829347)

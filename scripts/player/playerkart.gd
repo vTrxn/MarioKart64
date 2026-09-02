@@ -113,5 +113,5 @@ func _physics_process(delta: float) -> void:
 		var kart_yaw_basis = Basis(Vector3.UP, current_y_rotation)
 		var target_basis = kart_yaw_basis * original_spring_arm_basis
 		
-		var new_basis = spring_arm.global_transform.basis.slerp(target_basis, 15.0 * delta)
+		var new_basis = spring_arm.global_transform.basis.slerp(target_basis, 5.0 * delta)
 		spring_arm.global_transform.basis = new_basis.orthonormalized()
