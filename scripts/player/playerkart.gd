@@ -7,7 +7,13 @@ extends CharacterBody3D
 @export var steering_angle: float = 2.5
 @export var gravity: float = 20.0
 
+@export_group("Direccion y Giro")
+@export var steering_speed: float = 1.2  #cuanto gira
+@export var steering_smooth: float = 8.0  # que tan rapido gira
+
 var current_speed: float = 0.0
+var current_steering: float = 0.0
+
 @onready var item_roulette = $ItemRoulette
 
 var original_max_speed: float = 0.0
@@ -87,15 +93,19 @@ func _physics_process(delta: float) -> void:
 	elif velocity.y < 0.0:
 		velocity.y = 0.0
 	
-	var turn_input := Input.get_action_strength("girar_izquierda")-Input.get_action_strength("girar_derecha")
-	var acceleration_input := Input.get_action_strength("acelerar")-Input.get_action_strength("frenar")
+	var turn_input :float = Input.get_action_strength("girar_izquierda")-Input.get_action_strength("girar_derecha")
+	var acceleration_input :float = Input.get_action_strength("acelerar")-Input.get_action_strength("frenar")
+	
 	if acceleration_input !=0:
 		current_speed = move_toward(current_speed, acceleration_input * max_speed, acceleration * delta)
 	else:
 		current_speed = move_toward(current_speed, 0.0, friction * delta)
 	
+	current_steering = lerp(current_steering, turn_input, steering_smooth * delta)
+	
 	if abs(current_speed) > 0.1:
-		rotate_y(turn_input * steering_angle * delta * sign(current_speed))
+		var speed_factor :float = clamp(abs(current_speed) / max_speed, 0.3, 1.0)
+		rotate_y(current_steering * steering_speed * speed_factor * delta * sign(current_speed))
 	
 	var forward_dir := -transform.basis.z
 	var horrizontal_velocity := forward_dir * current_speed
