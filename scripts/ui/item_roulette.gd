@@ -2,14 +2,14 @@ extends CanvasLayer
 
 signal item_selected(item_id)
 
-@onready var background = $Control/Background
-@onready var item_icon = $Control/Background/ItemIcon
-@onready var timer = $Timer
-@onready var audio = $RouletteSound
+@onready var item_container = $ItemContainer
+@onready var item_icon = $ItemContainer/ItemIcon
+@onready var timer = $ItemContainer/Timer
+@onready var audio = $ItemContainer/RouletteSound
 
 var is_rolling = false
 var time_elapsed = 0.0
-var roll_duration = 3.0
+var roll_duration = 2.5
 
 var item_db = [
 	{ "id": "banana", "texture": preload("res://assets/roulette/banana_rulet.png"), "weight": 20 },
@@ -27,22 +27,26 @@ var item_db = [
 var final_item_index = 0
 
 func _ready():
-	hide()
-	background.scale = Vector2.ZERO
+	item_container.hide()
+	if timer and not timer.timeout.is_connected(_on_timer_timeout):
+		timer.timeout.connect(_on_timer_timeout)
 
 func start_roulette():
-	show()
+	item_container.show()
 	is_rolling = true
 	time_elapsed = 0.0
 	
 	final_item_index = _get_random_item_by_weight()
 	
-	background.scale = Vector2(0.6, 0.6)
-	
-	audio.play()
-	timer.wait_time = 0.1
+	# 🔊 Inicia el sonido de la ruleta
+	if audio:
+		audio.play()
+		
+	_on_timer_timeout()
+	timer.wait_time = 0.08
 	timer.start()
-
+	
+	
 func _process(delta):
 	if is_rolling:
 		time_elapsed += delta
@@ -52,6 +56,7 @@ func _process(delta):
 func _on_timer_timeout():
 	if not is_rolling:
 		return
+	# Cambia las imágenes aleatoriamente durante la ruleta
 	var visual_random = randi() % item_db.size()
 	item_icon.texture = item_db[visual_random]["texture"]
 
@@ -59,16 +64,21 @@ func _stop_roulette():
 	is_rolling = false
 	timer.stop()
 	
+	# 🔇 Detiene el sonido al fijar el ítem final
+	if audio:
+		audio.stop()
+	
 	item_icon.texture = item_db[final_item_index]["texture"]
 	emit_signal("item_selected", item_db[final_item_index]["id"])
-	
-	await get_tree().create_timer(2.0).timeout
-	background.scale = Vector2(0.6, 0.6)
+
 
 func _get_random_item_by_weight() -> int:
 	var total_weight = 0
 	for item in item_db:
 		total_weight += item["weight"]
+		
+	if total_weight == 0:
+		return 0
 		
 	var random_val = randi() % total_weight
 	var current_weight = 0
@@ -81,10 +91,5 @@ func _get_random_item_by_weight() -> int:
 	return 0
 
 func clear_item():
-	hide()
+	item_container.hide()
 	item_icon.texture = null
-
-func set_item_texture(tex: Texture2D):
-	if tex:
-		item_icon.texture = tex
-		show()

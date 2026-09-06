@@ -4,51 +4,60 @@
 [ext_resource type="Texture2D" uid="uid://b6aftcw72c75c" path="res://assets/roulette/mark_rulet.png" id="2_fghij"]
 [ext_resource type="AudioStream" uid="uid://c0acupmn0te17" path="res://assets/audio/Mario Kart Wii - Item Box - Sound Effect.mp3" id="3_audio"]
 
-[node name="ItemRoulette" type="CanvasLayer" unique_id=1137834404]
+[node name="Hud" type="CanvasLayer" unique_id=1137834404]
 script = ExtResource("1_abcde")
 
-[node name="Control" type="Control" parent="." unique_id=1149812723]
+[node name="ItemContainer" type="Control" parent="." unique_id=107244886]
 layout_mode = 3
-anchor_left = 0.32500002
-anchor_right = 0.712
-anchor_bottom = 0.65400004
-offset_left = 97.599976
-offset_right = -108.224
-offset_bottom = -166.79202
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Background" type="TextureRect" parent="Control" unique_id=1086955523]
-layout_mode = 0
-offset_left = 32.0
-offset_top = 32.0
-offset_right = 66.0
-offset_bottom = 70.0
-scale = Vector2(2, 2)
-pivot_offset = Vector2(17, 19)
-texture = ExtResource("2_fghij")
-stretch_mode = 2
-
-[node name="ItemIcon" type="TextureRect" parent="Control/Background" unique_id=899517193]
-layout_mode = 1
-anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -83.5
-offset_top = -82.5
-offset_right = 80.5
-offset_bottom = 86.5
+offset_left = -68.0
+offset_top = 40.0
+offset_right = 68.0
+offset_bottom = 178.0
 grow_horizontal = 2
-grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="frame" type="TextureRect" parent="ItemContainer" unique_id=753097398]
+layout_mode = 0
+offset_right = 135.0
+offset_bottom = 137.0
+texture = ExtResource("2_fghij")
 expand_mode = 1
-stretch_mode = 5
 
-[node name="Timer" type="Timer" parent="." unique_id=2116018672]
-wait_time = 0.1
+[node name="ItemIcon" type="TextureRect" parent="ItemContainer" unique_id=1600641784]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.058823474
+anchor_top = 0.06521739
+anchor_right = 0.9117646
+anchor_bottom = 0.92753625
+grow_horizontal = 2
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="RouletteSound" type="AudioStreamPlayer" parent="." unique_id=1417786589]
+[node name="Timer" type="Timer" parent="ItemContainer" unique_id=860659781]
+
+[node name="RouletteSound" type="AudioStreamPlayer" parent="ItemContainer" unique_id=559539862]
 stream = ExtResource("3_audio")
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="LapConter" type="Label" parent="." unique_id=1000513160]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TimerLaber" type="Label" parent="." unique_id=560380155]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Leaderboard" type="VBoxContainer" parent="." unique_id=305724645]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PositionLabel" type="Label" parent="." unique_id=403305546]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=476698146]
+offset_right = 40.0
+offset_bottom = 40.0
