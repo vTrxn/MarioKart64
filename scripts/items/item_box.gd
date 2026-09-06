@@ -4,7 +4,7 @@ extends Area3D
 @onready var collision_shape = $CollisionShape3D
 
 func _ready():
-	connect("body_entered", Callable(self, "_on_body_entered"))
+	body_entered.connect(_on_body_entered)
 
 func _process(delta):
 	model.rotate_y(2.0 * delta)

@@ -12,7 +12,7 @@ extends CharacterBody3D
 @export var steering_smooth: float = 8.0  # que tan rapido gira
 
 @export_group("Derrape")
-@export var jump_force: float = 8.0
+@export var jump_force: float = 4.0
 @export var drift_steering: float = 1.5
 @export var boost_impulse: float = 15.0
 @export var boost_duration: float = 1.0
