@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://c0nui2kjjsg72"]
+
+[ext_resource type="Texture2D" uid="uid://h0h7aop5deb7" path="res://assets/menus/MenuAjustes.png" id="1_k7txy"]
+[ext_resource type="Script" uid="uid://5gxo0wfscnfp" path="res://scripts/menus/menu_ajustes.gd" id="1_ssywj"]
+
+[node name="Control" type="Control" unique_id=589532218]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ssywj")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=858335704]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.29897007, 0.29891407)
+texture = ExtResource("1_k7txy")
+
+[node name="BotonSonido" type="Button" parent="TextureRect" unique_id=60847248]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1245.1895
+offset_top = 686.60986
+offset_right = 1253.1895
+offset_bottom = 694.60986
+scale = Vector2(169.41284, 24.142302)
+
+[node name="BotonAyudas" type="Button" parent="TextureRect" unique_id=1395282684]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1241.8511
+offset_top = 976.5858
+offset_right = 1249.8511
+offset_bottom = 984.5858
+scale = Vector2(169.19821, 24.615097)
+
+[node name="BotonVolver" type="Button" parent="TextureRect" unique_id=1686402786]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 60.206696
+offset_top = 1920.2842
+offset_right = 68.206696
+offset_bottom = 1928.2842
+scale = Vector2(169.87222, 22.642126)
+
+[connection signal="pressed" from="TextureRect/BotonSonido" to="." method="_on_boton_sonido_pressed"]
+[connection signal="pressed" from="TextureRect/BotonAyudas" to="." method="_on_boton_ayudas_pressed"]
+[connection signal="pressed" from="TextureRect/BotonVolver" to="." method="_on_boton_volver_pressed"]

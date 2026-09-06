@@ -1,3 +1,8 @@
+Control
+Button
+TextureRect
+CanvasLayer
+ColorRect
 DirectionalLight3D
 WorldEnvironment
 CSGBox3D

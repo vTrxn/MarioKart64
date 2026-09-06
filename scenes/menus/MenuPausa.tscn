@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://xhuhph2kkkcs"]
+
+[ext_resource type="Script" uid="uid://b6kde7k3q3263" path="res://scripts/menus/menu_pausa.gd" id="1_c7qep"]
+[ext_resource type="Texture2D" uid="uid://bqcipnnljarv6" path="res://assets/menus/MenuPausa.png" id="2_pws3l"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=569808752]
+script = ExtResource("1_c7qep")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=163756672]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect" unique_id=68241178]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(16.248158, 16.299887)
+texture = ExtResource("2_pws3l")
+expand_mode = 3
+
+[node name="BotonContinuar" type="Button" parent="ColorRect/TextureRect" unique_id=741246608]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 23.694992
+offset_top = 15.39888
+offset_right = 31.694992
+offset_bottom = 23.39888
+scale = Vector2(3.1322072, 0.45464495)
+
+[node name="BotonAjustes" type="Button" parent="ColorRect/TextureRect" unique_id=159298123]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 23.818087
+offset_top = 20.85904
+offset_right = 31.818087
+offset_bottom = 28.85904
+scale = Vector2(3.131325, 0.47030306)
+
+[node name="BotonSalir" type="Button" parent="ColorRect/TextureRect" unique_id=1743476721]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 23.818087
+offset_top = 26.01245
+offset_right = 31.818087
+offset_bottom = 34.01245
+scale = Vector2(3.128719, 0.42446995)
+
+[connection signal="pressed" from="ColorRect/TextureRect/BotonContinuar" to="." method="_on_boton_continuar_pressed"]
+[connection signal="pressed" from="ColorRect/TextureRect/BotonAjustes" to="." method="_on_boton_ajustes_pressed"]
+[connection signal="pressed" from="ColorRect/TextureRect/BotonSalir" to="." method="_on_boton_salir_pressed"]

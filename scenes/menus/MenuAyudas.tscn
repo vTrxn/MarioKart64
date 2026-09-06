@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bbxk8ikvylcpf"]
+
+[ext_resource type="Script" uid="uid://bjp4a3gg2y5tu" path="res://scripts/menus/menu_ayudas.gd" id="1_3p321"]
+[ext_resource type="Texture2D" uid="uid://bowsbh5xmvvak" path="res://assets/menus/MenuAyudas.png" id="2_dpkyu"]
+
+[node name="Control" type="Control" unique_id=889522227]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3p321")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1764412831]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.29908618, 0.29866004)
+texture = ExtResource("2_dpkyu")
+
+[node name="BotonVolver" type="Button" parent="TextureRect" unique_id=2088823198]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 66.87035
+offset_top = 1911.8728
+offset_right = 74.87035
+offset_bottom = 1919.8728
+scale = Vector2(169.44458, 24.949709)
+
+[connection signal="pressed" from="TextureRect/BotonVolver" to="." method="_on_boton_volver_pressed"]

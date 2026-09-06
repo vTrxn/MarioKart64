@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://u8mty4pp00h4"]
+
+[ext_resource type="Script" uid="uid://b7hmslu1ot0qh" path="res://scripts/menus/menu_principal.gd" id="1_be4aw"]
+[ext_resource type="Texture2D" uid="uid://3lkfmqg8n1ip" path="res://assets/menus/MenuPrincipal.png" id="2_py8mu"]
+
+[node name="Control" type="Control" unique_id=274805989]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_be4aw")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1142609100]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.5606302, 0.5592604)
+texture = ExtResource("2_py8mu")
+
+[node name="BotonJugar" type="Button" parent="TextureRect" unique_id=1033367280]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 53.511208
+offset_top = 380.8601
+offset_right = 61.511208
+offset_bottom = 388.8601
+scale = Vector2(90.1595, 13.170229)
+
+[node name="BotonAjustes" type="Button" parent="TextureRect" unique_id=588446832]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 53.511208
+offset_top = 536.42267
+offset_right = 61.511208
+offset_bottom = 544.42267
+scale = Vector2(90.24123, 13.030022)
+
+[node name="BotonSalir" type="Button" parent="TextureRect" unique_id=2030745371]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 55.294907
+offset_top = 688.4092
+offset_right = 63.294907
+offset_bottom = 696.4092
+scale = Vector2(89.95197, 12.573335)
+
+[connection signal="pressed" from="TextureRect/BotonJugar" to="." method="_on_boton_jugar_pressed"]
+[connection signal="pressed" from="TextureRect/BotonAjustes" to="." method="_on_boton_ajustes_pressed"]
+[connection signal="pressed" from="TextureRect/BotonSalir" to="." method="_on_boton_salir_pressed"]
