@@ -32,3 +32,4 @@ transform = Transform3D(140, 0, 0, 0, 140, 0, 0, 0, 140, 117.48947, 0, -23.32484
 
 [node name="Playerkart" parent="." unique_id=1849314512 instance=ExtResource("2_ltx7w")]
 transform = Transform3D(-0.9999979, 0, 0.0020516778, 0, 1, 0, -0.0020516778, 0, -0.9999979, 118.19221, 0.233598, -7.048349)
+max_speed = 50.0
