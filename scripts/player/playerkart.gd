@@ -11,8 +11,16 @@ extends CharacterBody3D
 @export var steering_speed: float = 1.2  #cuanto gira
 @export var steering_smooth: float = 8.0  # que tan rapido gira
 
+@export_group("Derrape")
+@export var jump_force: float = 8.0
+@export var drift_steering: float = 2.0
+@export var boost_impulse: float = 2000.0
+
 var current_speed: float = 0.0
 var current_steering: float = 0.0
+var is_drifting: bool = false
+var drift_dir: float = 0.0
+var drift_timer: float = 0.0
 
 @onready var item_roulette = $ItemRoulette
 
@@ -101,11 +109,18 @@ func _physics_process(delta: float) -> void:
 	else:
 		current_speed = move_toward(current_speed, 0.0, friction * delta)
 	
+	_handle_drift(turn_input,delta)
+	
 	current_steering = lerp(current_steering, turn_input, steering_smooth * delta)
 	
 	if abs(current_speed) > 0.1:
 		var speed_factor :float = clamp(abs(current_speed) / max_speed, 0.3, 1.0)
-		rotate_y(current_steering * steering_speed * speed_factor * delta * sign(current_speed))
+		
+		if is_drifting:
+			var total_drift_turn: float = (drift_dir * drift_steering) + (current_steering * 0.5)
+			rotate_y(total_drift_turn * delta * sign(current_speed))
+		else:
+			rotate_y(current_steering * steering_speed * speed_factor * delta * sign(current_speed))
 	
 	var forward_dir := -transform.basis.z
 	var horrizontal_velocity := forward_dir * current_speed
@@ -114,7 +129,6 @@ func _physics_process(delta: float) -> void:
 	velocity.z = horrizontal_velocity.z
 	
 	move_and_slide()
-	
 	if has_node("SpringArm3D"):
 		var spring_arm = get_node("SpringArm3D")
 		spring_arm.global_position = global_position
@@ -125,3 +139,24 @@ func _physics_process(delta: float) -> void:
 		
 		var new_basis = spring_arm.global_transform.basis.slerp(target_basis, 5.0 * delta)
 		spring_arm.global_transform.basis = new_basis.orthonormalized()
+
+	
+func  _handle_drift(turn_input: float, delta: float):
+	if Input.is_action_just_pressed("derrapar") and is_on_floor() and abs(turn_input) > 0.2 and current_speed > 5.0:
+		is_drifting = true
+		drift_dir = sign(turn_input)
+		drift_timer = 0.0
+		velocity.y = jump_force
+	
+	if is_drifting:
+		if Input.is_action_just_pressed("derrapar") and is_on_floor():
+			drift_timer += delta
+		else:
+			_end_drift()
+func _end_drift():
+	if drift_timer >= 1.0:
+		current_speed = min(current_speed + boost_impulse, max_speed + boost_impulse)
+	
+	is_drifting = false
+	drift_dir = 0.0
+	drift_timer = 0.0
