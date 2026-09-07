@@ -12,4 +12,3 @@ VBoxContainer
 Timer
 DirectionalLight3D
 WorldEnvironment
-CSGBox3D

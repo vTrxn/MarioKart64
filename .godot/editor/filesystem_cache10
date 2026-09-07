@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1788758234
+::res://::1788759191
 icon.svg::CompressedTexture2D::5866279888725123995::1788756556::1788756574::1::::<><><>0<>0<>97c30809ca3f8de52d0a8a5bbc977061<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://assets/::1788756556
 ::res://assets/3d/::1788756556
@@ -276,7 +276,7 @@ body_gng_lod_e.png::CompressedTexture2D::1390724687594845249::1788756556::178875
 body_gng_lod_s.png::CompressedTexture2D::3011029947758484728::1788756556::1788756574::1::::<><><>0<>0<>dc1eabe0721614d85b3e911501f02cb6<>res://.godot/imported/body_gng_lod_s.png-379ecaab9e83acda74bcd665377c67f0.ctex::
 body_gng_s.png::CompressedTexture2D::5715173592516520216::1788756556::1788756574::1::::<><><>0<>0<>76ea1d889f608eecfcd06f934c121f20<>res://.godot/imported/body_gng_s.png-3780f97919dbb356f5ac1180d6c3a837.ctex::
 emblem_dummy.png::CompressedTexture2D::7331483033228554942::1788756556::1788756579::1::::<><><>0<>0<>ea568d72ad0d39a18103466928a0b5c1<>res://.godot/imported/emblem_dummy.png-c936830998b8b8af401a543f1c782d07.s3tc.ctex::
-::res://assets/3d/Veiculos/Cloud 9/::1788757969
+::res://assets/3d/Veiculos/Cloud 9/::1788758235
 body_cld.dae::PackedScene::5279281072021545502::1788756556::1788756578::1::::<><><>0<>0<>71c4594302062b59ab0ac02084fbdcb4<>res://.godot/imported/body_cld.dae-cf74231612f3492e43e507d3a1b2519d.scn::uid://de7swh250ya6d::::res://assets/3d/Veiculos/Cloud 9/body_cld.png<>uid://cu8lyogwiki07::::res://assets/3d/Veiculos/Cloud 9/emblem_dummy.png
 body_cld.png::CompressedTexture2D::7507210117867635313::1788756556::1788756574::1::::<><><>0<>0<>5b1054e98358afae3b991177f8a9c715<>res://.godot/imported/body_cld.png-0e2597d07b3652dcc849f0bb51d1a7bc.s3tc.ctex::
 body_cld_a.png::CompressedTexture2D::8152832028509456696::1788756556::1788756574::1::::<><><>0<>0<>9a6ab2f2b394f3c715e1de813b9ec5fa<>res://.godot/imported/body_cld_a.png-9fa0a5a9c71a5f82d5efea4cf55f714f.ctex::
@@ -486,7 +486,8 @@ MenuPausa.tscn::PackedScene::1630021688270234382::1788756556::0::1::::<><><>0<>0
 MenuPrincipal.tscn::PackedScene::1472665178704330567::1788756556::0::1::::<><><>0<>0<><>::uid://b7hmslu1ot0qh::::res://scripts/menus/menu_principal.gd<>uid://3lkfmqg8n1ip::::res://assets/menus/MenuPrincipal.png
 MenuSeleccionMapa.tscn::PackedScene::1228769629643419271::1788756556::0::1::::<><><>0<>0<><>::uid://b1t0fk4mb0syx::::res://scripts/menus/menu_seleccion_mapa.gd<>uid://pe1x1vcoridx::::res://assets/menus/MenuSeleccionMapa.png
 MenuSeleccionPersonaje.tscn::PackedScene::3055239842207146642::1788756556::0::1::::<><><>0<>0<><>::uid://druu322mu0chp::::res://scripts/menus/menu_seleccion_personaje.gd<>uid://d4km8shiimkeg::::res://assets/menus/MenuSeleccionPersonajes.png
-::res://scenes/player/::1788757680
+::res://scenes/player/::1788758938
+luigi.tscn::PackedScene::2657106276881904399::1788758938::0::1::::<><><>0<>0<><>::uid://bt7ouuign4dxt::::res://assets/3d/Personajes/Luigi/lg_lod/lg_lod.obj<>uid://b84r0gp7amgpm::::res://assets/3d/Ruedas/Standard/tire_std_R.dae<>uid://c4id462yq64rt::::res://scenes/ui/Hud.tscn<>uid://bnpsm0wl6ii0v::::res://assets/3d/Veiculos/Blue Seven/body_race.obj
 peach.tscn::PackedScene::8672282769918391913::1788757680::0::1::::<><><>0<>0<><>::uid://bf3kasxldmxrs::::res://assets/3d/Personajes/Peach/pc_lod/pc_lod.obj<>uid://chhk8ucetk5qg::::res://assets/3d/Veiculos/Cloud 9/body_cld.dae<>uid://c4id462yq64rt::::res://scenes/ui/Hud.tscn
 playerkart.tscn::PackedScene::2497410377740893621::1788756708::0::1::::<><><>0<>0<><>::uid://daqugjt0oindn::::res://scripts/player/playerkart.gd<>uid://bmmxss5peq10d::::res://assets/3d/Veiculos/Pipe Frame/body_pipe.dae<>uid://sba62es5bc1j::::res://assets/3d/Personajes/Mario/mr_lod/mr_lod.obj<>uid://b84r0gp7amgpm::::res://assets/3d/Ruedas/Standard/tire_std_R.dae<>uid://c4id462yq64rt::::res://scenes/ui/Hud.tscn
 toad.tscn::PackedScene::1405091103820883416::1788755547::0::1::::<><><>0<>0<><>::uid://c4ljt073lyg54::::res://assets/3d/Personajes/Toad/td_lod/td_lod.obj<>uid://b84r0gp7amgpm::::res://assets/3d/Ruedas/Standard/tire_std_R.dae<>uid://c4id462yq64rt::::res://scenes/ui/Hud.tscn<>uid://db731sam3i5tt::::res://assets/3d/Veiculos/Bruiser/body_gng.dae
