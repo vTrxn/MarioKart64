@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://ddfpda0y1ly37"]
+
+[ext_resource type="ArrayMesh" uid="uid://dml1akx1olavu" path="res://assets/3d/Personajes/Yoshi/ys_lod/ys_lod.obj" id="2_jil33"]
+[ext_resource type="PackedScene" uid="uid://b84r0gp7amgpm" path="res://assets/3d/Ruedas/Standard/tire_std_R.dae" id="3_rfup8"]
+[ext_resource type="PackedScene" uid="uid://boytkc52wujkk" path="res://assets/3d/Veiculos/B Dasher/body_dsh.dae" id="4_7kh0r"]
+[ext_resource type="PackedScene" uid="uid://c4id462yq64rt" path="res://scenes/ui/Hud.tscn" id="4_seqsw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x35fq"]
+size = Vector3(1.5674438, 1.0517883, 1.3066406)
+
+[node name="Yoshi" type="CharacterBody3D" unique_id=1564594624]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1548058063]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008392334, 0.4039154, 0.0036621094)
+shape = SubResource("BoxShape3D_x35fq")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=1613803751]
+transform = Transform3D(1, 0, 0, 0, 0.8660252, 0.49999988, 0, -0.49999988, 0.8660252, 0, 0, 0)
+collision_mask = 0
+spring_length = 3.5
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=692258539]
+transform = Transform3D(1, -1.5354354e-08, -5.370028e-09, 1.2327759e-08, 0.9307597, -0.36563212, 1.061225e-08, 0.36563212, 0.9307597, 0, -0.27446973, 2.3213046)
+fov = 75.403145
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SpringArm3D" unique_id=2056974778]
+transform = Transform3D(1, 0, 0, 0, 0.98400617, -0.17813659, 0, 0.17813659, 0.98400617, 0, -0.11192274, 3.5448093)
+
+[node name="body_dsh" parent="." unique_id=2069262876 instance=ExtResource("4_7kh0r")]
+transform = Transform3D(-0.1, 0, -8.742278e-09, 0, 0.1, 0, 8.742278e-09, 0, -0.1, -0.008, -0.105, 0.158)
+
+[node name="MrLod" type="MeshInstance3D" parent="." unique_id=62118018]
+transform = Transform3D(-0.1, 0, -8.742278e-09, 0, 0.1, 0, 8.742278e-09, 0, -0.1, -0.012486935, 0.15334424, 0.18484545)
+mesh = ExtResource("2_jil33")
+
+[node name="tire_std_R" parent="." unique_id=1704087180 instance=ExtResource("3_rfup8")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.5814105, 0.18523209, 0.5813692)
+
+[node name="tire_std_R2" parent="." unique_id=1449111272 instance=ExtResource("3_rfup8")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.5551894, 0.18887702, 0.5847285)
+
+[node name="tire_std_R3" parent="." unique_id=1960200023 instance=ExtResource("3_rfup8")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -0.5143235, 0.10873601, -0.60146725)
+
+[node name="tire_std_R4" parent="." unique_id=785167281 instance=ExtResource("3_rfup8")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.49535072, 0.10714105, -0.61049664)
+
+[node name="Hud" parent="." unique_id=1137834404 instance=ExtResource("4_seqsw")]
