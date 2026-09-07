@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://c4id462yq64rt"]
+
+[ext_resource type="Script" uid="uid://bcq2omlrimpmu" path="res://scripts/ui/item_roulette.gd" id="1_5wb3c"]
+[ext_resource type="Texture2D" uid="uid://b6aftcw72c75c" path="res://assets/roulette/mark_rulet.png" id="2_1se2i"]
+[ext_resource type="AudioStream" uid="uid://c0acupmn0te17" path="res://assets/audio/Mario Kart Wii - Item Box - Sound Effect.mp3" id="3_ehre4"]
+[ext_resource type="Texture2D" path="res://assets/LapAndTime/LapTitle.png" id="4_3g4ve"]
+[ext_resource type="Texture2D" path="res://assets/LapAndTime/Lap1.png" id="5_an1mh"]
+[ext_resource type="Texture2D" path="res://assets/LapAndTime/TimeTitle.png" id="6_32yah"]
+[ext_resource type="FontFile" path="res://assets/LapAndTime/TimerNumbers/MayroKartRetro-Regular.ttf" id="7_q8sow"]
+
+[node name="Hud" type="CanvasLayer" unique_id=1137834404]
+script = ExtResource("1_5wb3c")
+
+[node name="ItemContainer" type="Control" parent="." unique_id=107244886]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -68.0
+offset_top = 40.0
+offset_right = 68.0
+offset_bottom = 178.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="frame" type="TextureRect" parent="ItemContainer" unique_id=753097398]
+layout_mode = 0
+offset_right = 135.0
+offset_bottom = 137.0
+texture = ExtResource("2_1se2i")
+expand_mode = 1
+
+[node name="ItemIcon" type="TextureRect" parent="ItemContainer" unique_id=1600641784]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.058823474
+anchor_top = 0.06521739
+anchor_right = 0.9117646
+anchor_bottom = 0.92753625
+grow_horizontal = 2
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="ItemContainer" unique_id=860659781]
+
+[node name="RouletteSound" type="AudioStreamPlayer" parent="ItemContainer" unique_id=559539862]
+stream = ExtResource("3_ehre4")
+
+[node name="LapConter" type="HBoxContainer" parent="." unique_id=1068587353]
+offset_left = 208.0
+offset_top = 50.0
+offset_right = 724.0
+offset_bottom = 178.0
+scale = Vector2(0.4, 0.4)
+
+[node name="LapTitle" type="TextureRect" parent="LapConter" unique_id=1845663656]
+layout_mode = 2
+texture = ExtResource("4_3g4ve")
+
+[node name="Lap Number" type="TextureRect" parent="LapConter" unique_id=204342992]
+layout_mode = 2
+texture = ExtResource("5_an1mh")
+
+[node name="TimerContainer" type="HBoxContainer" parent="." unique_id=1511639090]
+offset_left = 772.99994
+offset_top = 47.999996
+offset_right = 1034.0
+offset_bottom = 176.0
+scale = Vector2(0.4, 0.4)
+
+[node name="TimerTitle" type="TextureRect" parent="TimerContainer" unique_id=1373522954]
+layout_mode = 2
+texture = ExtResource("6_32yah")
+
+[node name="TimerValue" type="Label" parent="TimerContainer" unique_id=1124854108]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7597178, 0.34596342, 0.18356732, 1)
+theme_override_fonts/font = ExtResource("7_q8sow")
+theme_override_font_sizes/font_size = 100
+text = "\"00'00\"00\""
+
+[node name="Leaderboard" type="VBoxContainer" parent="." unique_id=305724645]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PositionLabel" type="Label" parent="." unique_id=403305546]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=476698146]
+offset_right = 40.0
+offset_bottom = 40.0
