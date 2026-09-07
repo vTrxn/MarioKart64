@@ -69,7 +69,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.397522, 2.3760543, 0)
 shape = SubResource("CylinderShape3D_1bto1")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="ZonaLava" unique_id=1672876057]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -121.96224, 8.985552, 156.75131)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -121.96224, 10.0526, 155.40753)
 shape = SubResource("CylinderShape3D_fcsne")
 
 [node name="Checkpoint4" parent="." unique_id=1198445923 instance=ExtResource("5_twc5r")]
