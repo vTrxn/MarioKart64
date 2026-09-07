@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="mario kart"
-run/main_scene="uid://l2gau4rbudpc"
+run/main_scene="uid://u8mty4pp00h4"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
