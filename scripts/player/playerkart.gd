@@ -8,7 +8,7 @@ extends CharacterBody3D
 @export var gravity: float = 20.0
 
 @export_group("Direccion y Giro")
-@export var steering_speed: float = 1.2  #cuanto gira
+@export var steering_speed: float = 1.2  # cuanto gira
 @export var steering_smooth: float = 8.0  # que tan rapido gira
 
 @export_group("Derrape")
@@ -16,6 +16,9 @@ extends CharacterBody3D
 @export var drift_steering: float = 1.5
 @export var boost_impulse: float = 15.0
 @export var boost_duration: float = 1.0
+
+@export_group("Checkpoints")
+@export var total_mandatory_checkpoints: int = 3 # Total de checkpoints obligatorios en la pista
 
 var current_speed: float = 0.0
 var current_steering: float = 0.0
@@ -31,11 +34,16 @@ var has_banana_debuff: bool = false
 var has_false_box_debuff: bool = false
 
 var item_manager: Node
-
 var original_spring_arm_basis: Basis
+
+# Variables para sistema de Checkpoints y Respawn
+var last_mandatory_index: int = 0
+var last_visited_checkpoint_index: int = -1
+var last_respawn_transform: Transform3D
 
 func _ready():
 	original_max_speed = max_speed
+	last_respawn_transform = global_transform
 	
 	item_manager = preload("res://scripts/items/comportamiento_carro.gd").new()
 	item_manager.name = "ComportamientoCarro"
@@ -60,6 +68,55 @@ func trigger_item_box() -> bool:
 	if item_manager.has_method("trigger_item_box"):
 		return item_manager.trigger_item_box()
 	return false
+
+
+func register_checkpoint(type: int, index: int, spawn_transform: Transform3D):
+	
+	if index == last_visited_checkpoint_index:
+		return
+		
+	last_visited_checkpoint_index = index
+	last_respawn_transform = spawn_transform
+
+	match type:
+		0: # FINISH_LINE (Línea de Meta)
+			if last_mandatory_index >= total_mandatory_checkpoints:
+				last_mandatory_index = 0
+				if item_roulette:
+					if not item_roulette.is_race_active:
+						item_roulette.start_race_timer()
+					else:
+						item_roulette.advance_lap()
+
+		1: # MANDATORY (Obligatorio)
+			if index == last_mandatory_index + 1:
+				last_mandatory_index = index
+
+		2: # TRACKING (Seguimiento / Atajos)
+			pass 
+
+func respawn():
+	velocity = Vector3.ZERO
+	current_speed = 0.0
+	
+	if last_respawn_transform != Transform3D.IDENTITY:
+		# 1. Guardar la escala original del kart para que no se deforme
+		var original_scale = scale
+		
+		# 2. Aplicar solo posición y rotación (origin y basis normalizada)
+		global_position = last_respawn_transform.origin
+		global_transform.basis = last_respawn_transform.basis.orthonormalized()
+		
+		# 3. Restaurar la escala limpia
+		scale = original_scale
+		
+		# 4. Teletransportar inmediatamente la cámara para evitar que se estire al interpolar
+		if has_node("SpringArm3D"):
+			var spring_arm = get_node("SpringArm3D")
+			spring_arm.global_position = global_position
+			var current_y_rotation = global_transform.basis.get_euler().y
+			var kart_yaw_basis = Basis(Vector3.UP, current_y_rotation)
+			spring_arm.global_transform.basis = (kart_yaw_basis * original_spring_arm_basis).orthonormalized()
 
 func banana_debuff():
 	if has_banana_debuff:
@@ -146,7 +203,6 @@ func _physics_process(delta: float) -> void:
 		var new_basis = spring_arm.global_transform.basis.slerp(target_basis, 5.0 * delta)
 		spring_arm.global_transform.basis = new_basis.orthonormalized()
 
-	
 func _handle_drift(turn_input: float, delta: float):
 	if Input.is_action_just_pressed("derrapar") and is_on_floor():
 		is_drifting = true
@@ -154,7 +210,6 @@ func _handle_drift(turn_input: float, delta: float):
 		drift_timer = 0.0
 		velocity.y = jump_force
 		print("¡Derrape Iniciado!")
-	
 
 	if is_drifting:
 		if Input.is_action_pressed("derrapar"):

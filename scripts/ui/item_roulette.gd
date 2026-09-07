@@ -45,7 +45,7 @@ func _ready():
 		timer.timeout.connect(_on_timer_timeout)
 	
 	_update_lap_display(1)
-	update_position_display(1)
+
 
 func _process(delta: float):
 	if is_rolling:
@@ -85,10 +85,6 @@ func _update_lap_display(lap: int):
 		2: lap_number_rect.texture = TEX_LAP_2
 		3: lap_number_rect.texture = TEX_LAP_3
 
-func update_position_display(pos: int):
-	var suffixes = ["st", "nd", "rd", "th"]
-	var suffix_index = min(pos - 1, 3)
-	position_label.text = "%d%s" % [pos, suffixes[suffix_index]]
 
 func start_roulette():
 	item_container.show()

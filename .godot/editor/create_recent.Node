@@ -1,3 +1,7 @@
+MeshInstance3D
+CollisionShape3D
+Area3D
+Node3D
 CharacterBody3D
 Button
 Control
@@ -8,7 +12,3 @@ CanvasLayer
 AudioStreamPlayer
 SubViewportContainer
 Label
-VBoxContainer
-Timer
-DirectionalLight3D
-WorldEnvironment

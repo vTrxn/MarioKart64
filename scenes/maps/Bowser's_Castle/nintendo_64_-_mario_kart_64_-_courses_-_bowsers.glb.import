@@ -180,7 +180,8 @@ _subresources={
 "generate/physics": true
 },
 "PATH:Sketchfab_model/Bowser's Castle_obj_cleaner_materialmerger_gles/Object_52": {
-"generate/physics": true
+"generate/physics": true,
+"node/script": null
 },
 "PATH:Sketchfab_model/Bowser's Castle_obj_cleaner_materialmerger_gles/Object_6": {
 "generate/physics": true
