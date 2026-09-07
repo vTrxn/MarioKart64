@@ -8,8 +8,8 @@ extends CharacterBody3D
 @export var gravity: float = 20.0
 
 @export_group("Direccion y Giro")
-@export var steering_speed: float = 1.2  # cuanto gira
-@export var steering_smooth: float = 8.0  # que tan rapido gira
+@export var steering_speed: float = 1.2  
+@export var steering_smooth: float = 8.0  
 
 @export_group("Derrape")
 @export var jump_force: float = 4.0
@@ -19,7 +19,7 @@ extends CharacterBody3D
 @export var min_drift_time: float = 1.0
 
 @export_group("Checkpoints")
-@export var total_mandatory_checkpoints: int = 10 # Total de checkpoints obligatorios en la pista
+@export var total_mandatory_checkpoints: int = 10 
 
 var current_speed: float = 0.0
 var current_steering: float = 0.0
@@ -37,7 +37,7 @@ var has_false_box_debuff: bool = false
 var item_manager: Node
 var original_spring_arm_basis: Basis
 
-# Variables para sistema de Checkpoints y Respawn
+
 var last_mandatory_index: int = 0
 var last_visited_checkpoint_index: int = -1
 var last_respawn_transform: Transform3D
@@ -80,8 +80,8 @@ func register_checkpoint(type: int, index: int, spawn_transform: Transform3D):
 	last_respawn_transform = spawn_transform
 
 	match type:
-		0: # FINISH_LINE (Línea de Meta)
-			# Si la carrera aún no ha iniciado al cruzar la meta por primera vez
+		0: 
+			
 			if item_roulette and not item_roulette.is_race_active:
 				item_roulette.start_race_timer()
 				last_mandatory_index = 0
@@ -89,7 +89,7 @@ func register_checkpoint(type: int, index: int, spawn_transform: Transform3D):
 				print("¡Carrera iniciada!")
 				return
 
-			# Si la carrera ya está activa, valida que pasó por los checkpoints para contar la vuelta
+			
 			if last_mandatory_index >= total_mandatory_checkpoints and checkpoints_passed_in_lap >= (total_mandatory_checkpoints / 2):
 				last_mandatory_index = 0
 				checkpoints_passed_in_lap = 0
@@ -99,13 +99,13 @@ func register_checkpoint(type: int, index: int, spawn_transform: Transform3D):
 			else:
 				print("Meta cruzada pero faltan checkpoints: ", last_mandatory_index, "/", total_mandatory_checkpoints)
 
-		1: # MANDATORY (Obligatorio)
+		1: 
 			if index > last_mandatory_index:
 				last_mandatory_index = index
 				checkpoints_passed_in_lap += 1
 				print("Checkpoint validado: ", index, "/", total_mandatory_checkpoints)
 
-		2: # TRACKING (Seguimiento / Atajos)
+		2: 
 			pass
 
 func respawn():
@@ -116,17 +116,17 @@ func respawn():
 	boost_timer = 0.0
 	
 	if last_respawn_transform != Transform3D.IDENTITY:
-		# 1. Guardar la escala original del kart para que no se deforme
+		
 		var original_scale = scale
 		
-		# 2. Aplicar solo posición y rotación (origin y basis normalizada)
+		
 		global_position = last_respawn_transform.origin
 		global_transform.basis = last_respawn_transform.basis.orthonormalized()
 		
-		# 3. Restaurar la escala limpia
+		
 		scale = original_scale
 		
-		# 4. Teletransportar inmediatamente la cámara para evitar que se estire al interpolar
+		
 		if has_node("SpringArm3D"):
 			var spring_arm = get_node("SpringArm3D")
 			spring_arm.global_position = global_position
