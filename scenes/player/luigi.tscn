@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bd4eff58et752"]
+
+[ext_resource type="ArrayMesh" uid="uid://bt7ouuign4dxt" path="res://assets/3d/Personajes/Luigi/lg_lod/lg_lod.obj" id="1_iyxnd"]
+[ext_resource type="PackedScene" uid="uid://b84r0gp7amgpm" path="res://assets/3d/Ruedas/Standard/tire_std_R.dae" id="2_rdjqu"]
+[ext_resource type="PackedScene" uid="uid://c4id462yq64rt" path="res://scenes/ui/Hud.tscn" id="3_j113q"]
+[ext_resource type="ArrayMesh" uid="uid://bnpsm0wl6ii0v" path="res://assets/3d/Veiculos/Blue Seven/body_race.obj" id="4_q2kos"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lfsv3"]
+size = Vector3(1.5674438, 1.0517883, 1.3066406)
+
+[node name="Luigi" type="CharacterBody3D" unique_id=963420798]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=637747481]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008392334, 0.4039154, 0.0036621094)
+shape = SubResource("BoxShape3D_lfsv3")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=34662068]
+transform = Transform3D(1, 0, 0, 0, 0.8660252, 0.49999988, 0, -0.49999988, 0.8660252, 0, 0, 0)
+collision_mask = 0
+spring_length = 3.5
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=1044441797]
+transform = Transform3D(1, -1.5354354e-08, -5.370028e-09, 1.2327759e-08, 0.9307597, -0.36563212, 1.061225e-08, 0.36563212, 0.9307597, 0, -0.27446973, 2.3213046)
+fov = 75.403145
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SpringArm3D" unique_id=1679902501]
+transform = Transform3D(1, 0, 0, 0, 0.98400617, -0.17813659, 0, 0.17813659, 0.98400617, 0, -0.11192274, 3.5448093)
+
+[node name="MrLod" type="MeshInstance3D" parent="." unique_id=1331631713]
+transform = Transform3D(-0.1, 0, -8.742278e-09, 0, 0.1, 0, 8.742278e-09, 0, -0.1, -0.012486935, 0.15334424, 0.18484545)
+mesh = ExtResource("1_iyxnd")
+
+[node name="tire_std_R" parent="." unique_id=1674862573 instance=ExtResource("2_rdjqu")]
+transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, -0.5, 0.05, 0.65)
+
+[node name="tire_std_R2" parent="." unique_id=776990173 instance=ExtResource("2_rdjqu")]
+transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, 0.5, 0.05, 0.65)
+
+[node name="tire_std_R3" parent="." unique_id=1600246817 instance=ExtResource("2_rdjqu")]
+transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, -0.5, 0.05, -0.55)
+
+[node name="tire_std_R4" parent="." unique_id=1492413463 instance=ExtResource("2_rdjqu")]
+transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, 0.5, 0.05, -0.55)
+
+[node name="Hud" parent="." unique_id=1137834404 instance=ExtResource("3_j113q")]
+
+[node name="BodyRace" type="MeshInstance3D" parent="." unique_id=652616683]
+transform = Transform3D(-9.5, 0, -8.305164e-07, 0, 9.5, 0, 8.305164e-07, 0, -9.5, -0.008, -0.105, 0.158)
+mesh = ExtResource("4_q2kos")
