@@ -39,4 +39,10 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:AnimationPlayer": {
+"import/skip_import": true
+}
+}
+}

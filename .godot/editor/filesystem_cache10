@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1788757282
+::res://::1788757709
 icon.svg::CompressedTexture2D::5866279888725123995::1788756556::1788756574::1::::<><><>0<>0<>97c30809ca3f8de52d0a8a5bbc977061<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://assets/::1788756556
 ::res://assets/3d/::1788756556
@@ -486,7 +486,8 @@ MenuPausa.tscn::PackedScene::1630021688270234382::1788756556::0::1::::<><><>0<>0
 MenuPrincipal.tscn::PackedScene::1472665178704330567::1788756556::0::1::::<><><>0<>0<><>::uid://b7hmslu1ot0qh::::res://scripts/menus/menu_principal.gd<>uid://3lkfmqg8n1ip::::res://assets/menus/MenuPrincipal.png
 MenuSeleccionMapa.tscn::PackedScene::1228769629643419271::1788756556::0::1::::<><><>0<>0<><>::uid://b1t0fk4mb0syx::::res://scripts/menus/menu_seleccion_mapa.gd<>uid://pe1x1vcoridx::::res://assets/menus/MenuSeleccionMapa.png
 MenuSeleccionPersonaje.tscn::PackedScene::3055239842207146642::1788756556::0::1::::<><><>0<>0<><>::uid://druu322mu0chp::::res://scripts/menus/menu_seleccion_personaje.gd<>uid://d4km8shiimkeg::::res://assets/menus/MenuSeleccionPersonajes.png
-::res://scenes/player/::1788757243
+::res://scenes/player/::1788757680
+peach.tscn::PackedScene::8672282769918391913::1788757680::0::1::::<><><>0<>0<><>::uid://bf3kasxldmxrs::::res://assets/3d/Personajes/Peach/pc_lod/pc_lod.obj<>uid://chhk8ucetk5qg::::res://assets/3d/Veiculos/Cloud 9/body_cld.dae<>uid://c4id462yq64rt::::res://scenes/ui/Hud.tscn
 playerkart.tscn::PackedScene::2497410377740893621::1788756708::0::1::::<><><>0<>0<><>::uid://daqugjt0oindn::::res://scripts/player/playerkart.gd<>uid://bmmxss5peq10d::::res://assets/3d/Veiculos/Pipe Frame/body_pipe.dae<>uid://sba62es5bc1j::::res://assets/3d/Personajes/Mario/mr_lod/mr_lod.obj<>uid://b84r0gp7amgpm::::res://assets/3d/Ruedas/Standard/tire_std_R.dae<>uid://c4id462yq64rt::::res://scenes/ui/Hud.tscn
 toad.tscn::PackedScene::1405091103820883416::1788755547::0::1::::<><><>0<>0<><>::uid://c4ljt073lyg54::::res://assets/3d/Personajes/Toad/td_lod/td_lod.obj<>uid://b84r0gp7amgpm::::res://assets/3d/Ruedas/Standard/tire_std_R.dae<>uid://c4id462yq64rt::::res://scenes/ui/Hud.tscn<>uid://db731sam3i5tt::::res://assets/3d/Veiculos/Bruiser/body_gng.dae
 yoshi.tscn::PackedScene::7381066622782677232::1788755539::0::1::::<><><>0<>0<><>::uid://dml1akx1olavu::::res://assets/3d/Personajes/Yoshi/ys_lod/ys_lod.obj<>uid://b84r0gp7amgpm::::res://assets/3d/Ruedas/Standard/tire_std_R.dae<>uid://boytkc52wujkk::::res://assets/3d/Veiculos/B Dasher/body_dsh.dae<>uid://c4id462yq64rt::::res://scenes/ui/Hud.tscn
