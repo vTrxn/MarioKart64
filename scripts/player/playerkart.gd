@@ -71,7 +71,6 @@ func trigger_item_box() -> bool:
 
 
 func register_checkpoint(type: int, index: int, spawn_transform: Transform3D):
-	
 	if index == last_visited_checkpoint_index:
 		return
 		
@@ -80,20 +79,24 @@ func register_checkpoint(type: int, index: int, spawn_transform: Transform3D):
 
 	match type:
 		0: # FINISH_LINE (Línea de Meta)
+			# Si la carrera aún no ha iniciado al cruzar la meta por primera vez
+			if item_roulette and not item_roulette.is_race_active:
+				item_roulette.start_race_timer()
+				last_mandatory_index = 0
+				return
+
+			# Si la carrera ya está activa, valida que pasó por todos los obligatorios para contar la vuelta
 			if last_mandatory_index >= total_mandatory_checkpoints:
 				last_mandatory_index = 0
 				if item_roulette:
-					if not item_roulette.is_race_active:
-						item_roulette.start_race_timer()
-					else:
-						item_roulette.advance_lap()
+					item_roulette.advance_lap()
 
 		1: # MANDATORY (Obligatorio)
 			if index == last_mandatory_index + 1:
 				last_mandatory_index = index
 
 		2: # TRACKING (Seguimiento / Atajos)
-			pass 
+			pass
 
 func respawn():
 	velocity = Vector3.ZERO
