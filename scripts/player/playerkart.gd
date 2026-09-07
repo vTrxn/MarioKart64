@@ -19,7 +19,7 @@ extends CharacterBody3D
 @export var min_drift_time: float = 1.0
 
 @export_group("Checkpoints")
-@export var total_mandatory_checkpoints: int = 3 # Total de checkpoints obligatorios en la pista
+@export var total_mandatory_checkpoints: int = 10 # Total de checkpoints obligatorios en la pista
 
 var current_speed: float = 0.0
 var current_steering: float = 0.0
@@ -41,6 +41,7 @@ var original_spring_arm_basis: Basis
 var last_mandatory_index: int = 0
 var last_visited_checkpoint_index: int = -1
 var last_respawn_transform: Transform3D
+var checkpoints_passed_in_lap: int = 0
 
 func _ready():
 	original_max_speed = max_speed
@@ -84,17 +85,25 @@ func register_checkpoint(type: int, index: int, spawn_transform: Transform3D):
 			if item_roulette and not item_roulette.is_race_active:
 				item_roulette.start_race_timer()
 				last_mandatory_index = 0
+				checkpoints_passed_in_lap = 0
+				print("¡Carrera iniciada!")
 				return
 
-			# Si la carrera ya está activa, valida que pasó por todos los obligatorios para contar la vuelta
-			if last_mandatory_index >= total_mandatory_checkpoints:
+			# Si la carrera ya está activa, valida que pasó por los checkpoints para contar la vuelta
+			if last_mandatory_index >= total_mandatory_checkpoints and checkpoints_passed_in_lap >= (total_mandatory_checkpoints / 2):
 				last_mandatory_index = 0
+				checkpoints_passed_in_lap = 0
 				if item_roulette:
 					item_roulette.advance_lap()
+					print("¡Vuelta completada!")
+			else:
+				print("Meta cruzada pero faltan checkpoints: ", last_mandatory_index, "/", total_mandatory_checkpoints)
 
 		1: # MANDATORY (Obligatorio)
-			if index == last_mandatory_index + 1:
+			if index > last_mandatory_index:
 				last_mandatory_index = index
+				checkpoints_passed_in_lap += 1
+				print("Checkpoint validado: ", index, "/", total_mandatory_checkpoints)
 
 		2: # TRACKING (Seguimiento / Atajos)
 			pass

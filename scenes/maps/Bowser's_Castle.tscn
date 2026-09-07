@@ -94,28 +94,28 @@ checkpoint_index = 3
 
 [node name="Checkpoint5" parent="." unique_id=124766342 instance=ExtResource("5_twc5r")]
 transform = Transform3D(0.07537988, 0, -20.289083, 0, 9.188239, 0, 0.9361873, 0, 1.6336341, -61.171825, 4.7311068, 245.59125)
-checkpoint_index = 3
+checkpoint_index = 4
 
 [node name="Checkpoint6" parent="." unique_id=1518963374 instance=ExtResource("5_twc5r")]
 transform = Transform3D(-4.1054484e-08, 0, 20.354746, 0, 9.188238, 0, -0.9392171, 0, -8.897342e-07, -61.171825, 4.7311068, 315.65424)
-checkpoint_index = 3
+checkpoint_index = 5
 
 [node name="Checkpoint7" parent="." unique_id=1010873831 instance=ExtResource("5_twc5r")]
 transform = Transform3D(0.9391011, 0, 0.31971845, 0, 9.188238, 0, -0.01475258, 0, 20.352234, -213.5317, 4.7311068, 346.50168)
-checkpoint_index = 3
+checkpoint_index = 6
 
 [node name="Checkpoint8" parent="." unique_id=123146319 instance=ExtResource("5_twc5r")]
 transform = Transform3D(-0.10623361, 0, 8.178589, 0, 9.188237, 0, -0.93240047, 0, -0.93183243, -120.777565, 13.722015, 181.75336)
-checkpoint_index = 3
+checkpoint_index = 7
 
 [node name="Checkpoint9" parent="." unique_id=1062649705 instance=ExtResource("5_twc5r")]
 transform = Transform3D(-0.12585855, 0, 13.779865, 0, 9.188237, 0, -0.9308696, 0, -1.8631116, -151.49191, 4.558213, 23.884918)
-checkpoint_index = 3
+checkpoint_index = 8
 
 [node name="Checkpoint10" parent="." unique_id=1693011029 instance=ExtResource("5_twc5r")]
 transform = Transform3D(0.8280369, 0, 2.4805822, 0, 22.997595, 0, -0.052095667, 0, 39.427723, -6.471485, 12.229884, -86.500465)
-checkpoint_index = 3
+checkpoint_index = 9
 
 [node name="Checkpoint11" parent="." unique_id=1014155460 instance=ExtResource("5_twc5r")]
 transform = Transform3D(-0.82775277, 0, -2.686992, 0, 22.997595, 0, 0.056430556, 0, -39.414196, 87.056335, 11.8759165, -86.500465)
-checkpoint_index = 3
+checkpoint_index = 10
