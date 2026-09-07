@@ -14,8 +14,9 @@ extends CharacterBody3D
 @export_group("Derrape")
 @export var jump_force: float = 4.0
 @export var drift_steering: float = 1.5
-@export var boost_impulse: float = 15.0
+@export var boost_multiplier: float = 1.5
 @export var boost_duration: float = 1.0
+@export var min_drift_time: float = 1.0
 
 @export_group("Checkpoints")
 @export var total_mandatory_checkpoints: int = 3 # Total de checkpoints obligatorios en la pista
@@ -101,6 +102,9 @@ func register_checkpoint(type: int, index: int, spawn_transform: Transform3D):
 func respawn():
 	velocity = Vector3.ZERO
 	current_speed = 0.0
+	is_drifting = false
+	drift_timer = 0.0
+	boost_timer = 0.0
 	
 	if last_respawn_transform != Transform3D.IDENTITY:
 		# 1. Guardar la escala original del kart para que no se deforme
@@ -168,7 +172,7 @@ func _physics_process(delta: float) -> void:
 	
 	if boost_timer > 0.0:
 		boost_timer -= delta
-		current_speed = max_speed + boost_impulse
+		current_speed = max_speed * boost_multiplier
 	else:
 		if acceleration_input !=0:
 			current_speed = move_toward(current_speed, acceleration_input * max_speed, acceleration * delta)
@@ -207,7 +211,7 @@ func _physics_process(delta: float) -> void:
 		spring_arm.global_transform.basis = new_basis.orthonormalized()
 
 func _handle_drift(turn_input: float, delta: float):
-	if Input.is_action_just_pressed("derrapar") and is_on_floor():
+	if Input.is_action_just_pressed("derrapar") and is_on_floor() and not is_drifting and boost_timer <= 0.0:
 		is_drifting = true
 		drift_dir = sign(turn_input) if turn_input != 0 else 1.0
 		drift_timer = 0.0
@@ -222,7 +226,7 @@ func _handle_drift(turn_input: float, delta: float):
 			_end_drift()
 
 func _end_drift():
-	if drift_timer >= 0.4:
+	if drift_timer >= min_drift_time:
 		boost_timer = boost_duration
 		print("¡SE ACTIVÓ TURBO!")
 	else:
