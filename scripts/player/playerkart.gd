@@ -24,7 +24,7 @@ var drift_dir: float = 0.0
 var drift_timer: float = 0.0
 var boost_timer: float = 0.0
 
-@onready var item_roulette = $ItemRoulette
+@onready var item_roulette = $Hud
 
 var original_max_speed: float = 0.0
 var has_banana_debuff: bool = false

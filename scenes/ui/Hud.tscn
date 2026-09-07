@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://bcq2omlrimpmu" path="res://scripts/ui/item_roulette.gd" id="1_5wb3c"]
 [ext_resource type="Texture2D" uid="uid://b6aftcw72c75c" path="res://assets/roulette/mark_rulet.png" id="2_1se2i"]
 [ext_resource type="AudioStream" uid="uid://c0acupmn0te17" path="res://assets/audio/Mario Kart Wii - Item Box - Sound Effect.mp3" id="3_ehre4"]
-[ext_resource type="Texture2D" path="res://assets/LapAndTime/LapTitle.png" id="4_3g4ve"]
-[ext_resource type="Texture2D" path="res://assets/LapAndTime/Lap1.png" id="5_an1mh"]
-[ext_resource type="Texture2D" path="res://assets/LapAndTime/TimeTitle.png" id="6_32yah"]
-[ext_resource type="FontFile" path="res://assets/LapAndTime/TimerNumbers/MayroKartRetro-Regular.ttf" id="7_q8sow"]
+[ext_resource type="Texture2D" uid="uid://coghvako5q52t" path="res://assets/LapAndTime/LapTitle.png" id="4_3g4ve"]
+[ext_resource type="Texture2D" uid="uid://lggg3nlnjmpt" path="res://assets/LapAndTime/Lap1.png" id="5_an1mh"]
+[ext_resource type="Texture2D" uid="uid://51sspndiru6d" path="res://assets/LapAndTime/TimeTitle.png" id="6_32yah"]
+[ext_resource type="FontFile" uid="uid://bqedycuv2ooot" path="res://assets/LapAndTime/TimerNumbers/MayroKartRetro-Regular.ttf" id="7_q8sow"]
 
 [node name="Hud" type="CanvasLayer" unique_id=1137834404]
 script = ExtResource("1_5wb3c")

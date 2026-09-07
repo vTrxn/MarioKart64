@@ -17,9 +17,10 @@ var original_max_speed: float = 0.0
 
 func _ready():
 	kart = get_parent()
-	if kart.has_node("ItemRoulette"):
-		item_roulette = kart.get_node("ItemRoulette")
-		item_roulette.connect("item_selected", Callable(self, "_on_item_selected"))
+	if kart.has_node("Hud"):
+		item_roulette = kart.get_node("Hud")
+		if not item_roulette.item_selected.is_connected(_on_item_selected):
+			item_roulette.item_selected.connect(_on_item_selected)
 	original_max_speed = kart.max_speed
 
 func _process(delta: float):
