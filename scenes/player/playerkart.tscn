@@ -11,11 +11,11 @@ size = Vector3(1.5674438, 1.0517883, 1.3066406)
 
 [node name="Playerkart" type="CharacterBody3D" unique_id=1849314512]
 script = ExtResource("1_0k413")
+max_speed = 35.0
 steering_angle = 4.0
 steering_speed = 1.4
 jump_force = 2.0
 boost_multiplier = 1.2
-total_mandatory_checkpoints = 10
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1855634901]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008392334, 0.4039154, 0.0036621094)

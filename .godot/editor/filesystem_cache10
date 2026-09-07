@@ -1,10 +1,10 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1788798288
+::res://::1788799486
 icon.svg::CompressedTexture2D::5866279888725123995::1788797384::1788798295::1::::<><><>0<>0<>97c30809ca3f8de52d0a8a5bbc977061<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://assets/::1788797384
 ::res://assets/3d/::1788797384
 ::res://assets/3d/Personajes/::1788797384
-::res://assets/3d/Personajes/Bowser/::1788798288
+::res://assets/3d/Personajes/Bowser/::1788798303
 bowser_all.png::CompressedTexture2D::6321570275300784604::1788797384::1788798295::1::::<><><>0<>0<>94b2ba19acd75703635e8cf51daabd1d<>res://.godot/imported/bowser_all.png-72d30ff133943e0089ed5f6f3c7ac930.s3tc.ctex::
 bowser_all_spc.png::CompressedTexture2D::1402521575622076950::1788797384::1788798295::1::::<><><>0<>0<>dd193236d7bdd4b596a6dc7ef33ca871<>res://.godot/imported/bowser_all_spc.png-4ca7cc6c7b8e85f773a2e9b3f1b6bfd4.ctex::
 bowser_eye.0.png::CompressedTexture2D::6559052393065157882::1788797384::1788798295::1::::<><><>0<>0<>29d1d99b8f0d8ad844d84d43fd0b16f3<>res://.godot/imported/bowser_eye.0.png-b598c15039f2d8e7312bb657477b9f1f.s3tc.ctex::
@@ -22,11 +22,11 @@ bowser_eye_spc.5.png::CompressedTexture2D::8994920751894606135::1788797384::1788
 bw.dae::PackedScene::8957770717263515110::1788797384::1788798303::1::::<><><>0<>0<>3bc79985a185ace37dc4364442a6eac0<>res://.godot/imported/bw.dae-6f93e3023d1e5732f988f272fc96b184.scn::uid://c0pivtvjhhsms::::res://assets/3d/Personajes/Bowser/bowser_eye.0.png<>uid://cwchlrx2y4h3a::::res://assets/3d/Personajes/Bowser/bowser_all.png
 bw.obj::Mesh::3418705374518285747::1788797384::1788798296::1::::<><><>0<>0<>4e4dcbe55f9e278ab0820d2d44af950c<>res://.godot/imported/bw.obj-9596efe7a2f5d6dc7d20abec797ac531.mesh<*>res://.godot/imported/bw.obj-9596efe7a2f5d6dc7d20abec797ac531.mesh::uid://cwchlrx2y4h3a::::res://assets/3d/Personajes/Bowser/bowser_all.png<>uid://c0pivtvjhhsms::::res://assets/3d/Personajes/Bowser/bowser_eye.0.png
 Mirror XY.txt::TextFile::-1::1788797384::0::1::::<><><>0<>0<><>::
-::res://assets/3d/Personajes/Bowser/bw_lod/::1788798288
+::res://assets/3d/Personajes/Bowser/bw_lod/::1788798296
 bowser_lod_all.png::CompressedTexture2D::1739121293035789310::1788797384::1788798295::1::::<><><>0<>0<>5391c8e4c3757afe27ef65121f2016f0<>res://.godot/imported/bowser_lod_all.png-ba982f2a8687129074f95d84627c8d56.s3tc.ctex::
 bowser_lod_all_spc.png::CompressedTexture2D::8859653222067520328::1788797384::1788798295::1::::<><><>0<>0<>d70422f1140328d1c4f896f0d8a4ffcb<>res://.godot/imported/bowser_lod_all_spc.png-240d88d2b1207f4a95722e4d6a861a25.ctex::
 bw_lod.obj::Mesh::349387272096674578::1788797384::1788798296::1::::<><><>0<>0<>747e3489288d6ef05b3da775376c4ad5<>res://.godot/imported/bw_lod.obj-40cef143ac5affa6d2a891af94de24c8.mesh<*>res://.godot/imported/bw_lod.obj-40cef143ac5affa6d2a891af94de24c8.mesh::uid://y1pcrdcl558e::::res://assets/3d/Personajes/Bowser/bw_lod/bowser_lod_all.png
-::res://assets/3d/Personajes/Daisy/::1788798288
+::res://assets/3d/Personajes/Daisy/::1788798307
 ds.dae::PackedScene::6523302852416948823::1788797384::1788798307::1::::<><><>0<>0<>f0b0795bbdedb82d180fff3c73dfb785<>res://.godot/imported/ds.dae-d57e446b9f0d4720465f974b2a6dd521.scn::uid://dkm4jhhokta5y::::res://assets/3d/Personajes/Daisy/ds_eye.0.png<>uid://d0c78podlrca5::::res://assets/3d/Personajes/Daisy/ds_body.png
 ds.obj::Mesh::3892366770735839341::1788797384::1788798295::1::::<><><>0<>0<>042da7d75df6f26c05f29584a061ebbb<>res://.godot/imported/ds.obj-8f775081b12eb6950f23a5cfb92e4a40.mesh<*>res://.godot/imported/ds.obj-8f775081b12eb6950f23a5cfb92e4a40.mesh::uid://d0c78podlrca5::::res://assets/3d/Personajes/Daisy/ds_body.png<>uid://dkm4jhhokta5y::::res://assets/3d/Personajes/Daisy/ds_eye.0.png
 ds_body.png::CompressedTexture2D::8920114582134811198::1788797384::1788798295::1::::<><><>0<>0<>1b452738005e8f006476c76e9a2a1e9c<>res://.godot/imported/ds_body.png-bd9d2c7e2c26838376db3c03f664c544.s3tc.ctex::
@@ -46,11 +46,11 @@ ds_eye_spc.4.png::CompressedTexture2D::5867991050230438657::1788797384::17887982
 ds_eye_spc.5.png::CompressedTexture2D::6634267326079862294::1788797384::1788798295::1::::<><><>0<>0<>c8dbf6b49abc1db3de26f8eb6c60860d<>res://.godot/imported/ds_eye_spc.5.png-2af16ff0bb5f9903fbb40b039068a8da.ctex::
 ds_eye_spc.6.png::CompressedTexture2D::1131723147558704725::1788797384::1788798295::1::::<><><>0<>0<>bfd8ba8ae8d1581069f48c3bba1625af<>res://.godot/imported/ds_eye_spc.6.png-42029121f71a692f24a8d08983d99cb3.ctex::
 Mirror XY.txt::TextFile::-1::1788797384::0::1::::<><><>0<>0<><>::
-::res://assets/3d/Personajes/Daisy/ds_lod/::1788798288
+::res://assets/3d/Personajes/Daisy/ds_lod/::1788798296
 ds_lod.obj::Mesh::87608166238102100::1788797384::1788798296::1::::<><><>0<>0<>6a6fabe5a31a17901ceffe9155f131b6<>res://.godot/imported/ds_lod.obj-c761a9d51b8c9638b3a2d6fdb99c4125.mesh<*>res://.godot/imported/ds_lod.obj-c761a9d51b8c9638b3a2d6fdb99c4125.mesh::uid://0m4n32f8akhq::::res://assets/3d/Personajes/Daisy/ds_lod/ds_lod_body.png
 ds_lod_body.png::CompressedTexture2D::1781279144745329302::1788797384::1788798295::1::::<><><>0<>0<>ef6764eb90e8585859662f5875be6f45<>res://.godot/imported/ds_lod_body.png-11ce141f130dc5e998acca9828da49d6.s3tc.ctex::
 ds_lod_body_spc.png::CompressedTexture2D::2794346510667782044::1788797384::1788798295::1::::<><><>0<>0<>ad839b76e799de666ff0febfda0c7ebd<>res://.godot/imported/ds_lod_body_spc.png-7515bcdfb0a3d0f1729b0e74a428d500.ctex::
-::res://assets/3d/Personajes/Donkey Kong/::1788798288
+::res://assets/3d/Personajes/Donkey Kong/::1788798314
 dk.dae::PackedScene::3015433825075776549::1788797384::1788798314::1::::<><><>0<>0<>9258598dd7d4d299757818499e903b18<>res://.godot/imported/dk.dae-67e182bfef36233355da3acc6fb9e3fe.scn::uid://gsw2e2im60dr::::res://assets/3d/Personajes/Donkey Kong/dk_eye.0.png<>uid://dfxl421t0oj7r::::res://assets/3d/Personajes/Donkey Kong/dk_body.png
 dk.obj::Mesh::88769877853106207::1788797384::1788798296::1::::<><><>0<>0<>e96547925fd843673daecc00dde2b204<>res://.godot/imported/dk.obj-bd8d35f107485ae1f66bbc74e7b0cbb8.mesh<*>res://.godot/imported/dk.obj-bd8d35f107485ae1f66bbc74e7b0cbb8.mesh::uid://dfxl421t0oj7r::::res://assets/3d/Personajes/Donkey Kong/dk_body.png<>uid://gsw2e2im60dr::::res://assets/3d/Personajes/Donkey Kong/dk_eye.0.png
 dk_body.png::CompressedTexture2D::7558408091749124949::1788797384::1788798295::1::::<><><>0<>0<>192fadf8b20ec007e3f0f522681c01ad<>res://.godot/imported/dk_body.png-6e4054e3e9d960ec33c632d451021a2a.s3tc.ctex::
@@ -71,11 +71,11 @@ dk_eye.6.png::CompressedTexture2D::2492731179717276130::1788797384::1788798295::
 dk_eye.6_s.png::CompressedTexture2D::4432784232278734707::1788797384::1788798295::1::::<><><>0<>0<>2d1e255f7cb33efb1b6e450c02e4e27d<>res://.godot/imported/dk_eye.6_s.png-d05d32bfda603aae8adcd548e9a9d918.ctex::
 info.txt::TextFile::-1::1788797384::0::1::::<><><>0<>0<><>::
 Mirror XY.txt::TextFile::-1::1788797384::0::1::::<><><>0<>0<><>::
-::res://assets/3d/Personajes/Donkey Kong/dk_lod/::1788798288
+::res://assets/3d/Personajes/Donkey Kong/dk_lod/::1788798296
 dk_lod.obj::Mesh::8364795238886974272::1788797384::1788798296::1::::<><><>0<>0<>1737df0976bf6dd82fefe68750098012<>res://.godot/imported/dk_lod.obj-69a8caf37d71ab5fd95fe82a09b01744.mesh<*>res://.godot/imported/dk_lod.obj-69a8caf37d71ab5fd95fe82a09b01744.mesh::uid://dgt4pjde8i3hl::::res://assets/3d/Personajes/Donkey Kong/dk_lod/dk_lod_body.png
 dk_lod_body.png::CompressedTexture2D::7621406347504186489::1788797384::1788798295::1::::<><><>0<>0<>3074944c550c6500b0c2addb17e9f452<>res://.godot/imported/dk_lod_body.png-edbe1ee74c83b18031f3939a72326cfe.s3tc.ctex::
 dk_lod_body_spc.png::CompressedTexture2D::2035509273067833139::1788797384::1788798294::1::::<><><>0<>0<>9caa2a2043266aaef608530f7ea2c7df<>res://.godot/imported/dk_lod_body_spc.png-11a97e6d928953ed0d8643ca2a0c06db.ctex::
-::res://assets/3d/Personajes/Luigi/::1788798288
+::res://assets/3d/Personajes/Luigi/::1788798316
 info.txt::TextFile::-1::1788797384::0::1::::<><><>0<>0<><>::
 lg.dae::PackedScene::7138460977275260720::1788797384::1788798316::1::::<><><>0<>0<>fc393d170be6472fd06d4a37b47f8b38<>res://.godot/imported/lg.dae-894ef6ec42bfc0ef02eb33813037b660.scn::uid://rv0ejabtm51g::::res://assets/3d/Personajes/Luigi/lg_eye.0.png<>uid://bfefdis037kim::::res://assets/3d/Personajes/Luigi/lg_all.png
 lg_all.png::CompressedTexture2D::2745931804412902308::1788797384::1788798294::1::::<><><>0<>0<>0c5d919dbf4dbedb2b577df21c153631<>res://.godot/imported/lg_all.png-59301f99602304f76e6b9ac2e1f11103.s3tc.ctex::
@@ -96,11 +96,11 @@ lg_eye.6.png::CompressedTexture2D::2772012415640792356::1788797384::1788798294::
 lg_eye.6_s.png::CompressedTexture2D::3035891177678142222::1788797384::1788798294::1::::<><><>0<>0<>2b18e6ccd6f8cb0102e453c983e06821<>res://.godot/imported/lg_eye.6_s.png-31c7dfee45a53faa814d1e16df38e7b1.ctex::
 luigi.obj::Mesh::6148636329698189346::1788797384::1788798296::1::::<><><>0<>0<>94abf53351e79033c9e8a7cb59426d88<>res://.godot/imported/luigi.obj-5a502c66f9458d6fc2c743bf7bbc5b41.mesh<*>res://.godot/imported/luigi.obj-5a502c66f9458d6fc2c743bf7bbc5b41.mesh::uid://bfefdis037kim::::res://assets/3d/Personajes/Luigi/lg_all.png<>uid://rv0ejabtm51g::::res://assets/3d/Personajes/Luigi/lg_eye.0.png
 Mirror XY.txt::TextFile::-1::1788797384::0::1::::<><><>0<>0<><>::
-::res://assets/3d/Personajes/Luigi/lg_lod/::1788798288
+::res://assets/3d/Personajes/Luigi/lg_lod/::1788798295
 lg_lod.obj::Mesh::3786955617839024805::1788797384::1788798295::1::::<><><>0<>0<>208f167b827d68b1fd3b25d02c101290<>res://.godot/imported/lg_lod.obj-5459aabb00402c0c6df1855b2aed3671.mesh<*>res://.godot/imported/lg_lod.obj-5459aabb00402c0c6df1855b2aed3671.mesh::uid://d1cvmdu31qad6::::res://assets/3d/Personajes/Luigi/lg_lod/lg_lod_all.png
 lg_lod_all.png::CompressedTexture2D::8989597417324923557::1788797384::1788798294::1::::<><><>0<>0<>64ecc81797b0ceb9477373aebfb9084e<>res://.godot/imported/lg_lod_all.png-9edd8919b108db8437ce9dd3a86e479e.s3tc.ctex::
 lg_lod_all_spc.png::CompressedTexture2D::6000341778973618730::1788797384::1788798294::1::::<><><>0<>0<>43a21c1293b045226268b8a8ab641111<>res://.godot/imported/lg_lod_all_spc.png-ccb7007440405449cd3cacc27e779e7c.ctex::
-::res://assets/3d/Personajes/Mario/::1788798288
+::res://assets/3d/Personajes/Mario/::1788798311
 mario.obj::Mesh::8243575710288679532::1788797384::1788798296::1::::<><><>0<>0<>a2fde0ecee19f01be3387e718eaa67ff<>res://.godot/imported/mario.obj-647b76f48b0d0a97396377be41de4a6d.mesh<*>res://.godot/imported/mario.obj-647b76f48b0d0a97396377be41de4a6d.mesh::uid://cq2wdrxbphl76::::res://assets/3d/Personajes/Mario/mario_eye.0.png<>uid://buvcyugqoamq::::res://assets/3d/Personajes/Mario/mario_all.png
 mario_all.png::CompressedTexture2D::112756318906169816::1788797384::1788798295::1::::<><><>0<>0<>1171ecb6660434780ea16ade41fcfcbb<>res://.godot/imported/mario_all.png-93a66e1423fe0046f8c6a3c4729799ac.s3tc.ctex::
 mario_all_s.png::CompressedTexture2D::551268489504188356::1788797384::1788798294::1::::<><><>0<>0<>3625807d19d6c978748cf2ec0a3653b9<>res://.godot/imported/mario_all_s.png-be3aed0406f8098565f5eda53cf91eab.ctex::
@@ -120,11 +120,11 @@ mario_eye.6.png::CompressedTexture2D::4436859389680560708::1788797384::178879829
 mario_eye.6_s.png::CompressedTexture2D::4526753750936119602::1788797384::1788798294::1::::<><><>0<>0<>a428394339c832b856060cfec1bbf8dc<>res://.godot/imported/mario_eye.6_s.png-1d0e2d9821fecb810025ddfef39be60a.ctex::
 Mirror XY.txt::TextFile::-1::1788797384::0::1::::<><><>0<>0<><>::
 mr.dae::PackedScene::1059132422557323344::1788797384::1788798311::1::::<><><>0<>0<>7dc0c6656d86ac8bfe1f589440554c11<>res://.godot/imported/mr.dae-cbbdaa91fb6aa855ac7cb9a655a7c13a.scn::uid://cq2wdrxbphl76::::res://assets/3d/Personajes/Mario/mario_eye.0.png<>uid://buvcyugqoamq::::res://assets/3d/Personajes/Mario/mario_all.png
-::res://assets/3d/Personajes/Mario/mr_lod/::1788798288
+::res://assets/3d/Personajes/Mario/mr_lod/::1788798296
 mr_lod.obj::Mesh::1265520348017336237::1788797384::1788798296::1::::<><><>0<>0<>f8b24014dfa0414c504be28c8ae6a55a<>res://.godot/imported/mr_lod.obj-81952d39092e5806749fefd1a8a64417.mesh<*>res://.godot/imported/mr_lod.obj-81952d39092e5806749fefd1a8a64417.mesh::uid://c4pfb653r0r5h::::res://assets/3d/Personajes/Mario/mr_lod/mr_lod_all.png
 mr_lod_all.png::CompressedTexture2D::6839590545821674911::1788797384::1788798295::1::::<><><>0<>0<>142c08adc67ce901502e48e494588670<>res://.godot/imported/mr_lod_all.png-549260924f2b81f97ad637016b51668b.s3tc.ctex::
 mr_lod_all_spc.png::CompressedTexture2D::2314958560063973827::1788797384::1788798294::1::::<><><>0<>0<>ffc1b215cca314178ec890fd8a7663cc<>res://.godot/imported/mr_lod_all_spc.png-59df659dee32ee69791145b3770c66ef.ctex::
-::res://assets/3d/Personajes/Peach/::1788798288
+::res://assets/3d/Personajes/Peach/::1788798312
 Mirror XY.txt::TextFile::-1::1788797384::0::1::::<><><>0<>0<><>::
 pc.dae::PackedScene::6848378782167360011::1788797384::1788798312::1::::<><><>0<>0<>c8c1dd159ac81e7ae5c5d664543ad112<>res://.godot/imported/pc.dae-cf2aeeead185611f096fb3d38e708c9c.scn::uid://cj682jxpffeit::::res://assets/3d/Personajes/Peach/pc_eye.0.png<>uid://dm2vx66mjj1b5::::res://assets/3d/Personajes/Peach/pc_body.png
 pc_body.png::CompressedTexture2D::8058584180873641408::1788797384::1788798295::1::::<><><>0<>0<>2718a42f5fa4eeb31f17b3f05a0ffe48<>res://.godot/imported/pc_body.png-ffe170fc6c18906da3dd20d5b2fcf786.s3tc.ctex::
@@ -143,11 +143,11 @@ pc_eye.5.png::CompressedTexture2D::563719125001419399::1788797384::1788798294::1
 pc_eye.5_s.png::CompressedTexture2D::7645456464608753125::1788797384::1788798294::1::::<><><>0<>0<>6870a15d65c2fad06858499798f6053c<>res://.godot/imported/pc_eye.5_s.png-c32ebb470cd98d9f7522797416911308.ctex::
 pc_eye.6.png::CompressedTexture2D::8481303621463985525::1788797384::1788798294::1::::<><><>0<>0<>738262d2cff93066a64f300a89d15d20<>res://.godot/imported/pc_eye.6.png-28959b8aab4d400e36a9877b937f9df8.ctex::
 pc_eye.6_s.png::CompressedTexture2D::4062312542092528052::1788797384::1788798294::1::::<><><>0<>0<>7681a2093c7d3df90b5927d545593ca4<>res://.godot/imported/pc_eye.6_s.png-f82bb4d14981be870f36f4b10f16ff6e.ctex::
-::res://assets/3d/Personajes/Peach/pc_lod/::1788798288
+::res://assets/3d/Personajes/Peach/pc_lod/::1788798295
 pc_lod.obj::Mesh::2795775630379703008::1788797384::1788798295::1::::<><><>0<>0<>b6e56cb79650c014b6eba7aecc239252<>res://.godot/imported/pc_lod.obj-243c8b81c56b81771a98c2014e937999.mesh<*>res://.godot/imported/pc_lod.obj-243c8b81c56b81771a98c2014e937999.mesh::uid://dneav6u6xphwn::::res://assets/3d/Personajes/Peach/pc_lod/pc_lod_body.png
 pc_lod_body.png::CompressedTexture2D::8080013691621741149::1788797384::1788798294::1::::<><><>0<>0<>608448179786dcecbc2d788818c37086<>res://.godot/imported/pc_lod_body.png-95184471475b227249c98524fb416ff5.s3tc.ctex::
 pc_lod_body_spc.png::CompressedTexture2D::6467287808905041381::1788797384::1788798295::1::::<><><>0<>0<>eeccfae9174c7fe39fcb36596a3b0e4f<>res://.godot/imported/pc_lod_body_spc.png-0cd3a8f4934ec3bdd40e4599c17f6d16.ctex::
-::res://assets/3d/Personajes/Toad/::1788798288
+::res://assets/3d/Personajes/Toad/::1788798312
 Mirror XY.txt::TextFile::-1::1788797384::0::1::::<><><>0<>0<><>::
 README + CREDIT.txt::TextFile::-1::1788797384::0::1::::<><><>0<>0<><>::
 td.dae::PackedScene::4063043645396864939::1788797384::1788798312::1::::<><><>0<>0<>5922bb5246fd0748e3081cc9910a9f4f<>res://.godot/imported/td.dae-9fefe6c49691de9a26461aee72eee9fb.scn::uid://55k0vfnl6c8x::::res://assets/3d/Personajes/Toad/td_body.png<>uid://c266l5ogv7bq3::::res://assets/3d/Personajes/Toad/td_eye.0.png
@@ -165,11 +165,11 @@ td_eye_spc.2.png::CompressedTexture2D::6269451572128929735::1788797384::17887982
 td_eye_spc.3.png::CompressedTexture2D::3062549158548232865::1788797384::1788798295::1::::<><><>0<>0<>7f4b02745e4b66e2b606fd44b5716374<>res://.godot/imported/td_eye_spc.3.png-3e169c77b5a1d0d1392fc5b97d9c0ebb.ctex::
 td_eye_spc.4.png::CompressedTexture2D::5884711379853078364::1788797384::1788798295::1::::<><><>0<>0<>f98c56c708f9eb9c04f5dad56707b539<>res://.godot/imported/td_eye_spc.4.png-76b46665b2ac5180eea019678a9b3c26.ctex::
 td_eye_spc.5.png::CompressedTexture2D::2503773259921004333::1788797384::1788798295::1::::<><><>0<>0<>4f99e938c5595111ee0c06abf9fef7db<>res://.godot/imported/td_eye_spc.5.png-bf11a0319e96d31cba3c2717a4186979.ctex::
-::res://assets/3d/Personajes/Toad/td_lod/::1788798288
+::res://assets/3d/Personajes/Toad/td_lod/::1788798296
 td_lod.obj::Mesh::6831607735008227745::1788797384::1788798296::1::::<><><>0<>0<>6ac3559a70c1906f4ac8a4255b8df714<>res://.godot/imported/td_lod.obj-d01ecdbe9f52fa9ccd3fa16b192e380f.mesh<*>res://.godot/imported/td_lod.obj-d01ecdbe9f52fa9ccd3fa16b192e380f.mesh::uid://bmwgbfbjba3c2::::res://assets/3d/Personajes/Toad/td_lod/td_lod_all.png
 td_lod_all.png::CompressedTexture2D::3274469470261151167::1788797384::1788798295::1::::<><><>0<>0<>5c22c8c8b6747fbd16c72d0dc4b96edb<>res://.godot/imported/td_lod_all.png-6863cf4335d6a6034a27abccb6105ec2.s3tc.ctex::
 td_lod_all_spc.png::CompressedTexture2D::9086170528925321112::1788797384::1788798295::1::::<><><>0<>0<>94b1adf6dff2031e716645fa475f64dd<>res://.godot/imported/td_lod_all_spc.png-21c04222c40f5b53896c6a604dab885f.ctex::
-::res://assets/3d/Personajes/Yoshi/::1788798288
+::res://assets/3d/Personajes/Yoshi/::1788798311
 Mirror XY.txt::TextFile::-1::1788797384::0::1::::<><><>0<>0<><>::
 yoshi.obj::Mesh::3198589801701071156::1788797384::1788798296::1::::<><><>0<>0<>a7c51e68b036dd642e65801b021737a4<>res://.godot/imported/yoshi.obj-e15eefb35e93ae44b4389425a250f905.mesh<*>res://.godot/imported/yoshi.obj-e15eefb35e93ae44b4389425a250f905.mesh::uid://cy377rl83g5fc::::res://assets/3d/Personajes/Yoshi/ys_eye.0.png<>uid://bv6l573g841yl::::res://assets/3d/Personajes/Yoshi/ys_body.png
 ys.dae::PackedScene::2865275570359576628::1788797384::1788798311::1::::<><><>0<>0<>e465c5ac5f4bede50179073d72fde1d0<>res://.godot/imported/ys.dae-a3a30f66c4dafa81328bd6dd43b86dea.scn::uid://cy377rl83g5fc::::res://assets/3d/Personajes/Yoshi/ys_eye.0.png<>uid://bv6l573g841yl::::res://assets/3d/Personajes/Yoshi/ys_body.png
@@ -187,12 +187,12 @@ ys_eye.4.png::CompressedTexture2D::2817711001384319652::1788797384::1788798295::
 ys_eye.4_s.png::CompressedTexture2D::5388866375669196570::1788797384::1788798295::1::::<><><>0<>0<>d042c7d76904e8758c75eb9f758eefd3<>res://.godot/imported/ys_eye.4_s.png-fb63d8d5d084136510304beefe308ac2.ctex::
 ys_eye.5.png::CompressedTexture2D::8215876217454330110::1788797384::1788798295::1::::<><><>0<>0<>d5a1f75f454b62b934256f755cec0471<>res://.godot/imported/ys_eye.5.png-d5ab801876d87ce2189278f5c589ef64.ctex::
 ys_eye.5_s.png::CompressedTexture2D::6004108082719437998::1788797384::1788798295::1::::<><><>0<>0<>c08db8df0957307e87e2b8302625e447<>res://.godot/imported/ys_eye.5_s.png-522bfa5213bfe725328287a0b0aa0712.ctex::
-::res://assets/3d/Personajes/Yoshi/ys_lod/::1788798288
+::res://assets/3d/Personajes/Yoshi/ys_lod/::1788798296
 ys_lod.obj::Mesh::8025815533806743190::1788797384::1788798296::1::::<><><>0<>0<>0e4b061c4a37fac189d84d8de7a22318<>res://.godot/imported/ys_lod.obj-7978d1c0d16372fb6865a1bdeefe3195.mesh<*>res://.godot/imported/ys_lod.obj-7978d1c0d16372fb6865a1bdeefe3195.mesh::uid://chibtlynnijmn::::res://assets/3d/Personajes/Yoshi/ys_lod/ys_lod_all.png
 ys_lod_all.png::CompressedTexture2D::5280773557402382201::1788797384::1788798295::1::::<><><>0<>0<>7682080d7602ec72fc01a7e8594025f7<>res://.godot/imported/ys_lod_all.png-c90e99954194523821b3b483a185b985.s3tc.ctex::
 ys_lod_all_s.png::CompressedTexture2D::4489992905945585590::1788797384::1788798295::1::::<><><>0<>0<>6f1c6b1a93814773f32214ac52a84f9d<>res://.godot/imported/ys_lod_all_s.png-3c798b55fc1c84e2da92fcaf5d1dcbf5.ctex::
 ::res://assets/3d/Ruedas/::1788797384
-::res://assets/3d/Ruedas/Slick/::1788798288
+::res://assets/3d/Ruedas/Slick/::1788798317
 shaft_race_LFr.dae::PackedScene::9050294991479345882::1788797384::1788798311::1::::<><><>0<>0<>4426ac7a61377d16ae8672335486e294<>res://.godot/imported/shaft_race_LFr.dae-f6c590ecdea3da8db9b1e7fbf21532c4.scn::uid://bp61e3kkylx4n::::res://assets/3d/Ruedas/Slick/tire_race.png
 shaft_race_LFr_lod.dae::PackedScene::4828746943324130661::1788797384::1788798310::1::::<><><>0<>0<>fa8cb0bfbc5412ff9694d0a0580d1969<>res://.godot/imported/shaft_race_LFr_lod.dae-3450a19610b866d84b58cf4c5c92295b.scn::uid://dgnrro13ho8d4::::res://assets/3d/Ruedas/Slick/tire_race_lod.png
 shaft_race_LRe.dae::PackedScene::3493339708997164884::1788797384::1788798310::1::::<><><>0<>0<>7ae0fc97d3249cb31fcaa08d0f7fbf2c<>res://.godot/imported/shaft_race_LRe.dae-05ac18c4893ad452fcf859269284e5e5.scn::uid://bp61e3kkylx4n::::res://assets/3d/Ruedas/Slick/tire_race.png
@@ -210,7 +210,7 @@ tire_race_nmap.png::CompressedTexture2D::2368831557774151694::1788797384::178879
 tire_race_R.dae::PackedScene::5852535125889641193::1788797384::1788798315::1::::<><><>0<>0<>ff6ba3689321aca466d7e1ebd84cbab5<>res://.godot/imported/tire_race_R.dae-11a1636dbb621c7a673a4351f25cacd5.scn::uid://bp61e3kkylx4n::::res://assets/3d/Ruedas/Slick/tire_race.png
 tire_race_R_lod.dae::PackedScene::7647246782481205981::1788797384::1788798315::1::::<><><>0<>0<>4a77aa912dfca5e45d2359c3003564c5<>res://.godot/imported/tire_race_R_lod.dae-a7609e80a5b3b26b0888fb1324511e31.scn::uid://dgnrro13ho8d4::::res://assets/3d/Ruedas/Slick/tire_race_lod.png
 tire_race_s.png::CompressedTexture2D::4615008065972552829::1788797384::1788798295::1::::<><><>0<>0<>238ab850569cadcc1608697aa13c17ff<>res://.godot/imported/tire_race_s.png-bc940eb00b608e49db9949a459ad020f.ctex::
-::res://assets/3d/Ruedas/Slim/::1788798288
+::res://assets/3d/Ruedas/Slim/::1788798317
 shaft_classic_LFr.dae::PackedScene::2274195552119991009::1788797384::1788798315::1::::<><><>0<>0<>5dd11ce2fd2374836a245b9f3cc667ec<>res://.godot/imported/shaft_classic_LFr.dae-5abd0e4ebd6e8c6f40b05d1d0ca0ef57.scn::uid://c35cs0juufc80::::res://assets/3d/Ruedas/Slim/tire_classic_color.png
 shaft_classic_LFr_lod.dae::PackedScene::571909074841772207::1788797384::1788798314::1::::<><><>0<>0<>fcfe997f49893abb382985ec9af7e28b<>res://.godot/imported/shaft_classic_LFr_lod.dae-36850c4afd0c9ccba0e8a3206ab844ec.scn::uid://c8wxwnsc8ntwv::::res://assets/3d/Ruedas/Slim/tire_classic_lod.png
 shaft_classic_LRe.dae::PackedScene::6042870931921681391::1788797384::1788798314::1::::<><><>0<>0<>698318a6d91893b3205aa7c1e190d081<>res://.godot/imported/shaft_classic_LRe.dae-f1992bcb3756e16316ed02b728840b69.scn::uid://c35cs0juufc80::::res://assets/3d/Ruedas/Slim/tire_classic_color.png
@@ -228,7 +228,7 @@ tire_classic_L_lod.dae::PackedScene::7978054277411079276::1788797384::1788798308
 tire_classic_nmap.png::CompressedTexture2D::5918401833823353522::1788797384::1788798295::1::::<><><>0<>0<>a2a1b8a13deca5b2f590ecd16f5e3b94<>res://.godot/imported/tire_classic_nmap.png-1c3138172b61f41ba56e555b35e3c24e.ctex::
 tire_classic_R.dae::PackedScene::128120069321086375::1788797384::1788798308::1::::<><><>0<>0<>44694eb783f1a252cd1925c8fc52ad89<>res://.godot/imported/tire_classic_R.dae-8342fad7f381542d95c9867331aa04dc.scn::uid://c35cs0juufc80::::res://assets/3d/Ruedas/Slim/tire_classic_color.png
 tire_classic_R_lod.dae::PackedScene::3032018176449580230::1788797384::1788798307::1::::<><><>0<>0<>ef9e3d7753031d730c714d60cc80f4a0<>res://.godot/imported/tire_classic_R_lod.dae-df0b92d7737f091b1b5ca46d55839c53.scn::uid://c8wxwnsc8ntwv::::res://assets/3d/Ruedas/Slim/tire_classic_lod.png
-::res://assets/3d/Ruedas/Standard/::1788798288
+::res://assets/3d/Ruedas/Standard/::1788798308
 shaft_std_LFr.dae::PackedScene::834044250604839156::1788797384::1788798306::1::::<><><>0<>0<>79cf310a8d7d886882a39a7525d3fdfa<>res://.godot/imported/shaft_std_LFr.dae-a401179ec41a1781457326d40d5e7ef3.scn::uid://haqw2g337ant::::res://assets/3d/Ruedas/Standard/tire_std_default_color.png
 shaft_std_LFr_lod.dae::PackedScene::780122945231774549::1788797384::1788798305::1::::<><><>0<>0<>9a9a435519fa4d3ba0c4fc0b4a17b79f<>res://.godot/imported/shaft_std_LFr_lod.dae-fef5c1f42b4b38b273bc65b7bc061fdd.scn::uid://6xld6mo4enaw::::res://assets/3d/Ruedas/Standard/tire_std_lod.png
 shaft_std_LRe.dae::PackedScene::8154935672605423889::1788797384::1788798307::1::::<><><>0<>0<>a6634a4f890b277087229399b914051a<>res://.godot/imported/shaft_std_LRe.dae-758fe0322d0e2a0c8c22dffe26c7911c.scn::uid://haqw2g337ant::::res://assets/3d/Ruedas/Standard/tire_std_default_color.png
@@ -247,7 +247,7 @@ tire_std_nmap.png::CompressedTexture2D::3107872654351986244::1788797384::1788798
 tire_std_R.dae::PackedScene::4763596652107135298::1788797384::1788798306::1::::<><><>0<>0<>7fc7fa4f5940377a345273ead071baa8<>res://.godot/imported/tire_std_R.dae-417b06a11a297b2f1288c8deab978914.scn::uid://haqw2g337ant::::res://assets/3d/Ruedas/Standard/tire_std_default_color.png
 tire_std_R_lod.dae::PackedScene::3351289430852168679::1788797384::1788798303::1::::<><><>0<>0<>e1c674f942e17f64ee3bfebf65a7b095<>res://.godot/imported/tire_std_R_lod.dae-378fb52e1d7a52a07bf5989a590eb06f.scn::uid://6xld6mo4enaw::::res://assets/3d/Ruedas/Standard/tire_std_lod.png
 ::res://assets/3d/Veiculos/::1788797384
-::res://assets/3d/Veiculos/B Dasher/::1788798288
+::res://assets/3d/Veiculos/B Dasher/::1788798307
 body_dsh.dae::PackedScene::3419781194172386274::1788797384::1788798306::1::::<><><>0<>0<>89478f9846fb35d145262f1564c98e10<>res://.godot/imported/body_dsh.dae-be88f366eba4478bbcb5fc1ba1b50f96.scn::uid://dbvkapr743sor::::res://assets/3d/Veiculos/B Dasher/emblem_dummy.png<>uid://cy74wyypvd2a::::res://assets/3d/Veiculos/B Dasher/body_dsh.png
 body_dsh.png::CompressedTexture2D::191918678865602362::1788797384::1788798293::1::::<><><>0<>0<>4347175501ca2eb69c72883d125c0e3c<>res://.godot/imported/body_dsh.png-65ad5091992846773a5e7e9281cc7186.s3tc.ctex::
 body_dsh_lod.dae::PackedScene::743059268303233417::1788797384::1788798307::1::::<><><>0<>0<>875f085caa3a79912f249970b7fec505<>res://.godot/imported/body_dsh_lod.dae-fa4b4c5949fb54f38efd33aae434cbf6.scn::uid://dbvkapr743sor::::res://assets/3d/Veiculos/B Dasher/emblem_dummy.png<>uid://bv4kqellnwuo8::::res://assets/3d/Veiculos/B Dasher/body_dsh_lod.png
@@ -255,7 +255,7 @@ body_dsh_lod.png::CompressedTexture2D::3920889325193957101::1788797384::17887982
 body_dsh_lod_s.png::CompressedTexture2D::2279207089427246723::1788797384::1788798293::1::::<><><>0<>0<>873dbb7ec83071d58bcd483696ddcee2<>res://.godot/imported/body_dsh_lod_s.png-281feda146eab905551ab9e1a54604ce.ctex::
 body_dsh_s.png::CompressedTexture2D::4851670587626532234::1788797384::1788798293::1::::<><><>0<>0<>ab36a31af3b77f559d33fdf25ba36b3b<>res://.godot/imported/body_dsh_s.png-a116533bae438513139e539de834e50c.ctex::
 emblem_dummy.png::CompressedTexture2D::7273410813085991845::1788797384::1788798293::1::::<><><>0<>0<>85cbd13f5bec3098469d646725027fbf<>res://.godot/imported/emblem_dummy.png-1da1d6c327b870a8b225089559d73a50.s3tc.ctex::
-::res://assets/3d/Veiculos/Blue Seven/::1788798288
+::res://assets/3d/Veiculos/Blue Seven/::1788798296
 body_race.obj::Mesh::3330957000306065175::1788797384::1788798296::1::::<><><>0<>0<>57f8c98a0318919d6c4d31624f9a424a<>res://.godot/imported/body_race.obj-ebbea8bd519f64e6791a262b69f97f9f.mesh<*>res://.godot/imported/body_race.obj-ebbea8bd519f64e6791a262b69f97f9f.mesh::uid://4mq3g2gf6rge::::res://assets/3d/Veiculos/Blue Seven/body_race.png
 body_race.png::CompressedTexture2D::2061270829795609564::1788797384::1788798293::1::::<><><>0<>0<>f904b9c36d8080d71d85462c9576d7ca<>res://.godot/imported/body_race.png-7c3ab840292c74e4672b49bbb4c8d95f.s3tc.ctex::
 body_race_lod.obj::Mesh::5016708586194627374::1788797384::1788798296::1::::<><><>0<>0<>bb6aa343d383408ef8844b3b346bd9cf<>res://.godot/imported/body_race_lod.obj-ae477889614e3a949473e076623df131.mesh<*>res://.godot/imported/body_race_lod.obj-ae477889614e3a949473e076623df131.mesh::uid://df7rb8k2672r6::::res://assets/3d/Veiculos/Blue Seven/body_race_lod.png
@@ -264,7 +264,7 @@ body_race_lod_s.png::CompressedTexture2D::8615331927264684443::1788797384::17887
 body_race_s.png::CompressedTexture2D::1829585092087606442::1788797384::1788798293::1::::<><><>0<>0<>2aaf30892329e841595b92745b73b45a<>res://.godot/imported/body_race_s.png-c1e15ee9104cdc3fc9618ab9a5b33735.ctex::
 emblem_dummy.png::CompressedTexture2D::4537889296706287896::1788797384::1788798293::1::::<><><>0<>0<>17d8c3ceaf3ac949b37ea5244a1df9bd<>res://.godot/imported/emblem_dummy.png-4a3894c5b1ba5274511052bdf64470f3.ctex::
 readme.txt::TextFile::-1::1788797384::0::1::::<><><>0<>0<><>::
-::res://assets/3d/Veiculos/Bruiser/::1788798288
+::res://assets/3d/Veiculos/Bruiser/::1788798313
 body_gng.dae::PackedScene::7297258435289531537::1788797384::1788798312::1::::<><><>0<>0<>8aed98175b7204324bcd2ad39df563bb<>res://.godot/imported/body_gng.dae-fed12c59cd8587201033499c51cebd20.scn::uid://dj03t7n61xpt8::::res://assets/3d/Veiculos/Bruiser/body_gng.png<>uid://dcpoppkkb0owc::::res://assets/3d/Veiculos/Bruiser/emblem_dummy.png
 body_gng.png::CompressedTexture2D::7844306795828569947::1788797384::1788798293::1::::<><><>0<>0<>81eb3ec5252d4577abfc4026aae40536<>res://.godot/imported/body_gng.png-f9d330ef2071785175a6123805a8e6ea.s3tc.ctex::
 body_gng_a.png::CompressedTexture2D::2791831541626733261::1788797384::1788798293::1::::<><><>0<>0<>00f4c9e6fc401214ec4c662c610e6b3d<>res://.godot/imported/body_gng_a.png-30031c253f9eb876d48a266f57ba2bb3.ctex::
@@ -276,7 +276,7 @@ body_gng_lod_e.png::CompressedTexture2D::1390724687594845249::1788797384::178879
 body_gng_lod_s.png::CompressedTexture2D::3011029947758484728::1788797384::1788798293::1::::<><><>0<>0<>dc1eabe0721614d85b3e911501f02cb6<>res://.godot/imported/body_gng_lod_s.png-379ecaab9e83acda74bcd665377c67f0.ctex::
 body_gng_s.png::CompressedTexture2D::5715173592516520216::1788797384::1788798293::1::::<><><>0<>0<>76ea1d889f608eecfcd06f934c121f20<>res://.godot/imported/body_gng_s.png-3780f97919dbb356f5ac1180d6c3a837.ctex::
 emblem_dummy.png::CompressedTexture2D::7331483033228554942::1788797384::1788798293::1::::<><><>0<>0<>ea568d72ad0d39a18103466928a0b5c1<>res://.godot/imported/emblem_dummy.png-c936830998b8b8af401a543f1c782d07.s3tc.ctex::
-::res://assets/3d/Veiculos/Cloud 9/::1788798288
+::res://assets/3d/Veiculos/Cloud 9/::1788798315
 body_cld.dae::PackedScene::5279281072021545502::1788797384::1788798314::1::::<><><>0<>0<>71c4594302062b59ab0ac02084fbdcb4<>res://.godot/imported/body_cld.dae-cf74231612f3492e43e507d3a1b2519d.scn::uid://de7swh250ya6d::::res://assets/3d/Veiculos/Cloud 9/body_cld.png<>uid://cu8lyogwiki07::::res://assets/3d/Veiculos/Cloud 9/emblem_dummy.png
 body_cld.png::CompressedTexture2D::7507210117867635313::1788797384::1788798293::1::::<><><>0<>0<>5b1054e98358afae3b991177f8a9c715<>res://.godot/imported/body_cld.png-0e2597d07b3652dcc849f0bb51d1a7bc.s3tc.ctex::
 body_cld_a.png::CompressedTexture2D::8152832028509456696::1788797384::1788798293::1::::<><><>0<>0<>9a6ab2f2b394f3c715e1de813b9ec5fa<>res://.godot/imported/body_cld_a.png-9fa0a5a9c71a5f82d5efea4cf55f714f.ctex::
@@ -289,7 +289,7 @@ body_cld_s2.png::CompressedTexture2D::1059809178218789575::1788797384::178879829
 body_cld_s.png::CompressedTexture2D::2205967116424123488::1788797384::1788798293::1::::<><><>0<>0<>db7864ae1b7c06b8e47b06f4cf39eadc<>res://.godot/imported/body_cld_s.png-c164d1d162f422cafd09092319f63a64.ctex::
 emblem_dummy.png::CompressedTexture2D::6245454197611372706::1788797384::1788798293::1::::<><><>0<>0<>30a27fada90159daabcb0d0d0691b9be<>res://.godot/imported/emblem_dummy.png-8b6dbebc8d4d8d886a07f69c8214970f.s3tc.ctex::
 killer_ENV.png::CompressedTexture2D::3405031411411770650::1788797384::1788798293::1::::<><><>0<>0<>90e48463cb0eed38e8ae24cc2b4a4f74<>res://.godot/imported/killer_ENV.png-d1be9cd51b9a88c2cffd8a16425fd351.ctex::
-::res://assets/3d/Veiculos/Koopa Clown/::1788798288
+::res://assets/3d/Veiculos/Koopa Clown/::1788798316
 body_kpc.dae::PackedScene::1856649307021573416::1788797384::1788798316::1::::<><><>0<>0<>ee999098ae06dc7a1815a2cbd92e0a7f<>res://.godot/imported/body_kpc.dae-34d8a758cd7d2872ff0d5d23c7a1b0e5.scn::uid://c26leos65vpwq::::res://assets/3d/Veiculos/Koopa Clown/body_kpc.png<>uid://cthmovwnjviot::::res://assets/3d/Veiculos/Koopa Clown/emblem_dummy.png
 body_kpc.png::CompressedTexture2D::6732611650667793440::1788797384::1788798293::1::::<><><>0<>0<>5e39733e5a1ea562baffeb94cbc4b9aa<>res://.godot/imported/body_kpc.png-990e4168a51dcd2044f651e56f265a67.s3tc.ctex::
 body_kpc_lod.dae::PackedScene::6778551374126997724::1788797384::1788798309::1::::<><><>0<>0<>b3efafc8cfdd8b181f70dc8fbf3594ae<>res://.godot/imported/body_kpc_lod.dae-b25613bc768208e0f6f5f1a5d4223ee5.scn::uid://cthmovwnjviot::::res://assets/3d/Veiculos/Koopa Clown/emblem_dummy.png<>uid://c42onyym5e1ab::::res://assets/3d/Veiculos/Koopa Clown/body_kpc_lod.png
@@ -297,7 +297,7 @@ body_kpc_lod.png::CompressedTexture2D::6864930583689461225::1788797384::17887982
 body_kpc_lod_s.png::CompressedTexture2D::1893393721457573042::1788797384::1788798293::1::::<><><>0<>0<>7632241895324b9f49b9ede63d635508<>res://.godot/imported/body_kpc_lod_s.png-62874480a6bea26e9e7482fd49f7eb62.ctex::
 body_kpc_s.png::CompressedTexture2D::4961647536029045546::1788797384::1788798293::1::::<><><>0<>0<>de8cdbac6fecd6089a68a08a8f08a2b1<>res://.godot/imported/body_kpc_s.png-514e9dd4ce813cc95c0d9b1c0ed207a8.ctex::
 emblem_dummy.png::CompressedTexture2D::6121634783394674791::1788797384::1788798293::1::::<><><>0<>0<>bea77143e329cd03b0294b3afe50c917<>res://.godot/imported/emblem_dummy.png-d452928dcda74c3a31f7d74e52ac8463.s3tc.ctex::
-::res://assets/3d/Veiculos/Pipe Frame/::1788798288
+::res://assets/3d/Veiculos/Pipe Frame/::1788798310
 body_pipe.dae::PackedScene::3254888967974095325::1788797384::1788798310::1::::<><><>0<>0<>291f5b44807fe68c4f722feb8b64d024<>res://.godot/imported/body_pipe.dae-64ae82786d7d12d247edbeab126f5429.scn::uid://c5om1jd1ng8cp::::res://assets/3d/Veiculos/Pipe Frame/emblem_dummy.png<>uid://yheja2d7icno::::res://assets/3d/Veiculos/Pipe Frame/body_pipe_mr.png
 body_pipe_lod.dae::PackedScene::6476940862691926789::1788797384::1788798310::1::::<><><>0<>0<>a6544843ef8c36180dfe29723b5f8bbd<>res://.godot/imported/body_pipe_lod.dae-59507401ebd02b89aab3a523dcd40fcc.scn::uid://clyf8i44td0tk::::res://assets/3d/Veiculos/Pipe Frame/body_pipe_lod_mr.png<>uid://c5om1jd1ng8cp::::res://assets/3d/Veiculos/Pipe Frame/emblem_dummy.png
 body_pipe_lod_mr.png::CompressedTexture2D::5594826695993981212::1788797384::1788798293::1::::<><><>0<>0<>84c242a17cf321ed587d617880150d31<>res://.godot/imported/body_pipe_lod_mr.png-23f47e396cbc78382f33537694478e9a.s3tc.ctex::
@@ -305,7 +305,7 @@ body_pipe_lod_mr_s.png::CompressedTexture2D::7110515833098061092::1788797384::17
 body_pipe_mr.png::CompressedTexture2D::1699241873596511024::1788797384::1788798293::1::::<><><>0<>0<>871e25d75cfee06e6a60284513fb3ea1<>res://.godot/imported/body_pipe_mr.png-0431b5902e7e2ef04319064336eb2aea.s3tc.ctex::
 body_pipe_mr_s.png::CompressedTexture2D::3187980186144412115::1788797384::1788798292::1::::<><><>0<>0<>662e0e68bda538f71f48917131a64270<>res://.godot/imported/body_pipe_mr_s.png-701aebedace128724e57bb8a064421f1.ctex::
 emblem_dummy.png::CompressedTexture2D::6908183478182267351::1788797384::1788798293::1::::<><><>0<>0<>ba3f571b12bfdf9fd0bb9aad3bc02931<>res://.godot/imported/emblem_dummy.png-9072181ca42ecba5dd88be7a8c845e66.s3tc.ctex::
-::res://assets/3d/Veiculos/Pipe Frame/textures/::1788798288
+::res://assets/3d/Veiculos/Pipe Frame/textures/::1788798293
 body_pipe_bw.png::CompressedTexture2D::464917920165120642::1788797384::1788798292::1::::<><><>0<>0<>1afda1206d0a0bb0e78625f4773a8986<>res://.godot/imported/body_pipe_bw.png-6865769cb05107ef495b0974edb1f381.ctex::
 body_pipe_dk.png::CompressedTexture2D::1156895182177357921::1788797384::1788798292::1::::<><><>0<>0<>affb3eb933f109773f40be4000181126<>res://.godot/imported/body_pipe_dk.png-6b9ca934c8b88af0dd3fd0ba56c04b9d.ctex::
 body_pipe_ds.png::CompressedTexture2D::2724358577473871988::1788797384::1788798292::1::::<><><>0<>0<>129e0afc0decb004d45759c937938d04<>res://.godot/imported/body_pipe_ds.png-a165d1b3aa4e9cd9f1bba0c07d836ea7.ctex::
@@ -360,7 +360,7 @@ body_pipe_td.png::CompressedTexture2D::2416870464929614216::1788797384::17887982
 body_pipe_wig.png::CompressedTexture2D::3327078234128451732::1788797384::1788798292::1::::<><><>0<>0<>f3306bb0f228db9daba4b0649a0ae8f5<>res://.godot/imported/body_pipe_wig.png-94dbc89bee6b7ae7a28cb669a67df33b.ctex::
 body_pipe_wr.png::CompressedTexture2D::527749676763251500::1788797384::1788798292::1::::<><><>0<>0<>dabc8b67cfbeb608530f714d3b10a332<>res://.godot/imported/body_pipe_wr.png-529e4af226543c56fab134e895049b3f.ctex::
 body_pipe_ys.png::CompressedTexture2D::4636691504178065098::1788797384::1788798292::1::::<><><>0<>0<>e7b81c78bacbdcb7d4d6287d86bd6431<>res://.godot/imported/body_pipe_ys.png-86fcda28f0b4e36497b2ba4b033a08be.ctex::
-::res://assets/3d/Veiculos/Soda Jet/::1788798288
+::res://assets/3d/Veiculos/Soda Jet/::1788798317
 body_jet.dae::PackedScene::8863046734625481603::1788797384::1788798312::1::::<><><>0<>0<>a7ece8995820c5c643951ec92e71527f<>res://.godot/imported/body_jet.dae-04bc804c5365cd4a4aa95b41c152c025.scn::uid://c21ws8pl2u0ct::::res://assets/3d/Veiculos/Soda Jet/body_jet.png<>uid://b2xjnxr77uj4y::::res://assets/3d/Veiculos/Soda Jet/emblem_dummy.png
 body_jet.png::CompressedTexture2D::6722983642329087787::1788797384::1788798292::1::::<><><>0<>0<>2d9698cf09575e7ac93b3d86ba050e79<>res://.godot/imported/body_jet.png-8323f5c198cf37e94ac1996ef844b3cd.s3tc.ctex::
 body_jet_a.png::CompressedTexture2D::8617452358985130365::1788797384::1788798292::1::::<><><>0<>0<>17b3affe8add9bdced9813b14da88940<>res://.godot/imported/body_jet_a.png-a3c815f814ca4513f289e5ebaa7d8d2c.ctex::
@@ -372,7 +372,7 @@ body_jet_lod_e.png::CompressedTexture2D::2116535423076166341::1788797384::178879
 body_jet_lod_s.png::CompressedTexture2D::2104841280003947048::1788797384::1788798294::1::::<><><>0<>0<>61f6b54def043ed3494df4d2f55e6d44<>res://.godot/imported/body_jet_lod_s.png-2058cba1596b7d23b4ae3b3e6d0bf7ad.ctex::
 body_jet_s.png::CompressedTexture2D::2648632285788478581::1788797384::1788798294::1::::<><><>0<>0<>ac3b70f1a638e5343c276a897b05a80e<>res://.godot/imported/body_jet_s.png-6b21690be6d5cd81c212156ca99a79a4.ctex::
 emblem_dummy.png::CompressedTexture2D::4329571054315234294::1788797384::1788798317::1::::<><><>0<>0<>e4df3ca8edfb2a00a8e0361be5e6ce25<>res://.godot/imported/emblem_dummy.png-c5790136d608f0a5866c34b132e0b6a3.s3tc.ctex::
-::res://assets/3d/Veiculos/Zucchini/::1788798288
+::res://assets/3d/Veiculos/Zucchini/::1788798311
 body_cuc.dae::PackedScene::1300605708821888923::1788797384::1788798311::1::::<><><>0<>0<>a2378df3f33e6ffd8f483b306af70058<>res://.godot/imported/body_cuc.dae-dc1e42a17014434b4fa8c1de51876342.scn::uid://6daaooqn846v::::res://assets/3d/Veiculos/Zucchini/body_cuc.png<>uid://cjbrbwvqldgdl::::res://assets/3d/Veiculos/Zucchini/emblem_dummy.png
 body_cuc.png::CompressedTexture2D::2182048043741017855::1788797384::1788798294::1::::<><><>0<>0<>c910de2976dfa7b4e440f685d4c69cff<>res://.godot/imported/body_cuc.png-f5da7f771c0cc674f47b5a9c9d99e71a.s3tc.ctex::
 body_cuc_a.png::CompressedTexture2D::5503319394930306842::1788797384::1788798294::1::::<><><>0<>0<>84677a966f4913ed6c65d2a0a8610988<>res://.godot/imported/body_cuc_a.png-f74ea26c821d042b079879d84ee0cac9.ctex::
@@ -384,9 +384,9 @@ body_cuc_lod_e.png::CompressedTexture2D::3969016728730306649::1788797384::178879
 body_cuc_lod_s.png::CompressedTexture2D::8377923924625617939::1788797384::1788798294::1::::<><><>0<>0<>e0acca6608783ee5af1541b7fc6c3f33<>res://.godot/imported/body_cuc_lod_s.png-d2b71cd823038169b30cc27c81180f60.ctex::
 body_cuc_s.png::CompressedTexture2D::543846091137250892::1788797384::1788798294::1::::<><><>0<>0<>25eb001cc459f1405cf4f8a7a392aec6<>res://.godot/imported/body_cuc_s.png-72f93178be854f3c8ff643c143222b55.ctex::
 emblem_dummy.png::CompressedTexture2D::5407640501249875473::1788797384::1788798294::1::::<><><>0<>0<>e8a8541bfcd6bc451392df86d9080721<>res://.godot/imported/emblem_dummy.png-7b97a865917b2656e56d7f7cf7f6f3d8.s3tc.ctex::
-::res://assets/audio/::1788798288
+::res://assets/audio/::1788798292
 Mario Kart Wii - Item Box - Sound Effect.mp3::AudioStreamMP3::6527720415213368940::1788797384::1788798292::1::::<><><>0<>0<>0fa6b41fa4a82172a30e60c90dad09cb<>res://.godot/imported/Mario Kart Wii - Item Box - Sound Effect.mp3-c3a60fc812b1d1e6f00d18118a409434.mp3str::
-::res://assets/LapAndTime/::1788798288
+::res://assets/LapAndTime/::1788798294
 Lap1.png::CompressedTexture2D::784840054516534649::1788797384::1788798294::1::::<><><>0<>0<>d2024667776a4a7ad9c33652a42af956<>res://.godot/imported/Lap1.png-343ff78900e7f742092778a649d76a71.ctex::
 Lap2.png::CompressedTexture2D::1365502224851925066::1788797384::1788798294::1::::<><><>0<>0<>b7db843a36c52e49a401f744baaa9509<>res://.godot/imported/Lap2.png-24692c5a1a28845e27cf8553b633cd1c.ctex::
 Lap3.png::CompressedTexture2D::1684786016414199798::1788797384::1788798294::1::::<><><>0<>0<>2952789534ff41a55fe63b97616c6cfa<>res://.godot/imported/Lap3.png-962e35f26f87528e294b3f00ded6aa4e.ctex::
@@ -395,9 +395,9 @@ MARIOKART64#92C58ACD#0#2_all.png::CompressedTexture2D::684611709379296962::17887
 MARIOKART64#A9E0C17E#0#2_all.png::CompressedTexture2D::8342030248942532960::1788797384::1788798294::1::::<><><>0<>0<>03af8acec9032024b340c55a0288db1e<>res://.godot/imported/MARIOKART64#A9E0C17E#0#2_all.png-531e713275ea9bfdba5b6e643110bd16.ctex::
 MARIOKART64#DD5FC385#0#2_all.png::CompressedTexture2D::288983822683188191::1788797384::1788798294::1::::<><><>0<>0<>45d4f6327df4f411cbff6c20aa32a09c<>res://.godot/imported/MARIOKART64#DD5FC385#0#2_all.png-5c84420b1f6c3ec22b47529545aa1d9e.ctex::
 TimeTitle.png::CompressedTexture2D::2160464988987009049::1788797384::1788798294::1::::<><><>0<>0<>153408d3b4fd7a131888d3970b2965e2<>res://.godot/imported/TimeTitle.png-009a569d7f473c8898b00280b79ff398.ctex::
-::res://assets/LapAndTime/TimerNumbers/::1788798288
+::res://assets/LapAndTime/TimerNumbers/::1788798292
 MayroKartRetro-Regular.ttf::FontFile::3517924839883455719::1788797384::1788798292::1::::<><><>0<>0<>98ae3c788237f2342b7a17c2afc9dfa8<>res://.godot/imported/MayroKartRetro-Regular.ttf-eb15eb45ca9e28e1dcbfc98d601b3aa1.fontdata::
-::res://assets/menus/::1788798288
+::res://assets/menus/::1788798295
 MenuAjustes.png::CompressedTexture2D::543413536021048874::1788797384::1788798295::1::::<><><>0<>0<>8c87452ec25260984ab3f4a2eb0a98c2<>res://.godot/imported/MenuAjustes.png-68641b3e1ab797e2149c3533e0e540bf.ctex::
 MenuAyudas.png::CompressedTexture2D::3415575911948054694::1788797384::1788798295::1::::<><><>0<>0<>f263aaf4899dd0bdbaa292887cb95093<>res://.godot/imported/MenuAyudas.png-33c8489905abf881087ef1cc89d2790f.ctex::
 MenuFinJuego.png::CompressedTexture2D::216171014921519416::1788797384::1788798294::1::::<><><>0<>0<>11a35f803693e7a192637a329b6d01af<>res://.godot/imported/MenuFinJuego.png-747dbd7d62914f719c2a27f47ecd8a77.ctex::
@@ -405,7 +405,7 @@ MenuPausa.png::CompressedTexture2D::3514084163658290269::1788797384::1788798294:
 MenuPrincipal.png::CompressedTexture2D::1988612531371078719::1788797384::1788798294::1::::<><><>0<>0<>ab51ea37c6100b213f2c5fd06fdc1474<>res://.godot/imported/MenuPrincipal.png-1d0dc72556baa40b12185d6d93a1c9cf.ctex::
 MenuSeleccionMapa.png::CompressedTexture2D::1062711278816719109::1788797384::1788798294::1::::<><><>0<>0<>778de07c10bcf5245c2cec836ba05bf1<>res://.godot/imported/MenuSeleccionMapa.png-b979dac9a5f9f4dc24b67844ae357071.ctex::
 MenuSeleccionPersonajes.png::CompressedTexture2D::9216170785843490134::1788797384::1788798295::1::::<><><>0<>0<>b68002a85f97a02d40fff6db8807efb3<>res://.godot/imported/MenuSeleccionPersonajes.png-96d817bd29a6214cbe82a70050af0bee.ctex::
-::res://assets/roulette/::1788798288
+::res://assets/roulette/::1788798294
 bananas_rulet.png::CompressedTexture2D::4574498679757377456::1788797384::1788798294::1::::<><><>0<>0<>ad75dd2499d68961e2b0fb6ddca250c3<>res://.godot/imported/bananas_rulet.png-e400f21d619f19a68290e055160c53f0.ctex::
 banana_rulet.png::CompressedTexture2D::2938965182097714581::1788797384::1788798294::1::::<><><>0<>0<>e35df1ecf99791a9bf152bf50d19b339<>res://.godot/imported/banana_rulet.png-7396cd320c3b8f6b3244f5b2457295cf.s3tc.ctex::
 blue_shell_rulet.png::CompressedTexture2D::6284430301386866114::1788797384::1788798294::1::::<><><>0<>0<>eb557c872cd140296cdda2236b00cb25<>res://.godot/imported/blue_shell_rulet.png-cfc617775ece3176022972027d7d29aa.ctex::
@@ -428,17 +428,17 @@ stard_rulet.png::CompressedTexture2D::770889547356313390::1788797384::1788798294
 tunder_rulet.png::CompressedTexture2D::7069217725331341565::1788797384::1788798294::1::::<><><>0<>0<>b9a763857d8d591965cf27fa605fd716<>res://.godot/imported/tunder_rulet.png-f1c8bda64acdb3ffe0fdc8241ffc2c9b.ctex::
 ::res://assets/textures/::1788797384
 ::res://scenes/::1788797384
-::res://scenes/items/::1788798288
+::res://scenes/items/::1788798309
 banana.tscn::PackedScene::4633982718386957612::1788797384::0::1::::<><><>0<>0<><>::uid://dw67u2oil6xcr::::res://scripts/items/banana.gd<>uid://bh4wlegy8bsyf::::res://assets/roulette/banana_rulet.png
 false_box.tscn::PackedScene::-1::1788797384::0::1::::<><><>0<>0<><>::res://scripts/items/false_box.gd<>res://scenes/items/mario_kart_item_box.glb
 item_box.tscn::PackedScene::581363830431384157::1788797384::0::1::::<><><>0<>0<><>::uid://1v6bon477s3l::::res://scripts/items/item_box.gd<>uid://d0qv1wpin112k::::res://scenes/items/mario_kart_item_box.glb
 mario_kart_item_box.glb::PackedScene::8948335852652370280::1788797384::1788798309::1::::<><><>0<>0<>5b749fd7a80cc51c4b71876b5b494cd3<>res://.godot/imported/mario_kart_item_box.glb-c042fc622c30df12c86f5d1b7eef1ef5.scn::uid://cyse55sis23vh::::res://scenes/items/mario_kart_item_box_0.jpg
 mario_kart_item_box_0.jpg::CompressedTexture2D::6494830459955883577::1788797384::1788798294::1::::<><><>0<>0<>be44a932387fd30743bf721fdd1ce38c<>res://.godot/imported/mario_kart_item_box_0.jpg-eeefc9af60f99227f3f77bc80850bd5d.s3tc.ctex::
-::res://scenes/maps/::1788798288
-Bowser's_Castle.tscn::PackedScene::6242521177372296991::1788798288::0::1::::<><><>0<>0<><>::uid://bxvyfqy6pcpaa::::res://scripts/maps/bowser's_castle.gd<>uid://xqwa6g7yo3pp::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers.glb<>uid://bbt08ps58sakb::::res://scenes/player/playerkart.tscn<>uid://iju8h2yrbqjt::::res://scenes/items/item_box.tscn<>uid://bgj8st504r6ra::::res://scenes/maps/checkpoint.tscn<>uid://c74wtts3lugx::::res://scripts/maps/out_of_bounds.gd
-checkpoint.tscn::PackedScene::2828169995822543926::1788798288::0::1::::<><><>0<>0<><>::uid://dcxxtoiesmu7f::::res://scripts/maps/checkpoint.gd
+::res://scenes/maps/::1788798666
+Bowser's_Castle.tscn::PackedScene::6242521177372296991::1788799334::0::1::::<><><>0<>0<><>::uid://bxvyfqy6pcpaa::::res://scripts/maps/bowser's_castle.gd<>uid://xqwa6g7yo3pp::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers.glb<>uid://bbt08ps58sakb::::res://scenes/player/playerkart.tscn<>uid://iju8h2yrbqjt::::res://scenes/items/item_box.tscn<>uid://bgj8st504r6ra::::res://scenes/maps/checkpoint.tscn<>uid://c74wtts3lugx::::res://scripts/maps/out_of_bounds.gd
+checkpoint.tscn::PackedScene::2828169995822543926::1788798567::0::1::::<><><>0<>0<><>::uid://dcxxtoiesmu7f::::res://scripts/maps/checkpoint.gd
 test_map.tscn::PackedScene::828180877375428508::1788797384::0::1::::<><><>0<>0<><>::uid://bbt08ps58sakb::::res://scenes/player/playerkart.tscn<>uid://iju8h2yrbqjt::::res://scenes/items/item_box.tscn
-::res://scenes/maps/Bowser's_Castle/::1788798288
+::res://scenes/maps/Bowser's_Castle/::1788798316
 nintendo_64_-_mario_kart_64_-_courses_-_bowsers.glb::PackedScene::1648710860559833197::1788797384::1788798316::1::::<><><>0<>0<>fa2d7547d5b310d3f70f6bbd638981e4<>res://.godot/imported/nintendo_64_-_mario_kart_64_-_courses_-_bowsers.glb-d18e6ec2456d9af51bd7b53f4f6d0040.scn::uid://dw657auv7kt4c::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_0.png<>uid://bxykgyyc116kp::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_1.png<>uid://beo7702y7rlex::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_7.png<>uid://dfdeu45kxdt6::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_2.png<>uid://hsvmbmi604wy::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_3.png<>uid://c4k6iwg3eyifi::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_4.png<>uid://102lrrkwd45b::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_5.png<>uid://caa0eu4gfvo66::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_8.png<>uid://cca4g8nvvtdkd::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_18.png<>uid://0xrn026xexby::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_12.png<>uid://cd52cthtcqsec::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_13.png<>uid://dc4qubfojnux7::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_15.png<>uid://5v7p7bw2mba4::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_16.png<>uid://fbxfegnrfn0s::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_17.png<>uid://bp87ahw14aju3::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_19.png<>uid://byg8hjlw6bck5::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_21.png<>uid://p2nvn2dfkmor::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_20.png<>uid://c70jqtutxgm1::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_22.png<>uid://b165c6845viqc::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_23.png<>uid://dl46415wn5bj5::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_28.png<>uid://c1sconn2dnivo::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_29.png<>uid://0p2eb77vyqgm::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_24.png<>uid://dg26r8if1mku5::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_25.png<>uid://dar7tmcx20oiy::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_26.png<>uid://dq5u7oapevjpl::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_27.png<>uid://cjho4v3p5hwce::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_30.png<>uid://c1c6x2pa3niet::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_31.png<>uid://hghb2qtl1tbh::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_32.png<>uid://bvfhs722of4n3::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_33.png<>uid://csi4emurkju3l::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_34.png<>uid://bdujyxuwadlgr::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_35.png<>uid://ddb1r7cp3u1ta::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_36.png<>uid://r4cmi35shx4x::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_37.png<>uid://bhlfg01d7twwr::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_38.png<>uid://1j66qxyisv1n::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_6.png<>uid://dincx0hdksxd0::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_10.png<>uid://ctmglan5k68ju::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_11.png<>uid://bjhtus1u5wggh::::res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_14.png
 nintendo_64_-_mario_kart_64_-_courses_-_bowsers_0.png::CompressedTexture2D::8769291008573230232::1788797384::1788798294::1::::<><><>0<>0<>5a3e5bc4f92cfaaa6404ccd7adc711b7<>res://.godot/imported/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_0.png-50ac00e42a5da6a9fd6b7e32a1859b92.s3tc.ctex::
 nintendo_64_-_mario_kart_64_-_courses_-_bowsers_1.png::CompressedTexture2D::4050928335918757647::1788797384::1788798294::1::::<><><>0<>0<>058df7e06bd466be5a99fc41797f584f<>res://.godot/imported/nintendo_64_-_mario_kart_64_-_courses_-_bowsers_1.png-229a34d974b6d1fd3f71abb7dbc322d7.s3tc.ctex::
@@ -487,13 +487,13 @@ MenuPausa.tscn::PackedScene::1630021688270234382::1788797384::0::1::::<><><>0<>0
 MenuPrincipal.tscn::PackedScene::1472665178704330567::1788797384::0::1::::<><><>0<>0<><>::uid://b7hmslu1ot0qh::::res://scripts/menus/menu_principal.gd<>uid://3lkfmqg8n1ip::::res://assets/menus/MenuPrincipal.png
 MenuSeleccionMapa.tscn::PackedScene::1228769629643419271::1788797384::0::1::::<><><>0<>0<><>::uid://b1t0fk4mb0syx::::res://scripts/menus/menu_seleccion_mapa.gd<>uid://pe1x1vcoridx::::res://assets/menus/MenuSeleccionMapa.png
 MenuSeleccionPersonaje.tscn::PackedScene::3055239842207146642::1788797384::0::1::::<><><>0<>0<><>::uid://druu322mu0chp::::res://scripts/menus/menu_seleccion_personaje.gd<>uid://d4km8shiimkeg::::res://assets/menus/MenuSeleccionPersonajes.png
-::res://scenes/player/::1788798284
+::res://scenes/player/::1788799045
 bowser.tscn::PackedScene::5521439415948882272::1788797384::0::1::::<><><>0<>0<><>::uid://e8imfckxdmtu::::res://assets/3d/Personajes/Bowser/bw_lod/bw_lod.obj<>uid://c4id462yq64rt::::res://scenes/ui/Hud.tscn<>uid://1pm0iycgaqjw::::res://assets/3d/Veiculos/Koopa Clown/body_kpc.dae
 daisy.tscn::PackedScene::2284649353012554744::1788797384::0::1::::<><><>0<>0<><>::uid://bio5nd6d6ujk::::res://assets/3d/Personajes/Daisy/ds_lod/ds_lod.obj<>uid://c4id462yq64rt::::res://scenes/ui/Hud.tscn<>uid://dyjlc5bpi21it::::res://assets/3d/Veiculos/Soda Jet/body_jet.dae
 donkey_kong.tscn::PackedScene::5195578872550973658::1788797384::0::1::::<><><>0<>0<><>::uid://drf77qr5ohmlc::::res://assets/3d/Personajes/Donkey Kong/dk_lod/dk_lod.obj<>uid://b84r0gp7amgpm::::res://assets/3d/Ruedas/Standard/tire_std_R.dae<>uid://c4id462yq64rt::::res://scenes/ui/Hud.tscn<>uid://ssa1yvcw358b::::res://assets/3d/Veiculos/Zucchini/body_cuc.dae
 luigi.tscn::PackedScene::2657106276881904399::1788797384::0::1::::<><><>0<>0<><>::uid://bt7ouuign4dxt::::res://assets/3d/Personajes/Luigi/lg_lod/lg_lod.obj<>uid://b84r0gp7amgpm::::res://assets/3d/Ruedas/Standard/tire_std_R.dae<>uid://c4id462yq64rt::::res://scenes/ui/Hud.tscn<>uid://bnpsm0wl6ii0v::::res://assets/3d/Veiculos/Blue Seven/body_race.obj
 peach.tscn::PackedScene::8672282769918391913::1788797384::0::1::::<><><>0<>0<><>::uid://bf3kasxldmxrs::::res://assets/3d/Personajes/Peach/pc_lod/pc_lod.obj<>uid://chhk8ucetk5qg::::res://assets/3d/Veiculos/Cloud 9/body_cld.dae<>uid://c4id462yq64rt::::res://scenes/ui/Hud.tscn
-playerkart.tscn::PackedScene::2497410377740893621::1788798297::0::1::::<><><>0<>0<><>::uid://daqugjt0oindn::::res://scripts/player/playerkart.gd<>uid://bmmxss5peq10d::::res://assets/3d/Veiculos/Pipe Frame/body_pipe.dae<>uid://sba62es5bc1j::::res://assets/3d/Personajes/Mario/mr_lod/mr_lod.obj<>uid://b84r0gp7amgpm::::res://assets/3d/Ruedas/Standard/tire_std_R.dae<>uid://c4id462yq64rt::::res://scenes/ui/Hud.tscn
+playerkart.tscn::PackedScene::2497410377740893621::1788799379::0::1::::<><><>0<>0<><>::uid://daqugjt0oindn::::res://scripts/player/playerkart.gd<>uid://bmmxss5peq10d::::res://assets/3d/Veiculos/Pipe Frame/body_pipe.dae<>uid://sba62es5bc1j::::res://assets/3d/Personajes/Mario/mr_lod/mr_lod.obj<>uid://b84r0gp7amgpm::::res://assets/3d/Ruedas/Standard/tire_std_R.dae<>uid://c4id462yq64rt::::res://scenes/ui/Hud.tscn
 toad.tscn::PackedScene::1405091103820883416::1788797384::0::1::::<><><>0<>0<><>::uid://c4ljt073lyg54::::res://assets/3d/Personajes/Toad/td_lod/td_lod.obj<>uid://b84r0gp7amgpm::::res://assets/3d/Ruedas/Standard/tire_std_R.dae<>uid://c4id462yq64rt::::res://scenes/ui/Hud.tscn<>uid://db731sam3i5tt::::res://assets/3d/Veiculos/Bruiser/body_gng.dae
 yoshi.tscn::PackedScene::7381066622782677232::1788797384::0::1::::<><><>0<>0<><>::uid://dml1akx1olavu::::res://assets/3d/Personajes/Yoshi/ys_lod/ys_lod.obj<>uid://b84r0gp7amgpm::::res://assets/3d/Ruedas/Standard/tire_std_R.dae<>uid://boytkc52wujkk::::res://assets/3d/Veiculos/B Dasher/body_dsh.dae<>uid://c4id462yq64rt::::res://scenes/ui/Hud.tscn
 ::res://scenes/ui/::1788797384
@@ -516,7 +516,7 @@ menu_pausa.gd::GDScript::4583109605656576518::1788797384::0::1::::<>CanvasLayer<
 menu_principal.gd::GDScript::4647675682445787331::1788797384::0::1::::<>Control<><>0<>0<><>::
 menu_seleccion_mapa.gd::GDScript::4252081219978160039::1788797384::0::1::::<>Control<><>0<>0<><>::
 menu_seleccion_personaje.gd::GDScript::8395025750504825677::1788797384::0::1::::<>Control<><>0<>0<><>::
-::res://scripts/player/::1788798284
-playerkart.gd::GDScript::7193517652979377319::1788798297::0::1::::<>CharacterBody3D<><>0<>0<><>::
+::res://scripts/player/::1788798297
+playerkart.gd::GDScript::7193517652979377319::1788799370::0::1::::<>CharacterBody3D<><>0<>0<><>::
 ::res://scripts/ui/::1788797384
 item_roulette.gd::GDScript::2561493423010117928::1788797384::0::1::::<>CanvasLayer<><>0<>0<><>::

@@ -26,17 +26,8 @@ ambient_light_color = Color(0.5, 0.5, 0.5, 1)
 height = 0.3725586
 radius = 349.03906
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_1bto1"]
-top_radius = 348.7339
-bottom_radius = 348.7339
-height = 0.37060547
-
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_fcsne"]
 radius = 26.25879
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_nccq0"]
-top_radius = 26.424316
-bottom_radius = 26.424316
 
 [node name="Node3D" type="Node3D" unique_id=1949299023]
 script = ExtResource("1_ltx7w")
@@ -74,19 +65,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.9871616, 0)
 script = ExtResource("6_ybtvi")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ZonaLava" unique_id=1447682338]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.397522, 0.22773504, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.397522, 2.3760543, 0)
 shape = SubResource("CylinderShape3D_1bto1")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="ZonaLava/CollisionShape3D" unique_id=1548945228]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0009765625, 0)
-mesh = SubResource("CylinderMesh_1bto1")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="ZonaLava" unique_id=1672876057]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -121.96224, 8.985552, 156.75131)
 shape = SubResource("CylinderShape3D_fcsne")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="ZonaLava/CollisionShape3D2" unique_id=699262299]
-mesh = SubResource("CylinderMesh_nccq0")
 
 [node name="Checkpoint4" parent="." unique_id=1198445923 instance=ExtResource("5_twc5r")]
 transform = Transform3D(0.947764, 0, 0.42750025, 0, 9.188239, 0, -0.030187637, 0, 13.4218, 41.248024, 4.7311068, 221.39207)
