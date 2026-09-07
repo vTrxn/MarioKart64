@@ -5,7 +5,7 @@ func _ready():
 
 
 func _on_boton_sonido_pressed():
-	print("Botón de sonido presionado (Decorativo)")
+	print("Botón de sonido")
 
 
 func _on_boton_ayudas_pressed():

@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://bjr8mba0eaee1"]
+
+[ext_resource type="Script" uid="uid://druu322mu0chp" path="res://scripts/menus/menu_seleccion_personaje.gd" id="1_u58l1"]
+[ext_resource type="Texture2D" uid="uid://d4km8shiimkeg" path="res://assets/menus/MenuSeleccionPersonajes.png" id="2_spmeu"]
+
+[node name="MenuSeleccionPersonaje" type="Control" unique_id=1190236598]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u58l1")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=229030854]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.5616656, 0.5620368)
+texture = ExtResource("2_spmeu")
+
+[node name="ContenedorPersonajes" type="Control" parent="TextureRect" unique_id=1424876383]
+anchors_preset = 0
+offset_left = 115.72723
+offset_top = 225.96385
+offset_right = 155.72723
+offset_bottom = 317.96384
+scale = Vector2(43.331703, 8.5679)
+
+[node name="Mario" type="Button" parent="TextureRect/ContenedorPersonajes" unique_id=822563871]
+self_modulate = Color(1.0039686, 1.0000322, 1.0000322, 0)
+layout_mode = 0
+offset_left = 0.5341457
+offset_top = 1.6613107
+offset_right = 8.534145
+offset_bottom = 9.66131
+scale = Vector2(0.6982841, 3.5613477)
+
+[node name="Luigi" type="Button" parent="TextureRect/ContenedorPersonajes" unique_id=1404521543]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 11.627941
+offset_top = 1.8689735
+offset_right = 19.627941
+offset_bottom = 9.868974
+scale = Vector2(0.68805784, 3.4661689)
+
+[node name="Peach" type="Button" parent="TextureRect/ContenedorPersonajes" unique_id=298440015]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 22.516298
+offset_top = 1.8689747
+offset_right = 30.516298
+offset_bottom = 9.868975
+scale = Vector2(0.7152955, 3.4682343)
+
+[node name="Yoshi" type="Button" parent="TextureRect/ContenedorPersonajes" unique_id=1037331618]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 33.65118
+offset_top = 1.4536476
+offset_right = 41.65118
+offset_bottom = 9.453648
+scale = Vector2(0.704253, 3.464044)
+
+[node name="DonkeyKong" type="Button" parent="TextureRect/ContenedorPersonajes" unique_id=9817617]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 0.4930576
+offset_top = 42.15576
+offset_right = 8.493057
+offset_bottom = 50.15576
+scale = Vector2(0.6955493, 3.425628)
+
+[node name="Toad" type="Button" parent="TextureRect/ContenedorPersonajes" unique_id=1257055949]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 11.545766
+offset_top = 42.155758
+offset_right = 19.545765
+offset_bottom = 50.155758
+scale = Vector2(0.71719337, 3.4961154)
+
+[node name="Daisy" type="Button" parent="TextureRect/ContenedorPersonajes" unique_id=1503705083]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 22.557386
+offset_top = 42.155758
+offset_right = 30.557386
+offset_bottom = 50.155758
+scale = Vector2(0.7049213, 3.5005927)
+
+[node name="Bowser" type="Button" parent="TextureRect/ContenedorPersonajes" unique_id=173096673]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 33.610096
+offset_top = 42.363426
+offset_right = 41.610096
+offset_bottom = 50.363426
+scale = Vector2(0.71139544, 3.4369054)
+
+[node name="BotonVolver" type="Button" parent="TextureRect" unique_id=419274968]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 35.608376
+offset_top = 1019.5061
+offset_right = 43.608376
+offset_bottom = 1027.5061
+scale = Vector2(90.210045, 13.238886)
+
+[node name="BotonContinuar" type="Button" parent="TextureRect" unique_id=59127771]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1280.1211
+offset_top = 1015.94775
+offset_right = 1288.1211
+offset_bottom = 1023.94775
+scale = Vector2(90.432335, 13.460633)
+
+[connection signal="pressed" from="TextureRect/BotonVolver" to="." method="_on_boton_volver_pressed"]
+[connection signal="pressed" from="TextureRect/BotonContinuar" to="." method="_on_boton_continuar_pressed"]

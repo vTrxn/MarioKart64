@@ -1,7 +1,7 @@
 extends Control
 
 func _on_boton_jugar_pressed():
-	get_tree().change_scene_to_file("res://SeleccionPersonaje.tscn")
+	get_tree().change_scene_to_file("res://scenes/menus/MenuSeleccionPersonaje.tscn")
 
 func _on_boton_ajustes_pressed():
 	var ventana_ajustes = load("res://scenes/menus/MenuAjustes.tscn").instantiate()

@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dbu7wgmhpi6lc"]
+
+[ext_resource type="Script" uid="uid://dlfq5b2xyn85t" path="res://scripts/menus/menu_fin_juego.gd" id="1_d760r"]
+[ext_resource type="Texture2D" uid="uid://dcykmvajs0wi" path="res://assets/menus/MenuFinJuego.png" id="2_xeydq"]
+
+[node name="MenuFinJuego" type="CanvasLayer" unique_id=420697665]
+script = ExtResource("1_d760r")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1184111548]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect" unique_id=483985255]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.5609164, 0.55946267)
+texture = ExtResource("2_xeydq")
+
+[node name="BotonReintentar" type="Button" parent="ColorRect/TextureRect" unique_id=1381655382]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 663.20044
+offset_top = 366.423
+offset_right = 671.20044
+offset_bottom = 374.423
+scale = Vector2(90.05297, 13.197682)
+
+[node name="BotonInicio" type="Button" parent="ColorRect/TextureRect" unique_id=2014234421]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 663.20044
+offset_top = 521.9294
+offset_right = 671.20044
+offset_bottom = 529.9294
+scale = Vector2(90.17297, 13.3111105)
+
+[connection signal="pressed" from="ColorRect/TextureRect/BotonReintentar" to="." method="_on_boton_reintentar_pressed"]
+[connection signal="pressed" from="ColorRect/TextureRect/BotonInicio" to="." method="_on_boton_inicio_pressed"]

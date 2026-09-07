@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://rrhwkwhs7snf"]
+
+[ext_resource type="Script" uid="uid://b1t0fk4mb0syx" path="res://scripts/menus/menu_seleccion_mapa.gd" id="1_sobd0"]
+[ext_resource type="Texture2D" uid="uid://pe1x1vcoridx" path="res://assets/menus/MenuSeleccionMapa.png" id="2_wta6p"]
+
+[node name="MenuSeleccionMapa" type="Control" unique_id=271471098]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sobd0")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=489701656]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.562603, 0.5635509)
+texture = ExtResource("2_wta6p")
+
+[node name="ContenedorMapas" type="Control" parent="TextureRect" unique_id=189234581]
+anchors_preset = 0
+offset_left = 202.62956
+offset_top = 184.54411
+offset_right = 242.62956
+offset_bottom = 224.54411
+scale = Vector2(41.128845, 18.206427)
+
+[node name="BowserCastle" type="Button" parent="TextureRect/ContenedorMapas" unique_id=1914826280]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(5.000731, 4.9219537)
+
+[node name="BotonVolver" type="Button" parent="TextureRect" unique_id=146613730]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 33.771595
+offset_top = 1018.5415
+offset_right = 41.771595
+offset_bottom = 1026.5415
+scale = Vector2(90.72504, 12.950359)
+
+[node name="BotonContinuar" type="Button" parent="TextureRect" unique_id=1461462569]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1288.6528
+offset_top = 1020.316
+offset_right = 1296.6528
+offset_bottom = 1028.3159
+scale = Vector2(90.87584, 13.110818)
+
+[connection signal="pressed" from="TextureRect/BotonVolver" to="." method="_on_boton_volver_pressed"]
+[connection signal="pressed" from="TextureRect/BotonContinuar" to="." method="_on_boton_continuar_pressed"]
