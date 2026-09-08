@@ -16,6 +16,7 @@ steering_angle = 4.0
 steering_speed = 1.4
 jump_force = 2.0
 boost_multiplier = 1.2
+total_mandatory_checkpoints = 5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1855634901]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008392334, 0.4039154, 0.0036621094)
