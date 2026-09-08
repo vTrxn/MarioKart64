@@ -46,7 +46,40 @@ transform = Transform3D(140, 0, 0, 0, 140, 0, 0, 0, 140, 117.49169, -0.7436218, 
 transform = Transform3D(-0.9999979, 0, 0.0020516778, 0, 1, 0, -0.0020516778, 0, -0.9999979, 118.19221, 0.233598, -7.048349)
 
 [node name="ItemBox" parent="." unique_id=1621560835 instance=ExtResource("4_i6bpu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.83709, 0.0076900125, 217.61436)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110.62938, 0.0076900125, 197.89246)
+
+[node name="ItemBox2" parent="." unique_id=1268378157 instance=ExtResource("4_i6bpu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.58597, 0.0076900125, 209.07925)
+
+[node name="ItemBox3" parent="." unique_id=176517913 instance=ExtResource("4_i6bpu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108.175735, 0.0076900125, 206.08295)
+
+[node name="ItemBox4" parent="." unique_id=573440717 instance=ExtResource("4_i6bpu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.83797, 0.0076900125, 199.03784)
+
+[node name="ItemBox5" parent="." unique_id=490490376 instance=ExtResource("4_i6bpu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.72441, 0.0076900125, 84.027916)
+
+[node name="ItemBox6" parent="." unique_id=1802224692 instance=ExtResource("4_i6bpu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.475445, 0.0076900125, 90.96933)
+
+[node name="ItemBox7" parent="." unique_id=804643168 instance=ExtResource("4_i6bpu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.06796, 0.0076900125, 90.300514)
+
+[node name="ItemBox8" parent="." unique_id=251256338 instance=ExtResource("4_i6bpu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.120914, 0.0076900125, 86.97216)
+
+[node name="ItemBox9" parent="." unique_id=542969968 instance=ExtResource("4_i6bpu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.633755, 0.8907562, -83.76216)
+
+[node name="ItemBox10" parent="." unique_id=1751151993 instance=ExtResource("4_i6bpu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.539066, 0.8907562, -74.47093)
+
+[node name="ItemBox11" parent="." unique_id=983965001 instance=ExtResource("4_i6bpu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.58515, 0.8907562, -82.10064)
+
+[node name="ItemBox12" parent="." unique_id=255718142 instance=ExtResource("4_i6bpu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.636158, 0.8907562, -90.20491)
 
 [node name="Checkpoint" parent="." unique_id=119535117 instance=ExtResource("5_twc5r")]
 transform = Transform3D(-11.310895, 0, -8.742278e-08, 0, 6.8728914, 0, 9.888298e-07, 0, -1, 117.559784, 2.7866685, 4.6147275)
