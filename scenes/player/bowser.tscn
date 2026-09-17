@@ -7,6 +7,11 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_sspns"]
 size = Vector3(1.5674438, 1.0517883, 1.3066406)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gexxf"]
+albedo_color = Color(0.8862616, 0.88626146, 0.8862615, 1)
+metallic = 1.0
+roughness = 0.3
+
 [node name="Bowser" type="CharacterBody3D" unique_id=528504298]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1873368612]
@@ -27,6 +32,7 @@ transform = Transform3D(1, 0, 0, 0, 0.98400617, -0.17813659, 0, 0.17813659, 0.98
 
 [node name="MrLod" type="MeshInstance3D" parent="." unique_id=1704309909]
 transform = Transform3D(-0.1, 0, -8.742278e-09, 0, 0.1, 0, 8.742278e-09, 0, -0.1, -0.012486935, 0.15334424, 0.18484545)
+material_override = SubResource("StandardMaterial3D_gexxf")
 mesh = ExtResource("1_2pkqg")
 
 [node name="Hud" parent="." unique_id=1137834404 instance=ExtResource("2_o7pu8")]
