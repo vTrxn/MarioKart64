@@ -21,6 +21,9 @@ extends CharacterBody3D
 @export_group("Checkpoints")
 @export var total_mandatory_checkpoints: int = 10 
 
+@export_group("Cambio de material")
+@onready var mesh_instance: MeshInstance3D = $MrLod
+
 var current_speed: float = 0.0
 var current_steering: float = 0.0
 var is_drifting: bool = false
@@ -244,3 +247,29 @@ func _end_drift():
 	is_drifting = false
 	drift_dir = 0.0
 	drift_timer = 0.0
+	
+
+func _process(_delta):
+	if Input.is_action_just_pressed("activar_plata"):
+		transformar_a_plata(mesh_instance)
+
+static func cambiar_material_override(mesh_instance: MeshInstance3D, propiedad: String, valor) -> bool:
+	if mesh_instance == null:
+		return false
+	var material := mesh_instance.material_override
+	if material == null:
+		return false
+	material.set(propiedad, valor)
+	return true
+
+func transformar_a_plata(mesh_instance: MeshInstance3D) -> void:
+	if mesh_instance.material_override == null:
+		mesh_instance.material_override = StandardMaterial3D.new()
+		mesh_instance.material_override = mesh_instance.material_override.duplicate()
+	else:
+		mesh_instance.material_override = mesh_instance.material_override.duplicate()
+		
+	cambiar_material_override(mesh_instance, "albedo_color", Color(0.8, 0.8, 0.8))
+	cambiar_material_override(mesh_instance, "metallic", 1.0)
+	cambiar_material_override(mesh_instance, "roughness", 0.0)
+	
