@@ -8,6 +8,15 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_x35fq"]
 size = Vector3(1.5674438, 1.0517883, 1.3066406)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kv2ks"]
+transparency = 1
+albedo_color = Color(0, 0.9098039, 0.3882353, 0.21568628)
+metallic = 1.0
+metallic_specular = 0.0
+emission_enabled = true
+emission = Color(3.5642002e-05, 1.9604301, 0.87395895, 1)
+emission_energy_multiplier = 20.68
+
 [node name="Toad" type="CharacterBody3D" unique_id=1353550580]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2010399868]
@@ -31,6 +40,7 @@ transform = Transform3D(-0.1, 0, -8.742278e-09, 0, 0.1, 0, 8.742278e-09, 0, -0.1
 
 [node name="MrLod" type="MeshInstance3D" parent="." unique_id=729143111]
 transform = Transform3D(-0.1, 0, -8.742278e-09, 0, 0.1, 0, 8.742278e-09, 0, -0.1, -0.012486935, 0.15334424, 0.18484545)
+material_override = SubResource("StandardMaterial3D_kv2ks")
 mesh = ExtResource("2_w6p6b")
 
 [node name="tire_std_R" parent="." unique_id=1704087180 instance=ExtResource("3_02im0")]
