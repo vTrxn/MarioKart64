@@ -116,3 +116,51 @@ shape = SubResource("CylinderShape3D_1bto1")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="ZonaLava" unique_id=1672876057]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -121.96224, 8.775973, 155.40753)
 shape = SubResource("CylinderShape3D_fcsne")
+
+[node name="AreaLight3D" type="AreaLight3D" parent="." unique_id=362750764]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -234.38498, 7.9156165, 322.91946)
+light_energy = 16.0
+
+[node name="AreaLight3D2" type="AreaLight3D" parent="." unique_id=1553718556]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -227.57164, 7.9156165, 322.91946)
+light_energy = 16.0
+
+[node name="AreaLight3D3" type="AreaLight3D" parent="." unique_id=699205878]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -234.38498, 10.049044, 297.6547)
+light_energy = 16.0
+
+[node name="AreaLight3D4" type="AreaLight3D" parent="." unique_id=246508121]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -227.57164, 10.049044, 297.6547)
+light_energy = 16.0
+
+[node name="AreaLight3D5" type="AreaLight3D" parent="." unique_id=643481182]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -234.38498, 12.735226, 267.2064)
+light_energy = 16.0
+
+[node name="AreaLight3D6" type="AreaLight3D" parent="." unique_id=1798443670]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -227.57164, 12.735226, 267.2064)
+light_energy = 16.0
+
+[node name="AreaLight3D7" type="AreaLight3D" parent="." unique_id=1880541647]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -234.38498, 15.554747, 238.00441)
+light_energy = 16.0
+
+[node name="AreaLight3D8" type="AreaLight3D" parent="." unique_id=969267852]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -227.57164, 15.554747, 238.00441)
+light_energy = 16.0
+
+[node name="AreaLight3D9" type="AreaLight3D" parent="." unique_id=1808379840]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -121.306404, 16.537134, 187.83081)
+light_energy = 16.0
+
+[node name="AreaLight3D10" type="AreaLight3D" parent="." unique_id=621019593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -119.82314, 16.537134, 187.67358)
+light_energy = 16.0
+
+[node name="AreaLight3D11" type="AreaLight3D" parent="." unique_id=1930521075]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -121.306404, 16.537134, 119.82297)
+light_energy = 16.0
+
+[node name="AreaLight3D12" type="AreaLight3D" parent="." unique_id=1971440444]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -119.82314, 16.537134, 119.66574)
+light_energy = 16.0
