@@ -43,6 +43,11 @@ var last_visited_checkpoint_index: int = -1
 var last_respawn_transform: Transform3D
 var checkpoints_passed_in_lap: int = 0
 
+@export_group("Choque y Rebote")
+@export var bounce_force: float = 7.0      # Fuerza del rechazo hacia atrás
+@export var crash_duration: float = 0.3     # Tiempo que el jugador pierde el control
+var is_crashed: bool = false
+
 func _ready():
 	original_max_speed = max_speed
 	last_respawn_transform = global_transform
@@ -171,11 +176,32 @@ func false_box_debuff():
 	has_false_box_debuff = false
 
 func _physics_process(delta: float) -> void:
+	# --- 1. APLICAR GRAVEDAD ---
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 	elif velocity.y < 0.0:
 		velocity.y = 0.0
-	
+
+	# --- 2. MANEJO DEL ESTADO DE CHOQUE ---
+	if is_crashed:
+		# Frenamos la velocidad física del rebote gradualmente con fricción
+		velocity.x = move_toward(velocity.x, 0.0, friction * 2.0 * delta)
+		velocity.z = move_toward(velocity.z, 0.0, friction * 2.0 * delta)
+		
+		move_and_slide()
+		
+		# Mantener la cámara actualizándose durante el choque
+		if has_node("SpringArm3D"):
+			var spring_arm = get_node("SpringArm3D")
+			spring_arm.global_position = global_position
+			var current_y_rotation = global_transform.basis.get_euler().y
+			var kart_yaw_basis = Basis(Vector3.UP, current_y_rotation)
+			var target_basis = kart_yaw_basis * original_spring_arm_basis
+			var new_basis = spring_arm.global_transform.basis.slerp(target_basis, 5.0 * delta)
+			spring_arm.global_transform.basis = new_basis.orthonormalized()
+		return # Interrumpe el resto del procesamiento para no leer inputs del jugador
+
+	# --- 3. LÓGICA NORMAL DEL JUGADOR (Manejo, aceleración, etc.) ---
 	var turn_input :float = Input.get_action_strength("girar_izquierda")-Input.get_action_strength("girar_derecha")
 	var acceleration_input :float = Input.get_action_strength("acelerar")-Input.get_action_strength("frenar")
 	
@@ -183,12 +209,12 @@ func _physics_process(delta: float) -> void:
 		boost_timer -= delta
 		current_speed = max_speed * boost_multiplier
 	else:
-		if acceleration_input !=0:
+		if acceleration_input != 0:
 			current_speed = move_toward(current_speed, acceleration_input * max_speed, acceleration * delta)
 		else:
 			current_speed = move_toward(current_speed, 0.0, friction * delta)
 	
-	_handle_drift(turn_input,delta)
+	_handle_drift(turn_input, delta)
 	
 	current_steering = lerp(current_steering, turn_input, steering_smooth * delta)
 	
@@ -208,6 +234,26 @@ func _physics_process(delta: float) -> void:
 	velocity.z = horrizontal_velocity.z
 	
 	move_and_slide()
+	
+	# --- DETECCIÓN AUTOMÁTICA DE PAREDES EN EL MAPA ---
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var normal = collision.get_normal()
+		
+		# Si 'normal.y' es cercano a 0 (menor a 0.5), significa que es una pared vertical y no el suelo
+		if abs(normal.y) < 0.5:
+			# Solo activa el choque si la velocidad del kart es relevante (ejemplo: > 8.0)
+			if abs(current_speed) > 8.0:
+				receive_impact(normal)
+				break
+
+	# Opcional: Detectar choques con paredes/obstáculos sólidos mediante colisión física
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		if collision.get_collider().is_in_group("obstaculos"):
+			receive_impact(collision.get_normal())
+			break
+			
 	if has_node("SpringArm3D"):
 		var spring_arm = get_node("SpringArm3D")
 		spring_arm.global_position = global_position
@@ -244,3 +290,29 @@ func _end_drift():
 	is_drifting = false
 	drift_dir = 0.0
 	drift_timer = 0.0
+	
+# Funcion de choque 
+func receive_impact(impact_normal: Vector3 = Vector3.ZERO):
+	if is_crashed:
+		return
+	
+	is_crashed = true
+	is_drifting = false
+	boost_timer = 0.0
+	current_speed = 0.0
+	
+	# Si tenemos la normal del objeto contra el que chocamos, rebotamos en esa dirección.
+	# Si no, rebotamos hacia atrás (transform.basis.z es la dirección trasera del Kart).
+	var bounce_dir := Vector3.ZERO
+	if impact_normal != Vector3.ZERO:
+		bounce_dir = impact_normal.normalized()
+	else:
+		bounce_dir = transform.basis.z
+	
+	# Aplicamos el impulso de rebote y un pequeño salto
+	velocity.x = bounce_dir.x * bounce_force
+	velocity.z = bounce_dir.z * bounce_force
+	velocity.y = 3.0 
+	
+	# Temporizador para devolver el control al jugador tras el tiempo de aturdimiento
+	get_tree().create_timer(crash_duration).timeout.connect(func(): is_crashed = false)
