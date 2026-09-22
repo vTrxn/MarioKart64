@@ -1,54 +1,87 @@
-[gd_scene format=3 uid="uid://xhuhph2kkkcs"]
+[gd_scene format=3 uid="uid://c2tkqnhv2wdc0"]
 
-[ext_resource type="Script" uid="uid://b6kde7k3q3263" path="res://scripts/menus/menu_pausa.gd" id="1_c7qep"]
-[ext_resource type="Texture2D" uid="uid://bqcipnnljarv6" path="res://assets/menus/MenuPausa.png" id="2_pws3l"]
+[ext_resource type="Theme" uid="uid://cpm4oybb4kdom" path="res://assets/new_theme.tres" id="1_1umq8"]
+[ext_resource type="Script" uid="uid://e7tu6m4ifssd" path="res://scripts/menus/menu_pausa.gd" id="1_dd0yb"]
+[ext_resource type="Texture2D" uid="uid://bex0b1lqauysb" path="res://assets/botones/TituloPausa.png" id="2_dd0yb"]
+[ext_resource type="Texture2D" uid="uid://mphd5i0w2jre" path="res://assets/botones/BotonContinuar.png" id="3_bcyui"]
+[ext_resource type="Texture2D" uid="uid://cl31fj36gnppc" path="res://assets/botones/BotonAjustes.png" id="4_x3eai"]
+[ext_resource type="Texture2D" uid="uid://bkfawurfjiuhs" path="res://assets/botones/BotonSalir.png" id="5_5iukc"]
 
-[node name="CanvasLayer" type="CanvasLayer" unique_id=569808752]
-script = ExtResource("1_c7qep")
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=163756672]
+[node name="MenuPausa" type="Control" unique_id=332370743]
+process_mode = 3
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.5882353)
+script = ExtResource("1_dd0yb")
 
-[node name="TextureRect" type="TextureRect" parent="ColorRect" unique_id=68241178]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(16.248158, 16.299887)
-texture = ExtResource("2_pws3l")
-expand_mode = 3
+[node name="FondoOscuro" type="ColorRect" parent="." unique_id=1151944099]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.47058824)
 
-[node name="BotonContinuar" type="Button" parent="ColorRect/TextureRect" unique_id=741246608]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 23.694992
-offset_top = 15.39888
-offset_right = 31.694992
-offset_bottom = 23.39888
-scale = Vector2(3.1322072, 0.45464495)
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1648741344]
+propagate_maximum_size = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -149.0
+offset_right = 200.0
+offset_bottom = 149.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.96656334, 1.0512023)
+layout_direction = 2
 
-[node name="BotonAjustes" type="Button" parent="ColorRect/TextureRect" unique_id=159298123]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 23.818087
-offset_top = 20.85904
-offset_right = 31.818087
-offset_bottom = 28.85904
-scale = Vector2(3.131325, 0.47030306)
+[node name="ContenedorPausa" type="VBoxContainer" parent="CenterContainer" unique_id=1856163494]
+clip_contents = true
+layout_mode = 2
+theme = ExtResource("1_1umq8")
+theme_override_constants/separation = 16
+alignment = 1
 
-[node name="BotonSalir" type="Button" parent="ColorRect/TextureRect" unique_id=1743476721]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 23.818087
-offset_top = 26.01245
-offset_right = 31.818087
-offset_bottom = 34.01245
-scale = Vector2(3.128719, 0.42446995)
+[node name="TituloPausa" type="TextureRect" parent="CenterContainer/ContenedorPausa" unique_id=1886767443]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_dd0yb")
+expand_mode = 1
+stretch_mode = 5
 
-[connection signal="pressed" from="ColorRect/TextureRect/BotonContinuar" to="." method="_on_boton_continuar_pressed"]
-[connection signal="pressed" from="ColorRect/TextureRect/BotonAjustes" to="." method="_on_boton_ajustes_pressed"]
-[connection signal="pressed" from="ColorRect/TextureRect/BotonSalir" to="." method="_on_boton_salir_pressed"]
+[node name="BotonContinuar" type="Button" parent="CenterContainer/ContenedorPausa" unique_id=1163560696]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_constants/icon_max_width = 350
+theme_override_font_sizes/font_size = 19
+icon = ExtResource("3_bcyui")
+icon_alignment = 1
+expand_icon = true
+
+[node name="BotonAjustes" type="Button" parent="CenterContainer/ContenedorPausa" unique_id=667229252]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_constants/icon_max_width = 350
+theme_override_font_sizes/font_size = 19
+icon = ExtResource("4_x3eai")
+icon_alignment = 1
+expand_icon = true
+
+[node name="BotonSalir" type="Button" parent="CenterContainer/ContenedorPausa" unique_id=474625357]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_constants/icon_max_width = 350
+theme_override_font_sizes/font_size = 19
+icon = ExtResource("5_5iukc")
+icon_alignment = 1
+expand_icon = true

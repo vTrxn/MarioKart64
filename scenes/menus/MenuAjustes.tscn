@@ -41,7 +41,3 @@ offset_top = 1920.2842
 offset_right = 68.206696
 offset_bottom = 1928.2842
 scale = Vector2(169.87222, 22.642126)
-
-[connection signal="pressed" from="TextureRect/BotonSonido" to="." method="_on_boton_sonido_pressed"]
-[connection signal="pressed" from="TextureRect/BotonAyudas" to="." method="_on_boton_ayudas_pressed"]
-[connection signal="pressed" from="TextureRect/BotonVolver" to="." method="_on_boton_volver_pressed"]

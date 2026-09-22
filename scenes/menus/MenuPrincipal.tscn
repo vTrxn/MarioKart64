@@ -1,51 +1,69 @@
-[gd_scene format=3 uid="uid://u8mty4pp00h4"]
+[gd_scene format=3 uid="uid://saj0nghwup0x"]
 
-[ext_resource type="Script" uid="uid://b7hmslu1ot0qh" path="res://scripts/menus/menu_principal.gd" id="1_be4aw"]
-[ext_resource type="Texture2D" uid="uid://3lkfmqg8n1ip" path="res://assets/menus/MenuPrincipal.png" id="2_py8mu"]
+[ext_resource type="Theme" uid="uid://cpm4oybb4kdom" path="res://assets/new_theme.tres" id="1_py8mu"]
+[ext_resource type="Texture2D" uid="uid://cl31fj36gnppc" path="res://assets/botones/BotonAjustes.png" id="2_ny18b"]
+[ext_resource type="Script" uid="uid://dq0jl6sny7ly0" path="res://scripts/menus/menu_principal.gd" id="2_q2auv"]
+[ext_resource type="Texture2D" uid="uid://dlkdrotli5sd5" path="res://assets/menus/MenuPrincipal.png" id="2_v3ki6"]
+[ext_resource type="Texture2D" uid="uid://bkfawurfjiuhs" path="res://assets/botones/BotonSalir.png" id="3_v3ki6"]
+[ext_resource type="Texture2D" uid="uid://doh78fpkvu3iy" path="res://assets/botones/BotonJugar.png" id="4_q2auv"]
 
-[node name="Control" type="Control" unique_id=274805989]
+[node name="MenuPrincipal" type="Control" unique_id=1829965642]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_be4aw")
+scale = Vector2(1.0142534, 1.0230871)
+theme = ExtResource("1_py8mu")
+script = ExtResource("2_q2auv")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1142609100]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(0.5606302, 0.5592604)
-texture = ExtResource("2_py8mu")
+[node name="FondoPantalla" type="TextureRect" parent="." unique_id=705298898]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 1.0034412)
+texture = ExtResource("2_v3ki6")
+expand_mode = 1
 
-[node name="BotonJugar" type="Button" parent="TextureRect" unique_id=1033367280]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 53.511208
-offset_top = 380.8601
-offset_right = 61.511208
-offset_bottom = 388.8601
-scale = Vector2(90.1595, 13.170229)
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=152952533]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 40.423817
+offset_right = 440.42383
+grow_vertical = 2
 
-[node name="BotonAjustes" type="Button" parent="TextureRect" unique_id=588446832]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 53.511208
-offset_top = 536.42267
-offset_right = 61.511208
-offset_bottom = 544.42267
-scale = Vector2(90.24123, 13.030022)
+[node name="ContenedoresBotones" type="VBoxContainer" parent="CenterContainer" unique_id=277549455]
+layout_mode = 2
+theme_override_constants/separation = 16
 
-[node name="BotonSalir" type="Button" parent="TextureRect" unique_id=2030745371]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 55.294907
-offset_top = 688.4092
-offset_right = 63.294907
-offset_bottom = 696.4092
-scale = Vector2(89.95197, 12.573335)
+[node name="BotonJugar" type="Button" parent="CenterContainer/ContenedoresBotones" unique_id=1498775471]
+custom_minimum_size = Vector2(400, 50)
+layout_mode = 2
+theme_override_constants/h_separation = 30
+theme_override_constants/icon_max_width = 350
+icon = ExtResource("4_q2auv")
+icon_alignment = 1
+expand_icon = true
 
-[connection signal="pressed" from="TextureRect/BotonJugar" to="." method="_on_boton_jugar_pressed"]
-[connection signal="pressed" from="TextureRect/BotonAjustes" to="." method="_on_boton_ajustes_pressed"]
-[connection signal="pressed" from="TextureRect/BotonSalir" to="." method="_on_boton_salir_pressed"]
+[node name="BotonAjustes" type="Button" parent="CenterContainer/ContenedoresBotones" unique_id=924718466]
+custom_minimum_size = Vector2(400, 50)
+layout_mode = 2
+theme_override_constants/h_separation = 30
+theme_override_constants/icon_max_width = 350
+icon = ExtResource("2_ny18b")
+icon_alignment = 1
+expand_icon = true
+
+[node name="BotonSalir" type="Button" parent="CenterContainer/ContenedoresBotones" unique_id=697726023]
+custom_minimum_size = Vector2(400, 50)
+layout_mode = 2
+theme_override_constants/h_separation = 30
+theme_override_constants/icon_max_width = 350
+icon = ExtResource("3_v3ki6")
+icon_alignment = 1
+expand_icon = true

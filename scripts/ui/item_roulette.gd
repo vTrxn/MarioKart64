@@ -77,6 +77,10 @@ func advance_lap():
 	else:
 		stop_race_timer()
 		print("¡Carrera finalizada!")
+		var escena_fin_juego = preload("res://scenes/menus/MenuFinJuego.tscn")
+		var menu_fin_instancia = escena_fin_juego.instantiate()
+		add_child(menu_fin_instancia)
+		menu_fin_instancia.mostrar_menu()
 
 func _update_lap_display(lap: int):
 	current_lap = lap
