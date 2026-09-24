@@ -1,3 +1,4 @@
+SpotLight3D
 Label
 AnimatedSprite2D
 TextureRect
@@ -12,4 +13,3 @@ Node3D
 CharacterBody3D
 GridContainer
 ColorRect
-CanvasLayer

@@ -117,13 +117,3 @@ shape = SubResource("CylinderShape3D_fcsne")
 
 [node name="Yoshi" parent="." unique_id=1564594624 instance=ExtResource("6_ubna5")]
 transform = Transform3D(-0.9998801, 0, -0.015486662, 0, 1, 0, 0.015486662, 0, -0.9998801, 117.26931, -0.6148374, -7.3225245)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=914491873]
-transform = Transform3D(-0.9898237, -0.016048146, -0.14139163, -0.033958565, 0.9915518, 0.12518719, 0.13818812, 0.1287147, -0.98200643, 135.7179, -4.7033277, 105.76894)
-light_color = Color(0.5498721, 0.28430977, 0.2262975, 1)
-light_energy = 16.0
-light_indirect_energy = 16.0
-light_volumetric_fog_energy = 2.7
-light_specular = 16.0
-spot_range = 20.194
-spot_angle = 61.874996

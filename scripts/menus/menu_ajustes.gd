@@ -4,6 +4,8 @@ extends Control
 @onready var boton_ayudas: Button = $TextureRect/BotonAyudas
 @onready var boton_volver: Button = $TextureRect/BotonVolver
 
+const ESCENA_AYUDAS = preload("res://scenes/menus/MenuAyudas.tscn")
+
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	
@@ -35,17 +37,13 @@ func _on_boton_sonido_pressed() -> void:
 	print("Botón de sonido")
 
 func _on_boton_ayudas_pressed() -> void:
-	# Oculta temporalmente los ajustes mientras se ve la ventana de ayudas
-	hide()
-	var ventana_ayudas = load("res://scenes/menus/MenuAyudas.tscn").instantiate()
-	add_child(ventana_ayudas)
-	
-	# Al cerrar la ventana de ayudas, reaparece el menú de ajustes
-	ventana_ayudas.tree_exited.connect(func():
+	var ajustes = ESCENA_AYUDAS.instantiate()
+	add_child(ajustes)
+	ajustes.show()
+	ajustes.tree_exited.connect(func():
 		show()
-		if boton_ayudas:
-			boton_ayudas.call_deferred("grab_focus")
 	)
+
 
 func _on_boton_volver_pressed() -> void:
 	# Al destruirse, dispara automáticamente la señal 'tree_exited' 

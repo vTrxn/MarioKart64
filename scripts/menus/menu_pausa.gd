@@ -18,6 +18,7 @@ func _input(event: InputEvent) -> void:
 		# Si está abierto el menú de ajustes, no despausa el juego desde aquí
 		if has_node("MenuAjustes"):
 			return
+			hide()
 			
 		if get_tree().paused:
 			despausar()

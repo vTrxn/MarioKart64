@@ -103,6 +103,7 @@ func advance_lap() -> void:
 	else:
 		stop_race_timer()
 		emit_signal("race_finished")
+	
 
 func _update_lap_display(lap: int) -> void:
 	current_lap = lap
