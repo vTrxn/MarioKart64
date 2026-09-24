@@ -94,7 +94,7 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 		_update_camera_position(delta)
 		return
-
+	_apply_gravity(delta)
 	if is_crashed:
 		_process_crash_state(delta)
 		_update_camera_position(delta)

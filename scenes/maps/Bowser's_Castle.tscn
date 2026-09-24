@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bxvyfqy6pcpaa" path="res://scripts/maps/bowser's_castle.gd" id="1_ltx7w"]
 [ext_resource type="PackedScene" uid="uid://xqwa6g7yo3pp" path="res://scenes/maps/Bowser's_Castle/nintendo_64_-_mario_kart_64_-_courses_-_bowsers.glb" id="1_us7vw"]
-[ext_resource type="PackedScene" uid="uid://bbt08ps58sakb" path="res://scenes/player/playerkart.tscn" id="2_ltx7w"]
 [ext_resource type="PackedScene" uid="uid://iju8h2yrbqjt" path="res://scenes/items/item_box.tscn" id="4_i6bpu"]
 [ext_resource type="PackedScene" uid="uid://bgj8st504r6ra" path="res://scenes/maps/checkpoint.tscn" id="5_twc5r"]
+[ext_resource type="PackedScene" uid="uid://ddfpda0y1ly37" path="res://scenes/player/yoshi.tscn" id="6_ubna5"]
 [ext_resource type="Script" uid="uid://c74wtts3lugx" path="res://scripts/maps/out_of_bounds.gd" id="6_ybtvi"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sky"]
@@ -42,9 +42,6 @@ shadow_enabled = true
 
 [node name="Sketchfab_Scene" parent="." unique_id=1106099024 instance=ExtResource("1_us7vw")]
 transform = Transform3D(140, 0, 0, 0, 140, 0, 0, 0, 140, 117.49169, -0.7436218, -23.301561)
-
-[node name="Playerkart" parent="." unique_id=1849314512 instance=ExtResource("2_ltx7w")]
-transform = Transform3D(-0.9999979, 0, 0.0020516778, 0, 1, 0, -0.0020516778, 0, -0.9999979, 118.19221, 0.233598, -7.048349)
 
 [node name="ItemBox" parent="." unique_id=1621560835 instance=ExtResource("4_i6bpu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110.62938, 0.0076900125, 197.89246)
@@ -117,3 +114,6 @@ shape = SubResource("CylinderShape3D_1bto1")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="ZonaLava" unique_id=1672876057]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -121.96224, 8.775973, 155.40753)
 shape = SubResource("CylinderShape3D_fcsne")
+
+[node name="Yoshi" parent="." unique_id=1564594624 instance=ExtResource("6_ubna5")]
+transform = Transform3D(-0.9998801, 0, -0.015486662, 0, 1, 0, 0.015486662, 0, -0.9998801, 117.26931, -0.6148374, -7.3225245)
