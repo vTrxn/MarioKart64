@@ -17,10 +17,11 @@ ground_horizon_color = Color(0.7, 0.85, 0.95, 1)
 sky_material = SubResource("ProceduralSkyMaterial_sky")
 
 [sub_resource type="Environment" id="Environment_env"]
-background_mode = 2
+background_mode = 1
+background_color = Color(0.11487552, 0.036458887, 0.19973835, 1)
 sky = SubResource("Sky_env")
 ambient_light_source = 3
-ambient_light_color = Color(0.5, 0.5, 0.5, 1)
+ambient_light_color = Color(0.107174546, 0.043427594, 0.2211918, 1)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_1bto1"]
 height = 0.3725586

@@ -1,3 +1,5 @@
+Label
+AnimatedSprite2D
 TextureRect
 Button
 VBoxContainer
@@ -11,4 +13,3 @@ CharacterBody3D
 GridContainer
 ColorRect
 CanvasLayer
-AudioStreamPlayer

@@ -2,6 +2,7 @@ extends CanvasLayer
 
 signal item_selected(item_id)
 signal race_finished()
+signal countdown_finished()
 
 @onready var item_container: Control = $ItemContainer
 @onready var item_icon: TextureRect = $ItemContainer/ItemIcon
@@ -11,6 +12,7 @@ signal race_finished()
 @onready var lap_number_rect: TextureRect = $"LapConter/Lap Number"
 @onready var timer_label: Label = $TimerContainer/TimerValue
 @onready var position_label: Label = $PositionLabel
+@onready var countdown_label: Label = $CountdownLabel if has_node("CountdownLabel") else null
 
 const TEX_LAP_1 = preload("res://assets/LapAndTime/Lap1.png")
 const TEX_LAP_2 = preload("res://assets/LapAndTime/Lap2.png")
@@ -54,6 +56,32 @@ func _process(delta: float) -> void:
 	if is_race_active:
 		race_time += delta
 		_update_timer_display()
+
+func start_countdown() -> void:
+	is_race_active = false
+	
+	if countdown_label:
+		countdown_label.show()
+		
+		countdown_label.text = "3"
+		await get_tree().create_timer(1.0).timeout
+		
+		countdown_label.text = "2"
+		await get_tree().create_timer(1.0).timeout
+		
+		countdown_label.text = "1"
+		await get_tree().create_timer(1.0).timeout
+		
+		countdown_label.text = "¡GO!"
+	else:
+		await get_tree().create_timer(3.0).timeout
+	
+	start_race_timer()
+	emit_signal("countdown_finished")
+	
+	await get_tree().create_timer(1.0).timeout
+	if countdown_label:
+		countdown_label.hide()
 
 func start_race_timer() -> void:
 	race_time = 0.0

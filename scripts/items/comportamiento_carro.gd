@@ -38,10 +38,10 @@ func _process(delta: float) -> void:
 				kart.max_speed = original_max_speed
 
 func trigger_item_box() -> bool:
-	if item_roulette and not item_roulette.is_rolling:
-		if current_item == "":
+	if item_roulette:
+		if current_item == "" and not item_roulette.is_rolling:
 			item_roulette.start_roulette()
-			return true
+		return true
 	return false
 
 func _on_item_selected(item_id: String) -> void:

@@ -51,15 +51,14 @@ var checkpoints_passed_in_lap: int = 0
 
 var original_spring_arm_basis: Basis
 var item_manager: Node
+var is_race_started: bool = false
 
-# Cargar la clase predefinida en lugar de instanciar dinámicamente con texto
 const ItemBehaviorClass = preload("res://scripts/items/comportamiento_carro.gd")
 
 func _ready() -> void:
 	original_max_speed = max_speed
 	last_respawn_transform = global_transform
 	
-	# Instanciación limpia del componente de ítems en el setup inicial
 	item_manager = ItemBehaviorClass.new()
 	item_manager.name = "ComportamientoCarro"
 	add_child(item_manager)
@@ -67,10 +66,34 @@ func _ready() -> void:
 	if spring_arm:
 		original_spring_arm_basis = spring_arm.transform.basis
 		spring_arm.set_as_top_level(true)
+		
+	if hud:
+		if not hud.countdown_finished.is_connected(_on_countdown_finished):
+			hud.countdown_finished.connect(_on_countdown_finished)
+		hud.start_countdown()
 
-# --- PROCESAMIENTO DE FÍSICAS ---
+func _on_countdown_finished() -> void:
+	is_race_started = true
+
+func _unhandled_input(event: InputEvent) -> void:
+	if not is_race_started:
+		return
+		
+	if event is InputEventKey and event.pressed and not event.echo:
+		if event.keycode == KEY_E or event.keycode == KEY_SPACE:
+			if item_manager and item_manager.has_method("trigger_item_box"):
+				item_manager.trigger_item_box()
+			
+	if event.is_action_pressed("usar_item"):
+		if item_manager and item_manager.has_method("use_item"):
+			item_manager.use_item()
+
 func _physics_process(delta: float) -> void:
-	_apply_gravity(delta)
+	if not is_race_started:
+		_apply_gravity(delta)
+		move_and_slide()
+		_update_camera_position(delta)
+		return
 
 	if is_crashed:
 		_process_crash_state(delta)
@@ -87,7 +110,6 @@ func _physics_process(delta: float) -> void:
 	_check_wall_collisions()
 	_update_camera_position(delta)
 
-# --- MÉTODOS MODULARES DE MOVIMIENTO ---
 func _apply_gravity(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= gravity * delta
@@ -130,7 +152,6 @@ func _process_crash_state(delta: float) -> void:
 	move_and_slide()
 
 func _check_wall_collisions() -> void:
-	# Recorrido unificado de colisiones para evitar sobrecargar la CPU
 	for i in range(get_slide_collision_count()):
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
@@ -156,23 +177,11 @@ func _update_camera_position(delta: float) -> void:
 	var new_basis = spring_arm.global_transform.basis.slerp(target_basis, 5.0 * delta)
 	spring_arm.global_transform.basis = new_basis.orthonormalized()
 
-# --- MANEJO DE INPUTS Y EVENTOS DE ITEMS ---
-func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed and not event.echo:
-		if event.keycode == KEY_E or event.keycode == KEY_SPACE:
-			if item_manager and item_manager.has_method("trigger_item_box"):
-				item_manager.trigger_item_box()
-			
-	if event.is_action_pressed("usar_item"):
-		if item_manager and item_manager.has_method("use_item"):
-			item_manager.use_item()
-
 func trigger_item_box() -> bool:
 	if item_manager and item_manager.has_method("trigger_item_box"):
 		return item_manager.trigger_item_box()
 	return false
 
-# --- SISTEMA DE DERRAPE ---
 func _handle_drift(delta: float) -> void:
 	var turn_input: float = Input.get_action_strength("girar_izquierda") - Input.get_action_strength("girar_derecha")
 	
@@ -195,7 +204,6 @@ func _end_drift() -> void:
 	drift_dir = 0.0
 	drift_timer = 0.0
 
-# --- SISTEMA DE CHECKPOINTS Y RESPAWN ---
 func register_checkpoint(type: Checkpoint.CheckpointType, index: int, spawn_transform: Transform3D) -> void:
 	if index == last_visited_checkpoint_index:
 		return
@@ -205,12 +213,6 @@ func register_checkpoint(type: Checkpoint.CheckpointType, index: int, spawn_tran
 
 	match type:
 		Checkpoint.CheckpointType.FINISH_LINE:
-			if hud and not hud.is_race_active:
-				hud.start_race_timer()
-				last_mandatory_index = 0
-				checkpoints_passed_in_lap = 0
-				return
-
 			if last_mandatory_index >= total_mandatory_checkpoints and checkpoints_passed_in_lap >= (total_mandatory_checkpoints / 2):
 				last_mandatory_index = 0
 				checkpoints_passed_in_lap = 0
@@ -244,7 +246,6 @@ func respawn() -> void:
 			var kart_yaw_basis = Basis(Vector3.UP, current_y_rotation)
 			spring_arm.global_transform.basis = (kart_yaw_basis * original_spring_arm_basis).orthonormalized()
 
-# --- EFECTOS Y COLISIONES ---
 func receive_impact(impact_normal: Vector3 = Vector3.ZERO) -> void:
 	if is_crashed:
 		return
