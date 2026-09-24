@@ -1,11 +1,12 @@
 extends CanvasLayer
 
 signal item_selected(item_id)
+signal race_finished()
 
-@onready var item_container = $ItemContainer
-@onready var item_icon = $ItemContainer/ItemIcon
-@onready var timer = $ItemContainer/Timer
-@onready var audio = $ItemContainer/RouletteSound
+@onready var item_container: Control = $ItemContainer
+@onready var item_icon: TextureRect = $ItemContainer/ItemIcon
+@onready var timer: Timer = $ItemContainer/Timer
+@onready var audio: AudioStreamPlayer = $ItemContainer/RouletteSound
 
 @onready var lap_number_rect: TextureRect = $"LapConter/Lap Number"
 @onready var timer_label: Label = $TimerContainer/TimerValue
@@ -15,11 +16,11 @@ const TEX_LAP_1 = preload("res://assets/LapAndTime/Lap1.png")
 const TEX_LAP_2 = preload("res://assets/LapAndTime/Lap2.png")
 const TEX_LAP_3 = preload("res://assets/LapAndTime/Lap3.png")
 
-var is_rolling = false
-var time_elapsed = 0.0
-var roll_duration = 2.5
+var is_rolling: bool = false
+var time_elapsed: float = 0.0
+var roll_duration: float = 2.5
 
-var item_db = [
+var item_db: Array[Dictionary] = [
 	{ "id": "banana", "texture": preload("res://assets/roulette/banana_rulet.png"), "weight": 20 },
 	{ "id": "triple_banana", "texture": preload("res://assets/roulette/bananas_rulet.png"), "weight": 20 },
 	{ "id": "green_shell", "texture": preload("res://assets/roulette/green_shell_rulet.png"), "weight": 0 },
@@ -32,22 +33,19 @@ var item_db = [
 	{ "id": "bomb", "texture": preload("res://assets/roulette/bomb_rulet.png"), "weight": 0 }
 ]
 
-var final_item_index = 0
-
+var final_item_index: int = 0
 var race_time: float = 0.0
 var is_race_active: bool = false
 var current_lap: int = 1
 var total_laps: int = 3
 
-func _ready():
+func _ready() -> void:
 	item_container.hide()
 	if timer and not timer.timeout.is_connected(_on_timer_timeout):
 		timer.timeout.connect(_on_timer_timeout)
-	
 	_update_lap_display(1)
 
-
-func _process(delta: float):
+func _process(delta: float) -> void:
 	if is_rolling:
 		time_elapsed += delta
 		if time_elapsed >= roll_duration:
@@ -57,44 +55,38 @@ func _process(delta: float):
 		race_time += delta
 		_update_timer_display()
 
-func start_race_timer():
+func start_race_timer() -> void:
 	race_time = 0.0
 	is_race_active = true
 
-func stop_race_timer():
+func stop_race_timer() -> void:
 	is_race_active = false
 
-func _update_timer_display():
+func _update_timer_display() -> void:
 	var minutes: int = int(race_time / 60.0)
 	var seconds: int = int(race_time) % 60
 	var milliseconds: int = int((race_time - int(race_time)) * 100)
 	timer_label.text = "\"%02d'%02d\"%02d" % [minutes, seconds, milliseconds]
 
-func advance_lap():
+func advance_lap() -> void:
 	if current_lap < total_laps:
 		current_lap += 1
 		_update_lap_display(current_lap)
 	else:
 		stop_race_timer()
-		print("¡Carrera finalizada!")
-		var escena_fin_juego = preload("res://scenes/menus/MenuFinJuego.tscn")
-		var menu_fin_instancia = escena_fin_juego.instantiate()
-		add_child(menu_fin_instancia)
-		menu_fin_instancia.mostrar_menu()
+		emit_signal("race_finished")
 
-func _update_lap_display(lap: int):
+func _update_lap_display(lap: int) -> void:
 	current_lap = lap
 	match lap:
 		1: lap_number_rect.texture = TEX_LAP_1
 		2: lap_number_rect.texture = TEX_LAP_2
 		3: lap_number_rect.texture = TEX_LAP_3
 
-
-func start_roulette():
+func start_roulette() -> void:
 	item_container.show()
 	is_rolling = true
 	time_elapsed = 0.0
-	
 	final_item_index = _get_random_item_by_weight()
 	
 	if audio:
@@ -104,13 +96,13 @@ func start_roulette():
 	timer.wait_time = 0.08
 	timer.start()
 
-func _on_timer_timeout():
+func _on_timer_timeout() -> void:
 	if not is_rolling:
 		return
 	var visual_random = randi() % item_db.size()
 	item_icon.texture = item_db[visual_random]["texture"]
 
-func _stop_roulette():
+func _stop_roulette() -> void:
 	is_rolling = false
 	timer.stop()
 	
@@ -120,20 +112,20 @@ func _stop_roulette():
 	item_icon.texture = item_db[final_item_index]["texture"]
 	emit_signal("item_selected", item_db[final_item_index]["id"])
 
-func set_item_texture(tex: Texture2D):
+func set_item_texture(tex: Texture2D) -> void:
 	if item_icon:
 		item_icon.texture = tex
 
 func _get_random_item_by_weight() -> int:
-	var total_weight = 0
+	var total_weight: int = 0
 	for item in item_db:
 		total_weight += item["weight"]
 		
 	if total_weight == 0:
 		return 0
 		
-	var random_val = randi() % total_weight
-	var current_weight = 0
+	var random_val: int = randi() % total_weight
+	var current_weight: int = 0
 	
 	for i in range(item_db.size()):
 		current_weight += item_db[i]["weight"]
@@ -142,6 +134,6 @@ func _get_random_item_by_weight() -> int:
 			
 	return 0
 
-func clear_item():
+func clear_item() -> void:
 	item_container.hide()
 	item_icon.texture = null

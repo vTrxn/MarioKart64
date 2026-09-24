@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c4id462yq64rt"]
 
-[ext_resource type="Script" uid="uid://bcq2omlrimpmu" path="res://scripts/ui/item_roulette.gd" id="1_5wb3c"]
+[ext_resource type="Script" uid="uid://bcq2omlrimpmu" path="res://scripts/ui/Hud.gd" id="1_5wb3c"]
 [ext_resource type="Texture2D" uid="uid://b6aftcw72c75c" path="res://assets/roulette/mark_rulet.png" id="2_1se2i"]
 [ext_resource type="AudioStream" uid="uid://c0acupmn0te17" path="res://assets/audio/Mario Kart Wii - Item Box - Sound Effect.mp3" id="3_ehre4"]
 [ext_resource type="Texture2D" uid="uid://coghvako5q52t" path="res://assets/LapAndTime/LapTitle.png" id="4_3g4ve"]
@@ -87,7 +87,3 @@ offset_bottom = 40.0
 [node name="PositionLabel" type="Label" parent="." unique_id=403305546]
 offset_right = 40.0
 offset_bottom = 23.0
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=476698146]
-offset_right = 40.0
-offset_bottom = 40.0

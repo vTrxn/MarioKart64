@@ -12,23 +12,29 @@ var banana_uses_left: int = 0
 
 var has_mushroom_boost: bool = false
 var mushroom_boost_time_left: float = 0.0
-
 var original_max_speed: float = 0.0
 
-func _ready():
-	kart = get_parent()
-	if kart.has_node("Hud"):
+const TEX_MUSHROOM_2 = preload("res://assets/roulette/fongus2_rulet.png")
+const TEX_MUSHROOM_1 = preload("res://assets/roulette/fongus1_rulet.png")
+const BANANA_SCENE = preload("res://scenes/items/banana.tscn")
+const FALSE_BOX_SCENE = preload("res://scenes/items/false_box.tscn")
+
+func _ready() -> void:
+	kart = get_parent() as CharacterBody3D
+	if kart and kart.has_node("Hud"):
 		item_roulette = kart.get_node("Hud")
 		if not item_roulette.item_selected.is_connected(_on_item_selected):
 			item_roulette.item_selected.connect(_on_item_selected)
-	original_max_speed = kart.max_speed
+	
+	if kart:
+		original_max_speed = kart.max_speed
 
-func _process(delta: float):
+func _process(delta: float) -> void:
 	if has_mushroom_boost:
 		mushroom_boost_time_left -= delta
 		if mushroom_boost_time_left <= 0.0:
 			has_mushroom_boost = false
-			if not kart.has_banana_debuff and not kart.has_false_box_debuff:
+			if kart and not kart.has_banana_debuff and not kart.has_false_box_debuff:
 				kart.max_speed = original_max_speed
 
 func trigger_item_box() -> bool:
@@ -38,37 +44,33 @@ func trigger_item_box() -> bool:
 			return true
 	return false
 
-func _on_item_selected(item_id: String):
-	print("Item selected: ", item_id)
+func _on_item_selected(item_id: String) -> void:
 	if held_item_node:
 		held_item_node.queue_free()
+		
 	current_item = item_id
 	
-	if item_id == "banana":
-		banana_uses_left = 1
-		_spawn_held_banana()
-	elif item_id == "triple_banana":
-		banana_uses_left = 3
-		_spawn_held_banana()
-	elif item_id == "false_box":
-		var false_box_scene = preload("res://scenes/items/false_box.tscn")
-		if false_box_scene:
-			held_item_node = false_box_scene.instantiate()
-			kart.add_child(held_item_node)
-			held_item_node.position = Vector3(0, 0.5, 1.5)
-	elif item_id == "mushroom":
-		mushroom_uses_left = 1
-	elif item_id == "triple_mushroom":
-		mushroom_uses_left = 3
+	match item_id:
+		"banana":
+			banana_uses_left = 1
+			_spawn_held_item(BANANA_SCENE)
+		"triple_banana":
+			banana_uses_left = 3
+			_spawn_held_item(BANANA_SCENE)
+		"false_box":
+			_spawn_held_item(FALSE_BOX_SCENE)
+		"mushroom":
+			mushroom_uses_left = 1
+		"triple_mushroom":
+			mushroom_uses_left = 3
 
-func _spawn_held_banana():
-	var banana_scene = preload("res://scenes/items/banana.tscn")
-	if banana_scene:
-		held_item_node = banana_scene.instantiate()
+func _spawn_held_item(scene: PackedScene) -> void:
+	if scene and kart:
+		held_item_node = scene.instantiate() as Node3D
 		kart.add_child(held_item_node)
 		held_item_node.position = Vector3(0, 0.5, 1.5)
 
-func use_item():
+func use_item() -> void:
 	if current_item == "":
 		return
 		
@@ -88,7 +90,7 @@ func use_item():
 		if current_item in ["banana", "triple_banana"]:
 			banana_uses_left -= 1
 			if banana_uses_left > 0:
-				_spawn_held_banana()
+				_spawn_held_item(BANANA_SCENE)
 			else:
 				_clear_item()
 		else:
@@ -102,35 +104,33 @@ func use_item():
 			held_item_node = null
 		_clear_item()
 
-func _clear_item():
+func _clear_item() -> void:
 	current_item = ""
 	if item_roulette and item_roulette.has_method("clear_item"):
 		item_roulette.clear_item()
 
-func _apply_mushroom_boost():
+func _apply_mushroom_boost() -> void:
 	if mushroom_uses_left <= 0:
 		return
 		
 	mushroom_uses_left -= 1
 	
 	if mushroom_uses_left == 2:
-		var tex = preload("res://assets/roulette/fongus2_rulet.png")
 		if item_roulette and item_roulette.has_method("set_item_texture"):
-			item_roulette.set_item_texture(tex)
+			item_roulette.set_item_texture(TEX_MUSHROOM_2)
 	elif mushroom_uses_left == 1:
-		var tex = preload("res://assets/roulette/fongus1_rulet.png")
 		if item_roulette and item_roulette.has_method("set_item_texture"):
-			item_roulette.set_item_texture(tex)
+			item_roulette.set_item_texture(TEX_MUSHROOM_1)
 	elif mushroom_uses_left <= 0:
 		_clear_item()
 			
-	kart.has_banana_debuff = false
-	kart.has_false_box_debuff = false
-	
-	mushroom_boost_time_left = 1.5
-	var boost_speed = original_max_speed * 1.25
-	
-	if not has_mushroom_boost:
+	if kart:
+		kart.has_banana_debuff = false
+		kart.has_false_box_debuff = false
+		
+		mushroom_boost_time_left = 1.5
+		var boost_speed = original_max_speed * 1.25
+		
 		has_mushroom_boost = true
 		kart.max_speed = boost_speed
 		if kart.current_speed < boost_speed:
